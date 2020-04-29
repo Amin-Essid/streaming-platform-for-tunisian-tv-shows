@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Video() {
+export default function Error() {
     return (
         <div>
-            <h2>video</h2>
+            <h1> Error </h1>
         </div>
     )
 }

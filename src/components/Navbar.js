@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Video() {
+export default function Navbar() {
     return (
         <div>
-            <h2>video</h2>
+            <h1>navbar</h1>
         </div>
     )
 }

@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from './pages/Home.js';
+import Navbar from './components/Navbar.js';
+import TvShows from './pages/TvShows.js'
+import SingleTvShow from './pages/SingleTvShow';
+import Stream from "./pages/Stream.js";
+import {Route, Switch} from 'react-router-dom';
+import Error from './pages/Error.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar/>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/TvShows' component={TvShows} />
+        <Route exact path='/:sts' component={SingleTvShow} />
+        <Route exact path='/:sts/:strm' component={Stream} />
+        <Route component={Error} />
+      </Switch>
+    </>
   );
 }
 
