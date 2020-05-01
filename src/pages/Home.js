@@ -1,11 +1,11 @@
 import React from 'react';
-import Section from '../components/Section.js'
+import Section from '../components/Section'
 
 export default function Home() {
     return (
-        <div>
+        <>
             <h1>home</h1>
             <Section />
-        </div>
+        </>
     )
 }
