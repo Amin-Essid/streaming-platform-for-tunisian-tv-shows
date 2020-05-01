@@ -1,5 +1,5 @@
 import React from 'react';
-import menuIcon from '../images/menu-icon.png';
+import menuIcon from '../images/icons/menu-icon.png';
 
 export default function Navbar() {
     return (
