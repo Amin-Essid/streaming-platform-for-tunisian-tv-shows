@@ -16,9 +16,10 @@ export default [
     {
         name: 'awledMoufida',
         year: '2015',
-        channel: 'elhiwar',
+        channel: 'alhiwar',
         type: 'drama',
         img: [awledMoufida],
+        featured: true,
         seasons: [
             [
                 {
@@ -388,6 +389,7 @@ export default [
         channel: 'attessia',
         type: 'comedy',
         img: [boulice ],
+        featured: false,
         seasons: [
             [
                 {
@@ -541,6 +543,7 @@ export default [
         channel: 'watania',
         type: 'comedy',
         img: [choufliHal],
+        featured: true,
         seasons: [
             [
                 {
@@ -726,6 +729,7 @@ export default [
         channel: 'watania',
         type: 'comedy',
         img: [darLkhleaa],
+        featured: false,
         seasons: [
             [
                 {
@@ -877,8 +881,9 @@ export default [
         name: 'denyaOkhra',
         year: 'comedy',
         channel: 'alhiwar',
-        type: '',
+        type: 'comedy',
         img: [denyaOkhra],
+        featured: true,
         seasons: [
             [
                 {
@@ -1104,6 +1109,7 @@ export default [
         channel: 'watania',
         type: 'drama',
         img: [galbDhib ],
+        featured: true,
         seasons: [
             [
                 {
@@ -1185,6 +1191,7 @@ export default [
         channel: 'watania',
         type: 'drama',
         img: [hsabetWakabet],
+        featured: false,
         seasons: [
             [
                 {
@@ -1238,6 +1245,7 @@ export default [
         channel: 'watania',
         type: 'drama',
         img: [khoutabAlbeb],
+        featured: false,
         seasons: [
             [
                 {
@@ -1288,9 +1296,10 @@ export default [
     {
         name: 'maktoub',
         year: '2013',
-        channel: 'elhiwar',
+        channel: 'alhiwar',
         type: 'drama',
         img: [maktoub],
+        featured: false,
         seasons: [
             [
                 {
@@ -1732,6 +1741,7 @@ export default [
         channel: 'attessia',
         type: 'drama',
         img: [nouba],
+        featured: true,
         seasons: [
             [
                 {
@@ -1885,6 +1895,7 @@ export default [
         channel: 'nessma',
         type: 'comedy',
         img: [nsibtiLaziza],
+        featured: false,
         seasons: [
             [
                 {
@@ -2326,6 +2337,7 @@ export default [
         channel: 'watania',
         type: 'drama',
         img: [saydRim],
+        featured: false,
         seasons: [
             [
                 {

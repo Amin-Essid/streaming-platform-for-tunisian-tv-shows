@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import Box from './Box.js'
+import Box from './Box';
+import Loading from './Loading';
+
 
 export default class Container extends Component {
     render() {
         return (
             <div>
-                <h3>container</h3>
-                <Box />
-                <Box />
-                <Box />
+            {this.props.loading ? <Loading /> : <Box name = {this.props.containerShows[0].name}/>}
             </div>
         )
     }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Box() {
+export default function Box({name}) {
     return (
         <div>
-            <h3>box</h3>
+            <h3>{name}</h3>
         </div>
     )
 }
