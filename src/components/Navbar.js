@@ -1,10 +1,10 @@
 import React from 'react';
-import menuIcon from '../images/icons/menu-icon.png';
+import menuIcon from '../images/icons/menuIcon.png';
 
 export default function Navbar() {
     return (
         <div className="navbar">
-            <div className="navbar-items flex-component">
+            <div className="navbar-items">
                 <div className="navbar-items__logo">
                     <img src="" alt=""/>
                 </div>

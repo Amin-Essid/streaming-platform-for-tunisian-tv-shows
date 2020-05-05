@@ -1,14 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Box from './Box';
 import Loading from './Loading';
+import styled from 'styled-components';
 
+const StyledContainer = styled.div`
+    width:100%;
+    margin: 0 0.8em;
+`
 
-export default class Container extends Component {
-    render() {
+export default function Container({loading, containerShows, boxWidth, boxHeight}) {
         return (
-            <div>
-            {this.props.loading ? <Loading /> : <Box name = {this.props.containerShows[0].name}/>}
-            </div>
+            <StyledContainer>
+            {loading ? <Loading /> : <Box boxWidth={boxWidth} boxHeight={boxHeight} img = {containerShows[0].img[0]}/>}
+            </StyledContainer>
         )
-    }
 }

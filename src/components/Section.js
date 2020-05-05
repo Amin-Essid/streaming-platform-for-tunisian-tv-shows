@@ -6,12 +6,24 @@ import leftArrow from '../images/icons/leftArrow.png';
 import styled from 'styled-components';
 
 
-export default function Section({loading, sectionShows, arrowSize, containerSize, boxSize }){
+const StyledSection = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+min-width: 300px;
+max-width: 95%;
+margin: 1em auto;
+`
+
+
+
+export default function Section({loading, sectionShows, arrowSize, boxWidth, boxHeight }){
     return (
-        <section>
-            <Arrow arrowSize="big" imgURL={rightArrow}/>
-            <Container loading={loading} containerShows={sectionShows} containerSize='' boxSize='' />
+        <StyledSection>
+            <Arrow arrowSize={arrowSize} imgURL={rightArrow}/>
+            <Container loading={loading} containerShows={sectionShows} boxWidth={boxWidth} boxWidth={boxHeight}  />
             <Arrow arrowSize={arrowSize} imgURL={leftArrow}/>
-         </section>
+         </StyledSection>
     )
 }
