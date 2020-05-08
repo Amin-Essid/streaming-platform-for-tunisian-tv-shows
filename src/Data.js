@@ -14,6 +14,7 @@ import  saydRim from './images/series/saydRim.png';
 
 export default [
     {
+        id: 1,
         name: 'awledMoufida',
         year: '2015',
         channel: 'alhiwar',
@@ -384,6 +385,7 @@ export default [
         ]
     },
     {
+        id: 2,
         name: 'boulice ',
         year: '2018',
         channel: 'attessia',
@@ -538,6 +540,7 @@ export default [
         ]
     },
     {
+        id: 3,
         name: 'choufliHal',
         year: '2006',
         channel: 'watania',
@@ -724,6 +727,7 @@ export default [
         ]
     },
     {
+        id: 4,
         name: 'darLkhleaa',
         year: '2012',
         channel: 'watania',
@@ -878,6 +882,7 @@ export default [
         ]
     },
     {
+        id: 5,
         name: 'denyaOkhra',
         year: 'comedy',
         channel: 'alhiwar',
@@ -1104,6 +1109,7 @@ export default [
         ]
     },
     {
+        id: 6,
         name: 'galbDhib ',
         year: '2020',
         channel: 'watania',
@@ -1186,6 +1192,7 @@ export default [
         ]
     },
     {
+        id: 7,
         name: 'hsabetWakabet',
         year: '2002',
         channel: 'watania',
@@ -1240,6 +1247,7 @@ export default [
         ]
     },
     {
+        id: 8,
         name: 'khoutabAlbeb',
         year: '1997',
         channel: 'watania',
@@ -1294,6 +1302,7 @@ export default [
         ]
     },
     {
+        id: 9,
         name: 'maktoub',
         year: '2013',
         channel: 'alhiwar',
@@ -1736,6 +1745,7 @@ export default [
         ]
     },
     {
+        id: 10,
         name: 'nouba',
         year: '2019',
         channel: 'attessia',
@@ -1890,6 +1900,7 @@ export default [
         ]
     },
     {
+        id: 11,
         name: 'nsibtiLaziza',
         year: '2014',
         channel: 'nessma',
@@ -2332,6 +2343,7 @@ export default [
         ]
     },
     {
+        id: 12,
         name: 'saydRim',
         year: '2000',
         channel: 'watania',

@@ -4,14 +4,18 @@ import styled from 'styled-components';
 const StyledBox = styled.div`
 background-image: url(${props => props.img});
 background-size: 100% 100%;
-max-width: 100%;
-height: 220px;
+width: ${props => props.boxWidth};
+height: ${props => props.boxHeight};;
+flex-shrink: 0;
 border-radius: 5px;
+& + & {
+    margin-right: 1em;
+}
 `
 
-export default function Box({img}) {
+export default function Box({img, boxWidth, boxHeight}) {
     return (
-        <StyledBox img={img}>
+        <StyledBox boxWidth={boxWidth} boxHeight={boxHeight} img={img}>
             
         </StyledBox>
     )

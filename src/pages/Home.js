@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <>
             <Ads />
-            <Section loading={loading} sectionShows={featuredShows} arrowSize="50px" containerSize="" boxSize=""/>
+            <Section loading={loading} sectionShows={featuredShows} arrowSize="50px" boxWidth='220px' boxHeight='220px'/>
             <ButtonsContainer/>
             {/* <Section sectionShows={channels} arrowSize="big" containerSize="" boxSize=""/>
             <ButtonsContainer/>
