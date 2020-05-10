@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Box from './Box';
 import Loading from './Loading';
 import styled from 'styled-components';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const StyledContainer = styled.div`
     display: flex;
@@ -10,6 +11,7 @@ const StyledContainer = styled.div`
     min-width:${props => props.boxWidth};
     max-width: ${props => props.containerMaxWidth};
     margin: 0 0.8em;
+    overflow: hidden;
 `
 
 
@@ -26,12 +28,40 @@ export default class Container extends Component {
 
     render(){
         let boxes = this.props.containerShows.map(box => {
-            return <Box key={box.id} name={box.name} img = {box.img[0]} boxWidth={this.props.boxWidth} boxHeight={this.props.boxHeight} />
+            return (
+                
+                        <CSSTransition
+                            key={box.id}
+                            timeout={250}
+                            classNames="fade"
+                        >
+                            <Box 
+                                key={box.id} 
+                                name={box.name} 
+                                img = {box.img[0]} 
+                                boxWidth={this.props.boxWidth} 
+                                boxHeight={this.props.boxHeight} 
+                            />
+                        </CSSTransition>
+                
+            )
         })
         return (
-            <StyledContainer boxWidth={this.props.boxWidth} containerMaxWidth={this.props.containerMaxWidth} ref={this.container} >
-            {this.props.loading ? <Loading /> : boxes}
+        
+            <StyledContainer 
+            boxWidth={this.props.boxWidth} 
+            containerMaxWidth={this.props.containerMaxWidth} 
+            ref={this.container} 
+            >
+            
+            {this.props.loading ? <Loading /> : (
+                <TransitionGroup component={null}>
+               {boxes}
+                </TransitionGroup>
+                )}
+            
             </StyledContainer>
+        
         )
     }
     updateDimensions = () => {

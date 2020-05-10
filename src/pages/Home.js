@@ -10,15 +10,74 @@ export default function Home() {
     return (
         <>
             <Ads />
-            <Section containerMaxWidth="700px" loading={loading} sectionShows={featuredShows} arrowSize="50px" boxWidth='220px' boxHeight='220px'/>
-            <ButtonsContainer buttonsContent={['رمضان 2020', 'كل المسلسلات']} buttonsWidth={['130px', '130px']} buttonsHeight={['43px', '43px']} buttonsStyle={['primary-button', 'secondary-button']} buttonsMargin={['2.9em', '2.9em']}/>
-            <Section containerMaxWidth="500px" loading={loading} sectionShows={channels} arrowSize="35px" boxWidth='100px' boxHeight='100px'/>
-            <ButtonsContainer buttonsContent={['مسلسلات زمان', 'المزيد']} buttonsWidth={['130px', '70px']} buttonsHeight={['35px', '35px']} buttonsStyle={['primary-button', 'secondary-button']} buttonsMargin={['4em', '1.5em']} />
-            <Section containerMaxWidth="860px" loading={loading} sectionShows={legendaryShows} arrowSize="45px" boxWidth='200px' boxHeight='200px'/>
-            <ButtonsContainer buttonsContent={['كوميديا', 'المزيد']} buttonsWidth={['130px', '70px']} buttonsHeight={['35px', '35px']} buttonsStyle={['primary-button', 'secondary-button']} buttonsMargin={['4em', '1.5em']} />
-            <Section containerMaxWidth="860px" loading={loading} sectionShows={comedyShows} arrowSize="45px" boxWidth='200px' boxHeight='200px'/>
-            <ButtonsContainer buttonsContent={['دراما', 'المزيد']} buttonsWidth={['130px', '70px']} buttonsHeight={['35px', '35px']} buttonsStyle={['primary-button', 'secondary-button']} buttonsMargin={['4em', '1.5em']} />
-            <Section containerMaxWidth="860px" loading={loading} sectionShows={dramaShows} arrowSize="45px" boxWidth='200px' boxHeight='200px'/>
+            <Section 
+                containerMaxWidth="700px" 
+                loading={loading} 
+                sectionShows={featuredShows} 
+                arrowSize="50px" 
+                boxWidth='220px' 
+                boxHeight='220px'
+            />
+            <ButtonsContainer 
+                buttonsContent={['رمضان 2020', 'كل المسلسلات']} 
+                buttonsWidth={['130px', '130px']} 
+                buttonsHeight={['43px', '43px']} 
+                buttonsStyle={['primary-button', 'secondary-button']} 
+                buttonsMargin={['2.9em', '2.9em']}
+            />
+            <Section 
+                containerMaxWidth="500px" 
+                loading={loading} 
+                sectionShows={channels} 
+                arrowSize="35px" 
+                boxWidth='100px' 
+                boxHeight='100px'
+            />
+            <ButtonsContainer 
+                buttonsContent={['مسلسلات زمان', 'المزيد']} 
+                buttonsWidth={['130px', '70px']} 
+                buttonsHeight={['35px', '35px']} 
+                buttonsStyle={['primary-button', 'secondary-button']} 
+                buttonsMargin={['4em', '1.5em']} 
+            />
+            <Section 
+                containerMaxWidth="860px" 
+                loading={loading} 
+                sectionShows={legendaryShows} 
+                arrowSize="45px" 
+                boxWidth='200px' 
+                boxHeight='200px'
+            />
+            <ButtonsContainer 
+                buttonsContent={['كوميديا', 'المزيد']} 
+                buttonsWidth={['130px', '70px']} 
+                buttonsHeight={['35px', '35px']} 
+                buttonsStyle={['primary-button', 'secondary-button']} 
+                buttonsMargin={['4em', '1.5em']} 
+            />
+            <Section 
+                containerMaxWidth="860px" 
+                loading={loading} 
+                sectionShows={comedyShows} 
+                arrowSize="45px" 
+                boxWidth='200px' 
+                boxHeight='200px'
+            />
+            <ButtonsContainer 
+                buttonsContent={['دراما', 'المزيد']} 
+                buttonsWidth={['130px', '70px']} 
+                buttonsHeight={['35px', '35px']} 
+                buttonsStyle={['primary-button', 'secondary-button']} 
+                buttonsMargin={['4em', '1.5em']} 
+            />
+            <Section 
+                containerMaxWidth="860px" 
+                loading={loading} 
+                sectionShows={dramaShows} 
+                arrowSize="45px" 
+                boxWidth='200px' 
+                boxHeight='200px'
+            />
         </>
     )
 }

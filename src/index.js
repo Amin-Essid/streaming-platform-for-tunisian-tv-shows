@@ -7,13 +7,14 @@ import {ShowsProvider} from './Context';
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  // {/* <React.StrictMode> */}
     <ShowsProvider>
       <Router>
         <App />
       </Router>
     </ShowsProvider>
-  </React.StrictMode>,
+  // {/* </React.StrictMode> */}
+  ,
   document.getElementById('root')
 );
 

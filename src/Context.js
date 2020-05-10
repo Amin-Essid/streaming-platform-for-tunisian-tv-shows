@@ -13,42 +13,42 @@ class ShowsProvider extends Component {
         shows: [],
         channels: [
             {
-                id: 1,
+                id: 111,
                 name: 'watania',
                 img: [WataniaImg]
             },
             {
-                id: 2,
+                id: 222,
                 name: 'alhiwar',
                 img: [alhiwarImg]
             },
             {
-                id: 3,
+                id: 333,
                 name: 'attessia',
                 img: [AttessiaImg]
             },
             {
-                id: 4,
+                id: 444,
                 name: 'nessma',
                 img: [NessmaImg]
             },
             {
-                id: 1,
+                id: 555,
                 name: 'watania',
                 img: [WataniaImg]
             },
             {
-                id: 2,
+                id: 666,
                 name: 'alhiwar',
                 img: [alhiwarImg]
             },
             {
-                id: 3,
+                id: 777,
                 name: 'attessia',
                 img: [AttessiaImg]
             },
             {
-                id: 4,
+                id: 888,
                 name: 'nessma',
                 img: [NessmaImg]
             }
