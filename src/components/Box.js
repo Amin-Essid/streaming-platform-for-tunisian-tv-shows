@@ -5,12 +5,14 @@ const StyledBox = styled.div`
 background-image: url(${props => props.img});
 background-size: 100% 100%;
 width: ${props => props.boxWidth};
-height: ${props => props.boxHeight};;
+height: ${props => props.boxHeight};
 flex-shrink: 0;
 border-radius: 5px;
 & + & {
     margin-right: 1em;
 }
+cursor: pointer;
+box-shadow: 0 2px 4px black;
 `
 
 export default function Box({img, boxWidth, boxHeight}) {

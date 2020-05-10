@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import data from './Data';
+import WataniaImg from './images/channels/watania.png';
+import alhiwarImg from './images/channels/watania.png';
+import AttessiaImg from './images/channels/attessia.png';
+import NessmaImg from './images/channels/nessma.png';
 
 const ShowsContext = React.createContext();
 
@@ -7,7 +11,49 @@ class ShowsProvider extends Component {
     state = {
         loading: true,
         shows: [],
-        channels: [],
+        channels: [
+            {
+                id: 1,
+                name: 'watania',
+                img: [WataniaImg]
+            },
+            {
+                id: 2,
+                name: 'alhiwar',
+                img: [alhiwarImg]
+            },
+            {
+                id: 3,
+                name: 'attessia',
+                img: [AttessiaImg]
+            },
+            {
+                id: 4,
+                name: 'nessma',
+                img: [NessmaImg]
+            },
+            {
+                id: 1,
+                name: 'watania',
+                img: [WataniaImg]
+            },
+            {
+                id: 2,
+                name: 'alhiwar',
+                img: [alhiwarImg]
+            },
+            {
+                id: 3,
+                name: 'attessia',
+                img: [AttessiaImg]
+            },
+            {
+                id: 4,
+                name: 'nessma',
+                img: [NessmaImg]
+            }
+
+        ],
         featuredShows: [],
         dramaShows: [],
         comedyShows: [],
@@ -29,6 +75,7 @@ class ShowsProvider extends Component {
         let alhiwarShows = shows.filter(show => show.channel === 'alhiwar');
         let wataniaShows = shows.filter(show => show.channel === 'watania');
         let nessmaShows = shows.filter(show => show.channel === 'nessma');
+        let legendaryShows = shows.filter(show => show.legendary);
         this.setState({
             shows,
             featuredShows,
@@ -38,6 +85,7 @@ class ShowsProvider extends Component {
             alhiwarShows,
             wataniaShows,
             nessmaShows,
+            legendaryShows,
             loading: false
         })
         //set the necessery data to the state

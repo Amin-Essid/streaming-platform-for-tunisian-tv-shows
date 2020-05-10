@@ -58,3 +58,13 @@ body {
   font-size: 1rem;
   text-align: center;
 }
+
+.primary-button{
+  color: white;
+  background-color: #BF1515;
+}
+
+.secondary-button{
+  color: #BF1515;
+  border: 2px solid #BF1515;
+}

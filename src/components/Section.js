@@ -36,7 +36,8 @@ export default class Section extends Component{
 
     createBoxes = (width) =>{
         let boxWidth = parseInt(this.props.boxWidth.slice(0, 3));
-        let boxesNumber = Math.floor(width / boxWidth) || 1;
+        let factor = Math.floor(width / boxWidth);
+        let boxesNumber = Math.floor(width / (boxWidth + factor*3)) || 1;
         if (this.state.firstUpload){
         this.setState({
             boxesNumber,
@@ -90,7 +91,7 @@ export default class Section extends Component{
         return (
             <StyledSection>
                 <Arrow moveBoxesFunction={this.moveBoxesRight}  arrowSize={this.props.arrowSize} imgURL={rightArrow}/>
-                <Container createBoxes={this.createBoxes} loading={this.props.loading} containerShows={this.state.containerShows} boxWidth={this.props.boxWidth} boxHeight={this.props.boxHeight}  />
+                <Container containerMaxWidth={this.props.containerMaxWidth} createBoxes={this.createBoxes} loading={this.props.loading} containerShows={this.state.containerShows} boxWidth={this.props.boxWidth} boxHeight={this.props.boxHeight}  />
                 <Arrow moveBoxesFunction={this.moveBoxesLeft}  arrowSize={this.props.arrowSize} imgURL={leftArrow}/>
             </StyledSection>
         )

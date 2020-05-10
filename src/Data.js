@@ -391,7 +391,6 @@ export default [
         channel: 'attessia',
         type: 'comedy',
         img: [boulice ],
-        featured: false,
         seasons: [
             [
                 {
@@ -547,6 +546,7 @@ export default [
         type: 'comedy',
         img: [choufliHal],
         featured: true,
+        legendary: true,
         seasons: [
             [
                 {
@@ -733,7 +733,6 @@ export default [
         channel: 'watania',
         type: 'comedy',
         img: [darLkhleaa],
-        featured: false,
         seasons: [
             [
                 {
@@ -1198,7 +1197,7 @@ export default [
         channel: 'watania',
         type: 'drama',
         img: [hsabetWakabet],
-        featured: false,
+        legendary: true,
         seasons: [
             [
                 {
@@ -1253,7 +1252,7 @@ export default [
         channel: 'watania',
         type: 'drama',
         img: [khoutabAlbeb],
-        featured: false,
+        legendary: true,
         seasons: [
             [
                 {
@@ -1308,7 +1307,7 @@ export default [
         channel: 'alhiwar',
         type: 'drama',
         img: [maktoub],
-        featured: false,
+        legendary: true,
         seasons: [
             [
                 {
@@ -1752,6 +1751,7 @@ export default [
         type: 'drama',
         img: [nouba],
         featured: true,
+        legendary: true,
         seasons: [
             [
                 {
@@ -1906,7 +1906,6 @@ export default [
         channel: 'nessma',
         type: 'comedy',
         img: [nsibtiLaziza],
-        featured: false,
         seasons: [
             [
                 {
@@ -2349,7 +2348,7 @@ export default [
         channel: 'watania',
         type: 'drama',
         img: [saydRim],
-        featured: false,
+        legendary: true,
         seasons: [
             [
                 {
