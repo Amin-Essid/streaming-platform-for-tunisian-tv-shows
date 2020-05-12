@@ -32,7 +32,7 @@ export default class Container extends Component {
                 
                         <CSSTransition
                             key={box.id}
-                            timeout={250}
+                            timeout={150}
                             classNames="fade"
                         >
                             <Box 

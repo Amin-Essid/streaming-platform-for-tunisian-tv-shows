@@ -1,18 +1,61 @@
-import React from 'react';
+import React, {useState} from 'react';
 import menuIcon from '../images/icons/menuIcon.png';
+import {Link} from 'react-router-dom';
 
-export default function Navbar() {
+function Navbar() {
     return (
-        <div className="navbar">
-            <div className="navbar-items">
-                <div className="navbar-items__logo">
-                    <img src="" alt=""/>
-                </div>
-                <input type="text" className="navbar-items__search" placeholder="بحث"/>
-                <div className="navbar-items__icon">
-                    <img src={menuIcon} alt="menu"/>
-                </div>
-            </div>
+        <nav className="navbar">
+            
+                <span className='nav-item'>
+                  <Link to='#' className='nav-item__link'>
+                    رمضان 2020
+                  </Link>
+                </span>
+                <span className='nav-item'>
+                  <Link to='#' className='nav-item__link'>كل المسلسلات </Link>
+                </span>
+                <span className='nav-item'>
+                  <Link to='#' className='nav-item__link'> اتصل بنا</Link>
+                </span>
+                <DropdownNavItem content={<img src={menuIcon} alt="menu"/>}>
+                    <DropdownMenu></DropdownMenu>
+                </DropdownNavItem>
+                
+            
+        </nav>
+    )
+}
+
+function DropdownNavItem(props){
+    const [open, setOpen] = useState(false);
+    return (
+        <span className='menu-icon'>
+          <Link to="#" className="nav-item__link" onClick={() => setOpen(!open)}>
+            {props.content}
+          </Link>
+    
+          {open && props.children}
+        </span>
+      );
+}
+
+function DropdownMenu(){
+
+    function DropdownItem(props) {
+        return (
+          <Link to="#" className="dropdown-item">
+            {props.children}
+          </Link>
+        );
+      }
+
+    return (
+        <div className='dropdown'>
+            <DropdownItem>رمضان 2020</DropdownItem>
+            <DropdownItem>كل المسلسلات</DropdownItem>
+            <DropdownItem>اتصل بنا</DropdownItem>
         </div>
     )
 }
+
+export default Navbar

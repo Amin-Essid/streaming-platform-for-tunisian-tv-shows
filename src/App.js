@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/Home';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import TvShows from './pages/TvShows'
 import SingleTvShow from './pages/SingleTvShow';
 import Stream from "./pages/Stream";
@@ -11,7 +11,7 @@ import Errr from './pages/Error';
 function App() {
   return (
     <>
-      <Navbar />
+      <Header />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/TvShows' component={TvShows} />

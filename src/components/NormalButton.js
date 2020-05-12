@@ -9,13 +9,17 @@ let StyledNormalButton = styled.div`
     width: ${props => props.buttonWidth};
     height: ${props => props.buttonHeight};
     border-radius: 5px;
-    box-shadow: 0 1.5px 4px black;
+    box-shadow: 0 3px 6px grey;
     cursor: pointer;
     font-weight: medium;
     font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    &:hover {
+    transform: scale(1.03);
+    filter: brightness(1.2);
+}
 `
 
 
