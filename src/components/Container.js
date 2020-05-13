@@ -39,6 +39,7 @@ export default class Container extends Component {
                                 key={box.id} 
                                 name={box.name} 
                                 img = {box.img[0]} 
+                                lnk={`/${box.type}/${box.name}`}
                                 boxWidth={this.props.boxWidth} 
                                 boxHeight={this.props.boxHeight} 
                             />

@@ -14,9 +14,9 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/TvShows' component={TvShows} />
-        <Route exact path='/:sts' component={SingleTvShow} />
-        <Route exact path='/:sts/:strm' component={Stream} />
+        <Route exact path='/:showsType' component={TvShows} />
+        <Route exact path='/:showsType/:stvs' component={SingleTvShow} />
+        <Route exact path='/:showsType/:stvs/:stream' component={Stream} />
         <Route component={Errr} />
       </Switch>
     </>

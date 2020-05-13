@@ -7,12 +7,12 @@ function Navbar() {
         <nav className="navbar">
             
                 <span className='nav-item'>
-                  <Link to='#' className='nav-item__link'>
+                  <Link to='/ramdhan' className='nav-item__link'>
                     رمضان 2020
                   </Link>
                 </span>
                 <span className='nav-item'>
-                  <Link to='#' className='nav-item__link'>كل المسلسلات </Link>
+                  <Link to='/all' className='nav-item__link'>كل المسلسلات </Link>
                 </span>
                 <span className='nav-item'>
                   <Link to='#' className='nav-item__link'> اتصل بنا</Link>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import data from './Data';
 import WataniaImg from './images/channels/watania.png';
-import alhiwarImg from './images/channels/watania.png';
+import alhiwarImg from './images/channels/alhiwar.png';
 import AttessiaImg from './images/channels/attessia.png';
 import NessmaImg from './images/channels/nessma.png';
 
@@ -15,42 +15,26 @@ class ShowsProvider extends Component {
             {
                 id: 111,
                 name: 'watania',
-                img: [WataniaImg]
+                img: [WataniaImg],
+                type: 'channels'
             },
             {
                 id: 222,
                 name: 'alhiwar',
-                img: [alhiwarImg]
+                img: [alhiwarImg],
+                type: 'channels'
             },
             {
                 id: 333,
                 name: 'attessia',
-                img: [AttessiaImg]
+                img: [AttessiaImg],
+                type: 'channels'
             },
             {
                 id: 444,
                 name: 'nessma',
-                img: [NessmaImg]
-            },
-            {
-                id: 555,
-                name: 'watania',
-                img: [WataniaImg]
-            },
-            {
-                id: 666,
-                name: 'alhiwar',
-                img: [alhiwarImg]
-            },
-            {
-                id: 777,
-                name: 'attessia',
-                img: [AttessiaImg]
-            },
-            {
-                id: 888,
-                name: 'nessma',
-                img: [NessmaImg]
+                img: [NessmaImg],
+                type: 'channels'
             }
 
         ],

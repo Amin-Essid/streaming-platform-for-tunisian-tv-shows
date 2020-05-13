@@ -71,13 +71,13 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.navbar a {
   color: #F2506E;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
-.navbar {
-
-}
 
 .nav-item {
   width: auto;
@@ -150,11 +150,20 @@ a {
   background-color: #BF1515;
 }
 
+.primary-button a {
+  color: white;
+  font-weight: bold;
+}
+
 .secondary-button{
   color: #BF1515;
   border: 2px solid #BF1515;
 }
 
+.secondary-button a {
+  color: #BF1515;
+  font-weight: bold;
+}
 /* csstransition */
 /* Box enter */
 .fade-enter {
@@ -164,7 +173,7 @@ a {
 .fade-enter.fade-enter-active {
     opacity: 1;
     transform: scale(1);
-    transition: all 150ms ease;
+    transition: all 150ms linear;
 }
 
 /* Box exit */
@@ -175,9 +184,14 @@ a {
 .fade-exit.fade-exit-active {
     opacity: 0;
     transform: scale(0.95);
-    transition: all 150ms ease ;
+    transition: all 150ms linear
 }
 .fade-exit-done {
   opacity: 0;
+}
+
+/* give a margin to the Link component in box */
+.boxLink + .boxLink {
+  margin-right: 1em;
 }
 

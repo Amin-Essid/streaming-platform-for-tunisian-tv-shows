@@ -2,6 +2,7 @@ import React from 'react';
 import NormalButton from './NormalButton';
 import styled from 'styled-components';
 
+
 let StyledButtonsContainer = styled.div`
     display: flex;
     justify-content: center;
@@ -10,9 +11,10 @@ let StyledButtonsContainer = styled.div`
     margin-bottom: ${props => props.buttonsMargin[1]};
 `
 
-export default function ButtonsContainer({buttonsContent, buttonsWidth, buttonsHeight, buttonsStyle, buttonsMargin}) {
+export default function ButtonsContainer({buttonsContent, buttonsWidth, buttonsHeight, buttonsStyle, buttonsMargin, links}) {
     let buttons = buttonsContent.map((button, index)=> {
-        return <NormalButton key={index} buttonContent={button} buttonsWidth={buttonsWidth[index]} buttonsHeight={buttonsHeight[index]} buttonsStyle={buttonsStyle[index]} />
+        return <NormalButton lnk={links[index]} key={index} buttonContent={button} buttonsWidth={buttonsWidth[index]} buttonsHeight={buttonsHeight[index]} buttonsStyle={buttonsStyle[index]} />
+
     })
     return (
         <StyledButtonsContainer buttonsMargin={buttonsMargin}>

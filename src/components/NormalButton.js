@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 let StyledNormalButton = styled.div`
     & + & {
@@ -24,8 +25,13 @@ let StyledNormalButton = styled.div`
 
 
 
-export default function NormalButton({buttonContent, buttonsWidth, buttonsHeight, buttonsStyle}) {
+export default function NormalButton({buttonContent, buttonsWidth, buttonsHeight, buttonsStyle, lnk}) {
     return (
-        <StyledNormalButton buttonWidth={buttonsWidth} buttonHeight={buttonsHeight} className={buttonsStyle}>{buttonContent}</StyledNormalButton>
+        <StyledNormalButton
+         buttonWidth={buttonsWidth} 
+         buttonHeight={buttonsHeight} 
+         className={buttonsStyle}>
+         <Link to={`/${lnk}`}>{buttonContent}</Link>
+         </StyledNormalButton>
     )
 }
