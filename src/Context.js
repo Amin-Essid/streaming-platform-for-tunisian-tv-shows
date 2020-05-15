@@ -11,6 +11,9 @@ class ShowsProvider extends Component {
     state = {
         loading: true,
         shows: [],
+        type: 'كل المسلسلات',
+        year:'الكل',
+        channel:'كل القنوات',
         channels: [
             {
                 id: 111,
@@ -20,7 +23,7 @@ class ShowsProvider extends Component {
             },
             {
                 id: 222,
-                name: 'الحوار',
+                name: 'الحوار التونسي',
                 img: [alhiwarImg],
                 type: 'channels'
             },
@@ -72,17 +75,79 @@ class ShowsProvider extends Component {
             legendaryShows,
             loading: false
         })
-        //set the necessery data to the state
-
     }
 
-    //format the data
-    // set the new state
-    // create the passed functions to provider
+
+
+    // get types and years
+    getUnique = (items, value) => {
+        return [...new Set(items.map(item => item[value]))]
+    }    
+
+    //auto select the shows using the url
+    getShows = (slug) => {
+        if (this.getUnique(this.state.shows, 'type').includes(slug)){
+            this.setState({
+                type :slug
+            }, this.filterShows)
+        } else if (this.getUnique(this.state.shows, 'year').includes(slug)) {
+            this.setState({
+                year :slug
+            }, this.filterShows) 
+        } else {
+            this.setState({
+                channel :slug
+            }, this.filterShows) 
+        }
+    };
+
+    handleChange = event => {
+        const target = event.target;
+        const value = target.value;
+        const name = event.target.name;
+        this.setState({
+            [name] :value
+        }, this.filterShows)
+        
+    }
+
+    filterShows = () => {
+        let {        
+            type,
+            shows,
+            year, 
+            channel} = this.state
+
+        // all the rooms
+        let tempShows = [...shows];
+
+
+        // filter by type
+        if(type !== 'كل المسلسلات'){
+            tempShows = tempShows.filter(show => show.type === type)
+        }
+
+        // filter by year
+        if(year !== 'الكل'){
+            tempShows = tempShows.filter(show => show.year === year)
+        }  
+        
+        // filter by type
+        if(channel !== 'كل القنوات'){
+            tempShows = tempShows.filter(show => show.channel === channel)
+        }        
+
+
+        // change state
+        this.setState({
+            filtredShows: tempShows
+        })
+    }
+
 
     render(){
         return(
-            <ShowsContext.Provider value = {{...this.state}}>
+            <ShowsContext.Provider value = {{...this.state, getShows: this.getShows, handleChange: this.handleChange, getUnique: this.getUnique}}>
                 {this.props.children}
             </ShowsContext.Provider>
         )

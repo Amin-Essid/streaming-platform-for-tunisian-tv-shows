@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function SelectButton() {
+export default function Footer() {
     return (
         <div>
-            <h4>selevt button</h4>
+            
         </div>
     )
 }

@@ -90,9 +90,24 @@ export default class Section extends Component{
     render(){
         return (
             <StyledSection>
-                <Arrow moveBoxesFunction={this.moveBoxesRight}  arrowSize={this.props.arrowSize} imgURL={rightArrow}/>
-                <Container containerMaxWidth={this.props.containerMaxWidth} createBoxes={this.createBoxes} loading={this.props.loading} containerShows={this.state.containerShows} boxWidth={this.props.boxWidth} boxHeight={this.props.boxHeight}  />
-                <Arrow moveBoxesFunction={this.moveBoxesLeft}  arrowSize={this.props.arrowSize} imgURL={leftArrow}/>
+                <Arrow 
+                    moveBoxesFunction={this.moveBoxesRight}  
+                    arrowSize={this.props.arrowSize} 
+                    imgURL={rightArrow}
+                />
+                <Container 
+                    containerMaxWidth={this.props.containerMaxWidth} 
+                    createBoxes={this.createBoxes} 
+                    loading={this.props.loading} 
+                    containerShows={this.state.containerShows} 
+                    boxWidth={this.props.boxWidth} 
+                    boxHeight={this.props.boxHeight}  
+                />
+                <Arrow 
+                    moveBoxesFunction={this.moveBoxesLeft}  
+                    arrowSize={this.props.arrowSize} 
+                    imgURL={leftArrow}
+                />
             </StyledSection>
         )
         }

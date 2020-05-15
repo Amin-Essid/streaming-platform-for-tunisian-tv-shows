@@ -19,7 +19,7 @@ export default function Home() {
                 boxHeight='220px'
             />
             <ButtonsContainer 
-                links={['ramdhan', 'all']}
+                links={['2020', 'كل-المسلسلات']}
                 buttonsContent={['رمضان 2020', 'كل المسلسلات']} 
                 buttonsWidth={['130px', '130px']} 
                 buttonsHeight={['43px', '43px']} 
@@ -35,7 +35,7 @@ export default function Home() {
                 boxHeight='100px'
             />
             <ButtonsContainer 
-            links={['legendary', 'legendary']}
+            links={['مسلسلات-زمان', 'مسلسلات-زمان']}
                 buttonsContent={['مسلسلات زمان', 'المزيد']} 
                 buttonsWidth={['130px', '70px']} 
                 buttonsHeight={['35px', '35px']} 
@@ -51,7 +51,7 @@ export default function Home() {
                 boxHeight='200px'
             />
             <ButtonsContainer 
-                links={['comedy', 'comedy']}
+                links={['كوميديا', 'كوميديا']}
                 buttonsContent={['كوميديا', 'المزيد']} 
                 buttonsWidth={['130px', '70px']} 
                 buttonsHeight={['35px', '35px']} 
@@ -67,7 +67,7 @@ export default function Home() {
                 boxHeight='200px'
             />
             <ButtonsContainer 
-                links={['drama', 'drama']}
+                links={['دراما', 'دراما']}
                 buttonsContent={['دراما', 'المزيد']} 
                 buttonsWidth={['130px', '70px']} 
                 buttonsHeight={['35px', '35px']} 

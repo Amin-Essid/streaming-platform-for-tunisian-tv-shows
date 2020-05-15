@@ -1,27 +1,30 @@
 import React, { Component } from 'react';
 import {ShowsContext} from '../Context';
+import ShowsContainer from '../components/ShowsContainer';
 
 export default class TvShows extends Component {
     constructor(props) {
         super(props)
         
         this.state = {
-            showsType: this.props.match.params.showsType
+            showsType: this.props.match.params.showsType.replace('-', ' ')
         }
     }
     
     componentWillReceiveProps(nextProps) {
         this.setState({
-            showsType: nextProps.match.params.showsType
+            showsType: nextProps.match.params.showsType.replace('-', ' ')
         })
         }
 
     static contextType = ShowsContext;
+
+
     
     render() {
         return (
             <>
-                <h1>{`tv shows: ${this.state.showsType}`}</h1>
+                <ShowsContainer defaultSelect={this.state.showsType} />
             </>
         )
     }

@@ -27,11 +27,13 @@ let StyledNormalButton = styled.div`
 
 export default function NormalButton({buttonContent, buttonsWidth, buttonsHeight, buttonsStyle, lnk}) {
     return (
+        <Link className='boxLink' to={`/${lnk}`}>
         <StyledNormalButton
          buttonWidth={buttonsWidth} 
          buttonHeight={buttonsHeight} 
          className={buttonsStyle}>
-         <Link to={`/${lnk}`}>{buttonContent}</Link>
+         {buttonContent}
          </StyledNormalButton>
+         </Link>
     )
 }

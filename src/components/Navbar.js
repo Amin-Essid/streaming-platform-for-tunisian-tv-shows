@@ -12,7 +12,7 @@ function Navbar() {
                   </Link>
                 </span>
                 <span className='nav-item'>
-                  <Link to='/all' className='nav-item__link'>كل المسلسلات </Link>
+                  <Link to='/كل-المسلسلات' className='nav-item__link'>كل المسلسلات </Link>
                 </span>
                 <span className='nav-item'>
                   <Link to='#' className='nav-item__link'> اتصل بنا</Link>
@@ -52,7 +52,7 @@ function DropdownMenu(){
     return (
         <div className='dropdown'>
             <DropdownItem><Link to="/2020">رمضان 2020</Link></DropdownItem>
-            <DropdownItem><Link to="/all">كل المسلسلات</Link></DropdownItem>
+            <DropdownItem><Link to="/كل-المسلسلات">كل المسلسلات</Link></DropdownItem>
             <DropdownItem><Link to="#">اتصل بنا</Link></DropdownItem>
         </div>
     )
