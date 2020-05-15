@@ -14,25 +14,25 @@ class ShowsProvider extends Component {
         channels: [
             {
                 id: 111,
-                name: 'watania',
+                name: 'الوطنية',
                 img: [WataniaImg],
                 type: 'channels'
             },
             {
                 id: 222,
-                name: 'alhiwar',
+                name: 'الحوار',
                 img: [alhiwarImg],
                 type: 'channels'
             },
             {
                 id: 333,
-                name: 'attessia',
+                name: 'التاسعة',
                 img: [AttessiaImg],
                 type: 'channels'
             },
             {
                 id: 444,
-                name: 'nessma',
+                name: 'نسمة',
                 img: [NessmaImg],
                 type: 'channels'
             }
@@ -53,12 +53,12 @@ class ShowsProvider extends Component {
     componentDidMount(){
         let shows = data;
         let featuredShows = shows.filter(show => show.featured);
-        let comedyShows = shows.filter(show => show.type === 'comedy');
-        let dramaShows = shows.filter(show => show.type === 'drama');
-        let attessiaShows = shows.filter(show => show.channel === 'attessia');
-        let alhiwarShows = shows.filter(show => show.channel === 'alhiwar');
-        let wataniaShows = shows.filter(show => show.channel === 'watania');
-        let nessmaShows = shows.filter(show => show.channel === 'nessma');
+        let comedyShows = shows.filter(show => show.type === 'كوميديا');
+        let dramaShows = shows.filter(show => show.type === 'دراما');
+        let attessiaShows = shows.filter(show => show.channel === 'التاسعة');
+        let alhiwarShows = shows.filter(show => show.channel === 'الحوار التونسي');
+        let wataniaShows = shows.filter(show => show.channel === 'الوطنية');
+        let nessmaShows = shows.filter(show => show.channel === 'نسمة');
         let legendaryShows = shows.filter(show => show.legendary);
         this.setState({
             shows,

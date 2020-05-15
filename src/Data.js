@@ -15,10 +15,10 @@ import  saydRim from './images/series/saydRim.png';
 export default [
     {
         id: 1,
-        name: 'awledMoufida',
+        name: 'أولاد مفيدة',
         year: '2015',
-        channel: 'alhiwar',
-        type: 'drama',
+        channel: 'الحوار التونسي',
+        type: 'دراما',
         img: [awledMoufida],
         featured: true,
         seasons: [
@@ -386,10 +386,10 @@ export default [
     },
     {
         id: 2,
-        name: 'boulice ',
+        name: 'بوليس',
         year: '2018',
-        channel: 'attessia',
-        type: 'comedy',
+        channel: 'التاسعة',
+        type: 'كوميديا',
         img: [boulice ],
         seasons: [
             [
@@ -540,10 +540,10 @@ export default [
     },
     {
         id: 3,
-        name: 'choufliHal',
+        name: 'شوفلي حل',
         year: '2006',
-        channel: 'watania',
-        type: 'comedy',
+        channel: 'الوطنية',
+        type: 'كوميديا',
         img: [choufliHal],
         featured: true,
         legendary: true,
@@ -728,10 +728,10 @@ export default [
     },
     {
         id: 4,
-        name: 'darLkhleaa',
+        name: 'دنيا أخرى',
         year: '2012',
-        channel: 'watania',
-        type: 'comedy',
+        channel: 'الوطنية',
+        type: 'كوميديا',
         img: [darLkhleaa],
         seasons: [
             [
@@ -882,10 +882,10 @@ export default [
     },
     {
         id: 5,
-        name: 'denyaOkhra',
-        year: 'comedy',
-        channel: 'alhiwar',
-        type: 'comedy',
+        name: 'دنيا أخرى',
+        year: '2018',
+        channel: 'الحوار التونسي',
+        type: 'كوميديا',
         img: [denyaOkhra],
         featured: true,
         seasons: [
@@ -1109,10 +1109,10 @@ export default [
     },
     {
         id: 6,
-        name: 'galbDhib ',
+        name: 'قلب الذيب',
         year: '2020',
-        channel: 'watania',
-        type: 'drama',
+        channel: 'الوطنية',
+        type: 'دراما',
         img: [galbDhib ],
         featured: true,
         seasons: [
@@ -1192,10 +1192,10 @@ export default [
     },
     {
         id: 7,
-        name: 'hsabetWakabet',
+        name: 'حسابات و عقابات',
         year: '2002',
-        channel: 'watania',
-        type: 'drama',
+        channel: 'الوطنية',
+        type: 'دراما',
         img: [hsabetWakabet],
         legendary: true,
         seasons: [
@@ -1247,10 +1247,10 @@ export default [
     },
     {
         id: 8,
-        name: 'khoutabAlbeb',
+        name: 'خطاب على الباب',
         year: '1997',
-        channel: 'watania',
-        type: 'drama',
+        channel: 'الوطنية',
+        type: 'دراما',
         img: [khoutabAlbeb],
         legendary: true,
         seasons: [
@@ -1302,10 +1302,10 @@ export default [
     },
     {
         id: 9,
-        name: 'maktoub',
+        name: 'مكتوب',
         year: '2013',
-        channel: 'alhiwar',
-        type: 'drama',
+        channel: 'الحوار التونسي',
+        type: 'دراما',
         img: [maktoub],
         legendary: true,
         seasons: [
@@ -1745,10 +1745,10 @@ export default [
     },
     {
         id: 10,
-        name: 'nouba',
+        name: 'النوبة',
         year: '2019',
-        channel: 'attessia',
-        type: 'drama',
+        channel: 'نسمة',
+        type: 'دراما',
         img: [nouba],
         featured: true,
         legendary: true,
@@ -1901,10 +1901,10 @@ export default [
     },
     {
         id: 11,
-        name: 'nsibtiLaziza',
+        name: 'نسيبتي العزيزة',
         year: '2014',
-        channel: 'nessma',
-        type: 'comedy',
+        channel: 'نسمة',
+        type: 'كوميديا',
         img: [nsibtiLaziza],
         seasons: [
             [
@@ -2343,10 +2343,10 @@ export default [
     },
     {
         id: 12,
-        name: 'saydRim',
+        name: 'صيد الريم',
         year: '2000',
-        channel: 'watania',
-        type: 'drama',
+        channel: 'الوطنية',
+        type: 'دراما',
         img: [saydRim],
         legendary: true,
         seasons: [

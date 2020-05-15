@@ -47,12 +47,6 @@ body {
   margin: 0 auto;
 }
 
-.header-items__logo{
-  background-color: #F2506E;
-  width: 40px;
-  height: 35px;
-  border-radius: 5px;
-}
 
 .header-items__search{
   width: 140px;
@@ -76,6 +70,7 @@ a {
 .navbar a {
   color: #F2506E;
   font-weight: bolder;
+  font-size: 1.125rem;
 }
 
 
@@ -106,7 +101,7 @@ a {
   position: absolute;
   top: 71px;
   width:200px;
-  transform: translateX(70%);
+  transform: translateX(76%);
   background-color: #F2506E;
   border-radius: 5px;
   padding: 1em;
@@ -132,15 +127,34 @@ a {
   background-color: rgb(248, 114, 138);
 }
 
+/* style the logo */
+
+.miniLogo img {
+  height: 45px;
+  cursor: pointer;
+}
+.bigLogo img {
+  height: 51px;
+  cursor: pointer;
+}
+
+/* all media q */
+
 @media (min-width: 869px){
   .menu-icon {
     display:none;
+  }
+  .miniLogo {
+    display: none;
   }
 }
 
 @media (max-width: 869px){
   .nav-item {
     display:none;
+  }
+  .bigLogo {
+    display: none;
   }
 }
 

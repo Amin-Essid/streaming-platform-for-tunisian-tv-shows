@@ -1,16 +1,16 @@
 import React from 'react';
-
 import NavBar from './Navbar';
+import Logo from '../images/icons/newLogo.png';
+import MiniLogo from '../images/icons/newMiniLogo.png';
+import {Link} from 'react-router-dom';
 
 export default function Header() {
     return (
         <div className="header">
             <div className="header-items">
-                <div className="header-items__logo">
-                    <img src="" alt=""/>
-                </div>
-                {/* <input type="text" className="header-items__search" placeholder="بحث"/> */}
-                <NavBar />
+                <Link className='bigLogo' to='/'><img  src={Logo} alt="Logo"/></Link>
+                <Link className='miniLogo' to='/'><img src={MiniLogo} alt="Logo"/></Link>
+            <NavBar />
             </div>
         </div>
     )

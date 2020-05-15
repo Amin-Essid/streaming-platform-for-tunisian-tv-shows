@@ -7,7 +7,7 @@ function Navbar() {
         <nav className="navbar">
             
                 <span className='nav-item'>
-                  <Link to='/ramdhan' className='nav-item__link'>
+                  <Link to='/2020' className='nav-item__link'>
                     رمضان 2020
                   </Link>
                 </span>
@@ -51,9 +51,9 @@ function DropdownMenu(){
 
     return (
         <div className='dropdown'>
-            <DropdownItem>رمضان 2020</DropdownItem>
-            <DropdownItem>كل المسلسلات</DropdownItem>
-            <DropdownItem>اتصل بنا</DropdownItem>
+            <DropdownItem><Link to="/2020">رمضان 2020</Link></DropdownItem>
+            <DropdownItem><Link to="/all">كل المسلسلات</Link></DropdownItem>
+            <DropdownItem><Link to="#">اتصل بنا</Link></DropdownItem>
         </div>
     )
 }
