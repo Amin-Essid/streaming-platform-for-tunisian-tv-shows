@@ -11,11 +11,10 @@ export default class TvShows extends Component {
         }
     }
     
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            showsType: nextProps.match.params.showsType.replace('-', ' ')
-        })
-        }
+    static getDerivedStateFromProps(props, state){
+        return {showsType: props.match.params.showsType.replace('-', ' ')}
+    }
+
 
     static contextType = ShowsContext;
 
@@ -24,7 +23,7 @@ export default class TvShows extends Component {
     render() {
         return (
             <>
-                <ShowsContainer defaultSelect={this.state.showsType} />
+                <ShowsContainer defaultOption={this.state.showsType} />
             </>
         )
     }

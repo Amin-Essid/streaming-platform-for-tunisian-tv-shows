@@ -12,7 +12,7 @@ function Navbar() {
                   </Link>
                 </span>
                 <span className='nav-item'>
-                  <Link to='/كل-المسلسلات' className='nav-item__link'>كل المسلسلات </Link>
+                  <Link to='/كل-الأصناف' className='nav-item__link'>كل المسلسلات </Link>
                 </span>
                 <span className='nav-item'>
                   <Link to='#' className='nav-item__link'> اتصل بنا</Link>
@@ -43,16 +43,17 @@ function DropdownMenu(){
 
     function DropdownItem(props) {
         return (
-          <Link to="#" className="dropdown-item">
+          <li className="dropdown-item">
             {props.children}
-          </Link>
+          </li>
         );
       }
 
     return (
         <div className='dropdown'>
             <DropdownItem><Link to="/2020">رمضان 2020</Link></DropdownItem>
-            <DropdownItem><Link to="/كل-المسلسلات">كل المسلسلات</Link></DropdownItem>
+            <DropdownItem><Link to='/كل-الأصناف'>
+            كل المسلسلات</Link></DropdownItem>
             <DropdownItem><Link to="#">اتصل بنا</Link></DropdownItem>
         </div>
     )

@@ -212,25 +212,45 @@ a {
 
 /*  rooms fitler*/
 .filter-container {
-  padding: 5rem 0;
+  padding: 2.5em;
 }
 .filter-form {
-  width: 60vw;
+  width: 60%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 40px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
+
+.form-group {
+  font-size: 1.125rem;
+  text-align: center;
+
+}
+
+.form-group + .form-group {
+  margin-right: 3em;
+}
+
+
 
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5em;
+  background-color: #BF1515;
+  color: white;
+  width: 150px;
+  padding: .5em 0;
+  border-radius: 3px;
 }
 .form-control {
   width: 100%;
-  background: transparent;
-  font-size: 1rem;
+  background: white;
+  font-size: 1.125rem;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: bold;
+  padding: .25em 0;
+  color: #BF1515;
 }
 .size-inputs {
   display: flex;
@@ -247,16 +267,18 @@ a {
   font-size: 0.8rem;
   margin-left: 0.5rem;
 }
-@media screen and (min-width: 776px) {
+@media (max-width: 592px) {
   .filter-form {
-    width: 70vw;
+    width: 100%;
+    flex-direction: column;
+  }
+  .form-group label {
+      display: none;
+  }
+  .form-group + .form-group {
+    margin-right: 0em;
+    margin-top: 0.3em;
   }
 }
-@media screen and (min-width: 992px) {
-  .filter-form {
-    width: 95vw;
-    max-width: 1170px;
-  }
-}
-/* end of rooms fitler*/
+/* end of shows fitler*/
 

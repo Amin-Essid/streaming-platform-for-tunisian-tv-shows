@@ -11,8 +11,8 @@ class ShowsProvider extends Component {
     state = {
         loading: true,
         shows: [],
-        type: 'كل المسلسلات',
-        year:'الكل',
+        type: 'كل الأصناف',
+        year:'كل السنوات',
         channel:'كل القنوات',
         channels: [
             {
@@ -84,20 +84,34 @@ class ShowsProvider extends Component {
         return [...new Set(items.map(item => item[value]))]
     }    
 
+    resetData = () => {
+        this.setState({
+            type: 'كل الأصناف',
+            year:'كل السنوات',
+            channel:'كل القنوات'
+        })
+    }
+
     //auto select the shows using the url
     getShows = (slug) => {
-        if (this.getUnique(this.state.shows, 'type').includes(slug)){
+        if (this.getUnique(this.state.shows, 'type').includes(slug) || slug === 'كل الأصناف'){
             this.setState({
-                type :slug
+                type :slug,
+                year:'كل السنوات',
+                channel:'كل القنوات'
             }, this.filterShows)
-        } else if (this.getUnique(this.state.shows, 'year').includes(slug)) {
+        } else if (this.getUnique(this.state.shows, 'year').includes(slug) || slug === 'كل السنوات') {
             this.setState({
-                year :slug
+                year :slug,
+                type: 'كل الأصناف',
+                channel:'كل القنوات'
             }, this.filterShows) 
-        } else {
+        } else if (this.getUnique(this.state.shows, 'channel').includes(slug) || slug === 'كل القنوات'){
             this.setState({
-                channel :slug
-            }, this.filterShows) 
+                channel :slug,
+                type: 'كل الأصناف',
+                year:'كل السنوات'
+            }, ()=> this.filterShows) 
         }
     };
 
@@ -123,12 +137,12 @@ class ShowsProvider extends Component {
 
 
         // filter by type
-        if(type !== 'كل المسلسلات'){
+        if(type !== 'كل الأصناف'){
             tempShows = tempShows.filter(show => show.type === type)
         }
 
         // filter by year
-        if(year !== 'الكل'){
+        if(year !== 'كل السنوات'){
             tempShows = tempShows.filter(show => show.year === year)
         }  
         
@@ -147,7 +161,7 @@ class ShowsProvider extends Component {
 
     render(){
         return(
-            <ShowsContext.Provider value = {{...this.state, getShows: this.getShows, handleChange: this.handleChange, getUnique: this.getUnique}}>
+            <ShowsContext.Provider value = {{...this.state, getShows: this.getShows, handleChange: this.handleChange, getUnique: this.getUnique, resetData: this.resetData}}>
                 {this.props.children}
             </ShowsContext.Provider>
         )

@@ -1,28 +1,52 @@
-import React from 'react'
+import React, {Component} from 'react'
 import ShowsFilter from './ShowsFilter';
 import ShowsList from './ShowsList';
 import Loading from './Loading'; 
 import {withConsumer} from '../Context';
-import {useEffect} from 'react';
 
 
 
-function ShowsContainer({context, defaultSelect}) {
-    const {loading, filtredShows, shows, getShows} = context;
+class ShowsContainer extends Component {
+    constructor(props) {
+        super(props)
 
-        //auto select the shows using the url
-    useEffect( () => getShows(defaultSelect), [])
+        this.state = {
+             defaultOption: this.props.defaultOption,
+             context: this.props.context
+        }
+    }
+
+    componentDidMount(){
+        const {getShows} = this.props.context
+        getShows(this.state.defaultOption)
+    }
+
+    componentDidUpdate(prevProps, prevState){
+        const {getShows} = this.props.context
+        if (prevState.defaultOption !== this.props.defaultOption){
+            this.setState({
+                defaultOption: this.props.defaultOption
+            }, () => getShows(this.state.defaultOption))
+        }
+    }
+
+   
 
 
-    if(loading){
-        return <Loading/>
-    }else{
-        return (
-            <>
-                <ShowsFilter shows={shows}/>
-                <ShowsList shows={filtredShows}/>
-            </>
-        )
+    render(){
+
+        const {loading, filtredShows, shows} = this.props.context
+
+        if(loading){
+            return <Loading/>
+        }else{
+            return (
+                <>
+                    <ShowsFilter defaultOption={this.state.defaultOption} shows={shows}/>
+                    <ShowsList shows={filtredShows}/>
+                </>
+            )
+        }
     }
 }
 

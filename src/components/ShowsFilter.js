@@ -6,13 +6,29 @@ import {ShowsContext} from '../Context';
 
 
 export default class ShowsFilter extends Component {
-    static contextType = ShowsContext;
-    render() {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             type: '',
+             year: '', 
+             channel: '',
+             channels: '',
+             years: '',
+             types: '',
+             defaultOption: this.props.defaultOption
+        }
+    }
+    
 
-        const {shows, type, year, channel, handleChange, getUnique} = this.context;
+    
+    static contextType = ShowsContext;
+
+    componentDidMount(){
+        const {shows, type, year, channel, getUnique} = this.context;
 
         let types = getUnique(shows, 'type');
-        types = ['كل المسلسلات', ...types];
+        types = ['كل الأصناف', ...types];
         types = types.map((item,index)=>{
             return <option value={item} key={index}>{item}</option>
         });
@@ -20,7 +36,7 @@ export default class ShowsFilter extends Component {
 
         let years = getUnique(shows, 'year');
         years = years.sort((a, b) => {return parseInt(b) - parseInt(a)});
-        years = ['الكل', ...years];
+        years = ['كل السنوات', ...years];
         years = years.map((item,index)=>{
             return <option value={item} key={index}>{item}</option>
         });
@@ -31,36 +47,63 @@ export default class ShowsFilter extends Component {
         channels = channels.map((item,index)=>{
             return <option value={item} key={index}>{item}</option>
         });
+        this.setState({
+            type,
+            channel,
+            year,
+            types,
+            channels,
+            years
+        })
+    }
 
 
+    componentDidUpdate(prevProps, prevState){
+        const {type, year, channel} = this.context;
+        if(prevState.type !== type || prevState.year !== year || prevState.channel !== channel){
+            this.setState({
+                type,
+                year,
+                channel
+            })
+        }
 
+    }
+
+    componentWillUnmount(){
+        const {resetData} = this.context
+        resetData()
+    }
+
+
+    render() {
+        const {handleChange} = this.context
         return (
             <section className="filter-container">
             {/* <Title title="search-rooms" /> */}
             <form className="filter-form">
              
                 <div className="form-group">
-                    <label htmlFor="type">النوع</label>
+                    <label htmlFor="type">الصنف</label>
                     <select name="type" id="type" 
-                    value={type} className="form-control" onChange={handleChange} >
-                         {types}
+                    value={this.state.type} className="form-control" onChange={handleChange} >
+                         {this.state.types}
                     </select>
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="type">التاريخ</label>
                     <select name="year" id="year" 
-                    value={year} className="form-control" onChange={handleChange}>
-                         {years}
+                    value={this.state.year} className="form-control" onChange={handleChange}>
+                         {this.state.years}
                     </select>
                 </div>
-
 
                 <div className="form-group">
                     <label htmlFor="type">القناة</label>
                     <select name="channel" id="channel" 
-                    value={channel} className="form-control" onChange={handleChange}>
-                         {channels}
+                    value={this.state.channel} className="form-control" onChange={handleChange}>
+                         {this.state.channels}
                     </select>
                 </div>
             </form>
