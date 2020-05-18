@@ -27,7 +27,6 @@ export default class Container extends Component {
     
 
     render(){
-
         let boxes = this.props.containerShows.map(box => {
             let lnk = '';
             if (box.type === 'channels') lnk = `/${box.name}`
@@ -46,6 +45,7 @@ export default class Container extends Component {
                                 lnk={lnk}
                                 boxWidth={this.props.boxWidth} 
                                 boxHeight={this.props.boxHeight} 
+                                boxLinkStyle='boxLink'
                             />
                         </CSSTransition>
                 

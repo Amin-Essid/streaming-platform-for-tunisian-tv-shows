@@ -20,9 +20,9 @@ box-shadow: 0 3px 6px grey;
 
 
 
-export default function Box({img, boxWidth, boxHeight, lnk, boxContent, boxContentStyle}) {
+function Box({img, boxWidth, boxHeight, lnk, boxContent, boxContentStyle, boxLinkStyle}) {
     return (
-        <Link className='boxLink' to={lnk}>
+        <Link className= {boxLinkStyle} to={lnk}>
             <StyledBox boxWidth={boxWidth} boxHeight={boxHeight} img={img}>
                 {
                     boxContent ? <p className={boxContentStyle}>{boxContent}</p> : ''
@@ -31,3 +31,6 @@ export default function Box({img, boxWidth, boxHeight, lnk, boxContent, boxConte
         </Link>
     )
 }
+
+
+export default React.memo(Box)

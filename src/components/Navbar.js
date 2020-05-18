@@ -3,16 +3,17 @@ import menuIcon from '../images/icons/menuIcon.png';
 import {Link} from 'react-router-dom';
 
 function Navbar() {
+    let randomNumberToRefrech = () => Math.floor(Math.random()*100);
     return (
         <nav className="navbar">
             
                 <span className='nav-item'>
-                  <Link to='/2020' className='nav-item__link'>
+                  <Link to={() => `/2020${Math.floor(Math.random()*1000)}`} className='nav-item__link'>
                     رمضان 2020
                   </Link>
                 </span>
                 <span className='nav-item'>
-                  <Link to='/كل-الأصناف' className='nav-item__link'>كل المسلسلات </Link>
+                  <Link to={() => `/كل-الأصناف${Math.floor(Math.random()*1000)}`} className='nav-item__link'>كل المسلسلات </Link>
                 </span>
                 <span className='nav-item'>
                   <Link to='#' className='nav-item__link'> اتصل بنا</Link>
@@ -51,8 +52,8 @@ function DropdownMenu(){
 
     return (
         <div className='dropdown'>
-            <DropdownItem><Link to="/2020">رمضان 2020</Link></DropdownItem>
-            <DropdownItem><Link to='/كل-الأصناف'>
+            <DropdownItem><Link to={() => `/2020${Math.floor(Math.random()*1000)}`}>رمضان 2020</Link></DropdownItem>
+            <DropdownItem><Link to={() => `/كل-الأصناف${Math.floor(Math.random()*1000)}`}>
             كل المسلسلات</Link></DropdownItem>
             <DropdownItem><Link to="#">اتصل بنا</Link></DropdownItem>
         </div>

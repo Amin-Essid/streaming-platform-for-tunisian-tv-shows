@@ -209,10 +209,21 @@ a {
   margin-right: 1em;
 }
 
+.boxInShowsList{
+  margin-left: .75em;
+  margin-right: .75em;
+  margin-bottom: 1.5em;
+}
+
+.no-items-style {
+  text-align: center;
+  color: #5A668C;
+}
+
 
 /*  rooms fitler*/
 .filter-container {
-  padding: 2.5em;
+  padding: 3em;
 }
 .filter-form {
   width: 60%;
@@ -241,7 +252,8 @@ a {
   color: white;
   width: 150px;
   padding: .5em 0;
-  border-radius: 3px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px grey;
 }
 .form-control {
   width: 100%;
@@ -251,22 +263,10 @@ a {
   font-weight: bold;
   padding: .25em 0;
   color: #BF1515;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px grey;
 }
-.size-inputs {
-  display: flex;
-}
-.size-input {
-  width: 40%;
-  padding: 0.2rem;
-  border: 1px solid black;
-  border-radius: 0.3rem;
-  margin-right: 0.3rem;
-}
-.single-extra label {
-  display: inline-block;
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
-}
+
 @media (max-width: 592px) {
   .filter-form {
     width: 100%;

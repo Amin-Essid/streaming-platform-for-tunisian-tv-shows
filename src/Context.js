@@ -49,7 +49,8 @@ class ShowsProvider extends Component {
         alhiwarShows: [],
         attessiaShows: [],
         nessmaShows: [],
-        filtredShows: []
+        filtredShows: [],
+        randomNumberToRefresh: Math.random()
     }
 
     // set the state using the data:
@@ -92,26 +93,38 @@ class ShowsProvider extends Component {
         })
     }
 
+    replaceNumbersAt = (str, index) => {
+        let fixedString = str.substring(0, index);
+        let replacedString = str.substring(index, str.length);
+        replacedString  = replacedString.replace('.', '');
+        replacedString = replacedString.replace(/\d+/g, '');
+        return fixedString + replacedString
+    }
+
     //auto select the shows using the url
     getShows = (slug) => {
+        slug = this.replaceNumbersAt(slug, 4)
         if (this.getUnique(this.state.shows, 'type').includes(slug) || slug === 'كل الأصناف'){
             this.setState({
                 type :slug,
                 year:'كل السنوات',
-                channel:'كل القنوات'
+                channel:'كل القنوات',
+                randomNumberToRefresh: Math.random()
             }, this.filterShows)
         } else if (this.getUnique(this.state.shows, 'year').includes(slug) || slug === 'كل السنوات') {
             this.setState({
                 year :slug,
                 type: 'كل الأصناف',
-                channel:'كل القنوات'
+                channel:'كل القنوات',
+                randomNumberToRefresh: Math.random()
             }, this.filterShows) 
         } else if (this.getUnique(this.state.shows, 'channel').includes(slug) || slug === 'كل القنوات'){
             this.setState({
                 channel :slug,
                 type: 'كل الأصناف',
-                year:'كل السنوات'
-            }, ()=> this.filterShows) 
+                year:'كل السنوات',
+                randomNumberToRefresh: Math.random()
+            }, this.filterShows) 
         }
     };
 

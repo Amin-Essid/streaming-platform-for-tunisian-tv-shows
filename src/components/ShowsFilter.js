@@ -85,24 +85,39 @@ export default class ShowsFilter extends Component {
              
                 <div className="form-group">
                     <label htmlFor="type">الصنف</label>
-                    <select name="type" id="type" 
-                    value={this.state.type} className="form-control" onChange={handleChange} >
+                    <select 
+                    style={{border: this.state.type !== 'كل الأصناف' ? 
+                    '2px solid #BF1515' : '0.8px solid grey'}} 
+                    name="type" id="type" 
+                    value={this.state.type} 
+                    className="form-control" 
+                    onChange={handleChange} >
                          {this.state.types}
                     </select>
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="type">التاريخ</label>
-                    <select name="year" id="year" 
-                    value={this.state.year} className="form-control" onChange={handleChange}>
+                    <select
+                    style={{border: this.state.year !== 'كل السنوات' ? 
+                    '2px solid #BF1515' : '0.8px solid grey'}} 
+                    name="year" id="year" 
+                    value={this.state.year} 
+                    className="form-control" 
+                    onChange={handleChange}>
                          {this.state.years}
                     </select>
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="type">القناة</label>
-                    <select name="channel" id="channel" 
-                    value={this.state.channel} className="form-control" onChange={handleChange}>
+                    <select 
+                    style={{border: this.state.channel !== 'كل القنوات' ? 
+                    '2px solid #BF1515' : '0.8px solid grey'}} 
+                    name="channel" id="channel" 
+                    value={this.state.channel} 
+                    className="form-control" 
+                    onChange={handleChange}>
                          {this.state.channels}
                     </select>
                 </div>

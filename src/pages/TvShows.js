@@ -7,12 +7,15 @@ export default class TvShows extends Component {
         super(props)
         
         this.state = {
-            showsType: this.props.match.params.showsType.replace('-', ' ')
+            showsType: props.match.params.showsType
         }
     }
     
     static getDerivedStateFromProps(props, state){
-        return {showsType: props.match.params.showsType.replace('-', ' ')}
+        
+        return ({
+                showsType: props.match.params.showsType
+                })
     }
 
 
@@ -23,7 +26,7 @@ export default class TvShows extends Component {
     render() {
         return (
             <>
-                <ShowsContainer defaultOption={this.state.showsType} />
+                <ShowsContainer defaultOption={this.state.showsType.replace('-', ' ')} randomNumberToRefresh={this.state.randomNumberToRefresh} />
             </>
         )
     }
