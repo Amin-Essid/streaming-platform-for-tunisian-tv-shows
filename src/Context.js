@@ -14,6 +14,7 @@ class ShowsProvider extends Component {
         type: 'كل الأصناف',
         year:'كل السنوات',
         channel:'كل القنوات',
+        selectedShow: null,
         channels: [
             {
                 id: 111,
@@ -128,6 +129,14 @@ class ShowsProvider extends Component {
         }
     };
 
+    // auto select a single show using url
+    getSingleShow = (slug) => {
+            let selectedShow = this.state.shows.find(show => show.name === slug)
+            this.setState({
+                selectedShow
+            })
+    }
+
     handleChange = event => {
         const target = event.target;
         const value = target.value;
@@ -174,7 +183,7 @@ class ShowsProvider extends Component {
 
     render(){
         return(
-            <ShowsContext.Provider value = {{...this.state, getShows: this.getShows, handleChange: this.handleChange, getUnique: this.getUnique, resetData: this.resetData}}>
+            <ShowsContext.Provider value = {{...this.state, getShows: this.getShows, getSingleShow: this.getSingleShow, handleChange: this.handleChange, getUnique: this.getUnique, resetData: this.resetData}}>
                 {this.props.children}
             </ShowsContext.Provider>
         )

@@ -10,6 +10,10 @@
 *, *::before, *::after{
           box-sizing: border-box;
 }
+#root{
+  position: relative;
+  min-height: 100vh;
+}
 
 ul {
   list-style: none;
@@ -282,3 +286,159 @@ a {
 }
 /* end of shows fitler*/
 
+/* style singleShowPage */
+
+/* style seasons container */
+.seasons-style {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+.singleSeason-style {
+  padding: .5em;
+  background-color: #5A668C;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px grey;
+  cursor: pointer;
+}
+.singleSeason-style + .singleSeason-style {
+  margin-right: .5em;
+}
+.singleSeason-style_active {
+  padding: .5em;
+  background-color: white;
+  color: #5A668C;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px grey;
+  cursor: pointer;
+  border: 2px solid #5A668C;
+  margin: 0 .5em;
+  font-weight: bold;
+}
+
+@media (max-width: 592px) {
+  .singleSeason-style, .singleSeason-style_active{
+    font-size: .7rem;
+    margin-bottom: .7em;
+  }
+}
+
+/* style singleShow hero */
+
+.singleShow-page {
+  margin-top: 2em;
+}
+
+.singleShow-hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.singleShow-img {
+  width: 175px;
+  height: 125px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px grey;
+}
+
+.singleShow-description {
+  width: 100%;
+  max-width: 725px;
+  min-height: 125px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px grey;
+  margin-right: 2em;
+}
+
+@media (max-width: 592px) {
+  .singleShow-img {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+  }
+
+  .singleShow-description {
+  min-height: 100px;
+  }
+}
+
+/* style Episode component */
+.singleShow-EpisodesContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 85%;
+  margin: 2em auto;
+}
+
+.episode-style{
+  width: 150px;
+  height: 193px;
+  margin: 1.5em;
+  background-color: white;
+  box-shadow: 0 2px 4px grey;
+  border-radius: 5px;
+  transition: all 200ms linear;
+}
+
+.episode-style:hover  .episode-style_button {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.episode-style_image {
+  width: 150px;
+  height: 103px;
+}
+
+.episode-style_info {
+    width: 150px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    background-color: #5A668C;
+  }
+
+  .episode-style_names {
+    color: white;
+    margin-right: .7em;
+    margin-top: .3em;
+  }
+
+    .episode-style_seasonName {
+      font-size: 10px;
+      margin-bottom: .25em;
+
+    }
+    .episode-style_episodeName {
+      font-weight: bold;
+    }
+
+  .episode-style_button {
+    align-self: flex-end;
+    margin-left: .7em;
+  }
+  .episode-style_button button {
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #f20c1f;
+    color: white;
+    padding: .5em 1em;
+    box-shadow: 0 2px 4px grey;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  /* light pink: #F2B6CC
+   dark pink: #F2506E
+   light red: #F26B6B
+   dark red: #BF1515
+  background grey: #F2F2F2
+  dark blue: #5A668C
+*/

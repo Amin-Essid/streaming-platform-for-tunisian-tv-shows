@@ -11,8 +11,7 @@ export default class TvShows extends Component {
         }
     }
     
-    static getDerivedStateFromProps(props, state){
-        
+    static getDerivedStateFromProps(props, state){  
         return ({
                 showsType: props.match.params.showsType
                 })

@@ -3,7 +3,6 @@ import menuIcon from '../images/icons/menuIcon.png';
 import {Link} from 'react-router-dom';
 
 function Navbar() {
-    let randomNumberToRefrech = () => Math.floor(Math.random()*100);
     return (
         <nav className="navbar">
             

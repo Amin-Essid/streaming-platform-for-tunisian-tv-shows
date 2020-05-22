@@ -9,10 +9,7 @@ import {withConsumer} from '../Context';
 class ShowsContainer extends Component {
     constructor(props) {
         super(props)
-
-        // const {randomNumberToRefresh} = this.props.context;
         
-
         this.state = {
              defaultOption: this.props.defaultOption,
              context: this.props.context

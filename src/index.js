@@ -5,13 +5,16 @@ import App from './App.js';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {ShowsProvider} from './Context';
+import ScrollToTop from './ScrollToTop';
 
 
 ReactDOM.render(
   // {/* <React.StrictMode> */}
     <ShowsProvider>
       <Router>
-        <App />
+        <ScrollToTop>
+          <App />
+        </ScrollToTop>
       </Router>
     </ShowsProvider>
   // {/* </React.StrictMode> */}

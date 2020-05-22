@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import {ShowsContext} from '../Context';
+import OneShowContainer from '../components/OneShowContainer'
 
 export default class SingleTvShow extends Component {
     constructor(props) {
@@ -11,17 +11,20 @@ export default class SingleTvShow extends Component {
         }
     }
     
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            show: nextProps.match.params.stvs
-        })
-        }
 
-    static contextType = ShowsContext;
+    static getDerivedStateFromProps(props, state){  
+        return ({
+                show: props.match.params.stvs
+                })
+    }
+
+
     render() {
+
+
         return (
             <>
-                <h1>{`tv shows: ${this.state.show}`}</h1>
+                <OneShowContainer show={this.state.show} />
             </>
         )
     }

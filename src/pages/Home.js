@@ -1,5 +1,4 @@
 import React from 'react';
-import Ads from '../components/Ads';
 import Section from '../components/Section';
 import ButtonsContainer from '../components/ButtonsContainer';
 import {ShowsContext} from '../Context';
@@ -9,7 +8,6 @@ export default function Home() {
     let {loading, featuredShows, comedyShows, dramaShows, legendaryShows, channels} = context;
     return (
         <>
-            <Ads />
             <Section 
                 containerMaxWidth="700px" 
                 loading={loading} 
