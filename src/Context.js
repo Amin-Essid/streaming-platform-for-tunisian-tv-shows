@@ -91,7 +91,7 @@ class ShowsProvider extends Component {
             type: 'كل الأصناف',
             year:'كل السنوات',
             channel:'كل القنوات'
-        })
+        }, this.filterShows)
     }
 
     replaceNumbersAt = (str, index) => {
@@ -104,7 +104,10 @@ class ShowsProvider extends Component {
 
     //auto select the shows using the url
     getShows = (slug) => {
-        slug = this.replaceNumbersAt(slug, 4)
+        console.log(slug[0])
+        if (isNaN(slug[0])) {slug = this.replaceNumbersAt(slug, 7)}
+        else {slug = this.replaceNumbersAt(slug, 4)}
+        console.log(slug)
         if (this.getUnique(this.state.shows, 'type').includes(slug) || slug === 'كل الأصناف'){
             this.setState({
                 type :slug,

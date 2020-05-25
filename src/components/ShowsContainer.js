@@ -19,7 +19,10 @@ class ShowsContainer extends Component {
 
     componentDidMount(){
         const {getShows} = this.props.context
-        getShows(this.state.defaultOption)
+        this.setState({
+            defaultOption: this.props.defaultOption
+        }, () => getShows(this.state.defaultOption))
+        
     }
 
     componentDidUpdate(prevProps, prevState){

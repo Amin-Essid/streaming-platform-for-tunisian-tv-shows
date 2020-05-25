@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-export default function Stream() {
-    return (
-        <>
-            <h1>stream</h1>
-        </>
-    )
+export default class Stream extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        )
+    }
 }
+

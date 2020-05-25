@@ -12,16 +12,17 @@ let StyledShowsList = styled.div`
 
 export default function ShowsList({shows}) {
     shows = shows.map(show => {
-        return (<Box 
-            style = {{ marginBottom: "1em"}}
-            key={show.id} 
-            name={show.name} 
-            img = {show.img[0]}
-            lnk={`/${show.type}/${show.name}`}
-            boxWidth='220px' 
-            boxHeight='220px' 
-            boxLinkStyle = 'boxInShowsList'
-        />)
+        return (
+            <Box 
+                style = {{ marginBottom: "1em"}}
+                key={show.id} 
+                name={show.name} 
+                img = {show.img[0]}
+                lnk={`/${show.type}/${show.name}`}
+                boxWidth='220px' 
+                boxHeight='220px' 
+                boxLinkStyle = 'boxInShowsList'
+            />)
     })
 
     return (

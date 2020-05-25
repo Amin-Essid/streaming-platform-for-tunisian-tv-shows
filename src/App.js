@@ -28,3 +28,6 @@ function App() {
 }
 
 export default App;
+
+// key=API_KEY
+// AIzaSyB4R8zkjTG79Wc_s2pnJlqzZrwb-IbHIVI

@@ -16,7 +16,7 @@ export default [
     {
         id: 1,
         name: 'أولاد مفيدة',
-        year: '2015',
+        year: 'بعد2011',
         channel: 'الحوار التونسي',
         type: 'دراما',
         img: [awledMoufida],
@@ -607,7 +607,7 @@ export default [
     {
         id: 2,
         name: 'بوليس',
-        year: '2018',
+        year: 'بعد2011',
         channel: 'التاسعة',
         type: 'كوميديا',
         img: [boulice ],
@@ -793,7 +793,7 @@ export default [
     {
         id: 3,
         name: 'شوفلي حل',
-        year: '2006',
+        year: 'قبل2011',
         channel: 'الوطنية',
         type: 'كوميديا',
         img: [choufliHal],
@@ -1156,8 +1156,8 @@ export default [
     },
     {
         id: 4,
-        name: 'دنيا أخرى',
-        year: '2012',
+        name: 'دار الخلاعة',
+        year: 'بعد2011',
         channel: 'الوطنية',
         type: 'كوميديا',
         img: [darLkhleaa],
@@ -1399,7 +1399,7 @@ export default [
     {
         id: 5,
         name: 'دنيا أخرى',
-        year: '2018',
+        year: 'بعد2011',
         channel: 'الحوار التونسي',
         type: 'كوميديا',
         img: [denyaOkhra],
@@ -1885,7 +1885,7 @@ export default [
     {
         id: 7,
         name: 'حسابات و عقابات',
-        year: '2002',
+        year: 'قبل2011',
         channel: 'الوطنية',
         type: 'دراما',
         img: [hsabetWakabet],
@@ -1984,7 +1984,7 @@ export default [
     {
         id: 8,
         name: 'خطاب على الباب',
-        year: '1997',
+        year: 'قبل2011',
         channel: 'الوطنية',
         type: 'دراما',
         img: [khoutabAlbeb],
@@ -2083,7 +2083,7 @@ export default [
     {
         id: 9,
         name: 'مكتوب',
-        year: '2013',
+        year: 'بعد2011',
         channel: 'الحوار التونسي',
         type: 'دراما',
         img: [maktoub],
@@ -2674,7 +2674,7 @@ export default [
     {
         id: 10,
         name: 'النوبة',
-        year: '2019',
+        year: 'بعد2011',
         channel: 'نسمة',
         type: 'دراما',
         img: [nouba],
@@ -2918,7 +2918,7 @@ export default [
     {
         id: 11,
         name: 'نسيبتي العزيزة',
-        year: '2014',
+        year: 'بعد2011',
         channel: 'نسمة',
         type: 'كوميديا',
         img: [nsibtiLaziza],
@@ -3040,7 +3040,7 @@ export default [
                 }
             ]},
             {
-                season_id:1,
+                season_id:2,
                 episodes:[
                 {
                     ep_id: 1,
@@ -3156,7 +3156,7 @@ export default [
                 }
             ]},
             {
-                season_id:1,
+                season_id:3,
                 episodes:[
                 {
                     ep_id: 1,
@@ -3272,7 +3272,7 @@ export default [
                 }
             ]},
             {
-                season_id:1,
+                season_id:4,
                 episodes:[
                 {
                     ep_id: 1,
@@ -3388,7 +3388,7 @@ export default [
                 }
             ]},
             {
-                season_id:1,
+                season_id:5,
                 episodes:[
                 {
                     ep_id: 1,
@@ -3504,7 +3504,7 @@ export default [
                 }
             ]},
             {
-                season_id:1,
+                season_id:6,
                 episodes:[
                 {
                     ep_id: 1,
@@ -3624,7 +3624,7 @@ export default [
     {
         id: 12,
         name: 'صيد الريم',
-        year: '2000',
+        year: 'قبل2011',
         channel: 'الوطنية',
         type: 'دراما',
         img: [saydRim],

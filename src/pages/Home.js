@@ -17,7 +17,7 @@ export default function Home() {
                 boxHeight='220px'
             />
             <ButtonsContainer 
-                links={['2020', 'كل-المسلسلات']}
+                links={['2020', 'كل-الأصناف']}
                 buttonsContent={['رمضان 2020', 'كل المسلسلات']} 
                 buttonsWidth={['130px', '130px']} 
                 buttonsHeight={['43px', '43px']} 
@@ -33,7 +33,7 @@ export default function Home() {
                 boxHeight='100px'
             />
             <ButtonsContainer 
-            links={['مسلسلات-زمان', 'مسلسلات-زمان']}
+            links={['قبل2011', 'قبل2011']}
                 buttonsContent={['مسلسلات زمان', 'المزيد']} 
                 buttonsWidth={['130px', '70px']} 
                 buttonsHeight={['35px', '35px']} 
