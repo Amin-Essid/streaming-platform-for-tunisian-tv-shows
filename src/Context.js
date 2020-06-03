@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import data from './Data';
+import finalData from './FinalData';
 import WataniaImg from './images/channels/watania.png';
 import alhiwarImg from './images/channels/alhiwar.png';
 import AttessiaImg from './images/channels/attessia.png';
@@ -15,6 +16,9 @@ class ShowsProvider extends Component {
         year:'كل السنوات',
         channel:'كل القنوات',
         selectedShow: null,
+        selectedShowEpisodes: [],
+        currentSeasonIndex: null,
+        currentEpisodeIndex: null,
         channels: [
             {
                 id: 111,
@@ -56,7 +60,7 @@ class ShowsProvider extends Component {
 
     // set the state using the data:
     componentDidMount(){
-        let shows = data;
+        let shows = finalData;
         let featuredShows = shows.filter(show => show.featured);
         let comedyShows = shows.filter(show => show.type === 'كوميديا');
         let dramaShows = shows.filter(show => show.type === 'دراما');
@@ -93,6 +97,7 @@ class ShowsProvider extends Component {
             channel:'كل القنوات'
         }, this.filterShows)
     }
+
 
     replaceNumbersAt = (str, index) => {
         let fixedString = str.substring(0, index);
@@ -138,6 +143,22 @@ class ShowsProvider extends Component {
             this.setState({
                 selectedShow
             })
+    }
+
+    getSelectedShowEpisodes = (episodes) => {
+        this.setState({
+            selectedShowEpisodes: episodes
+        }, () => console.log(this.state.selectedShowEpisodes))
+    }
+
+    getCurrentVideoInfo = (seasonIndex, episodeIndex) => {
+        this.setState({
+            currentEpisodeIndex: episodeIndex,
+            currentSeasonIndex: seasonIndex
+        }, () => {
+            console.log(this.state.currentEpisodeIndex)
+            console.log(this.state.currentSeasonIndex)
+        })
     }
 
     handleChange = event => {
@@ -186,7 +207,7 @@ class ShowsProvider extends Component {
 
     render(){
         return(
-            <ShowsContext.Provider value = {{...this.state, getShows: this.getShows, getSingleShow: this.getSingleShow, handleChange: this.handleChange, getUnique: this.getUnique, resetData: this.resetData}}>
+            <ShowsContext.Provider value = {{...this.state, getShows: this.getShows, getSingleShow: this.getSingleShow, handleChange: this.handleChange, getUnique: this.getUnique, resetData: this.resetData, getSelectedShowEpisodes: this.getSelectedShowEpisodes, getCurrentVideoInfo: this.getCurrentVideoInfo}}>
                 {this.props.children}
             </ShowsContext.Provider>
         )

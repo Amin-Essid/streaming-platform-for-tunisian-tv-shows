@@ -21,6 +21,7 @@ export default [
         type: 'دراما',
         img: [awledMoufida],
         featured: true,
+        partsPerEpisodes: [3, 3, 3, 3, 3],
         seasons: [
             'PLFApv2COP4eouxGWNj5_CTrBrjl6RnIXO',
             'PLFApv2COP4ermf8wpxfGnxW--TsNGrUJs',
@@ -36,6 +37,7 @@ export default [
         channel: 'التاسعة',
         type: 'كوميديا',
         img: [boulice ],
+        partsPerEpisodes: [[3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], 1, [1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 2, 3, 3, 3]],
         seasons: [
             'PLTGtCMX0-RuJi0_QiP0FcZ2pwAkHGjWcF',
             'PLTGtCMX0-RuINRHGwGgO_Em3_lzstnx2N',
@@ -51,6 +53,7 @@ export default [
         img: [choufliHal],
         featured: true,
         legendary: true,
+        partsPerEpisodes: 0,
         seasons:[
             'PL6TjelGzBJrWK9Avy3doBfhc_VjKToZ1d',
             'PLtKHe7Z2QnnGstKc69LrO3xZwdN0LKhYR',
@@ -66,6 +69,7 @@ export default [
         channel: 'الوطنية',
         type: 'كوميديا',
         img: [darLkhleaa],
+        partsPerEpisodes: 0,
         seasons: [
             'PLtKHe7Z2QnnE4_0T09UwEIS80TMXsif_y'
         ]
@@ -77,6 +81,7 @@ export default [
         channel: 'الحوار التونسي',
         type: 'كوميديا',
         img: [denyaOkhra],
+        partsPerEpisodes: 0,
         featured: true,
         seasons: [
             'PLFApv2COP4eqyVmGeU3lsyR0nKzHaoGvW',
@@ -92,6 +97,7 @@ export default [
         type: 'دراما',
         img: [galbDhib ],
         featured: true,
+        partsPerEpisodes: 0,
         seasons: [
             'PLtKHe7Z2QnnFV995T-rpMOu8zKou-7GhE'
         ]
@@ -103,6 +109,7 @@ export default [
         channel: 'الوطنية',
         type: 'دراما',
         img: [hsabetWakabet],
+        partsPerEpisodes: 0,
         legendary: true,
         seasons: [
             'PLtKHe7Z2QnnHz84ac0npqDOAUHw_qmCOG'
@@ -115,6 +122,7 @@ export default [
         channel: 'الوطنية',
         type: 'دراما',
         img: [khoutabAlbeb],
+        partsPerEpisodes: 0,
         legendary: true,
         seasons: [
             'PL6TjelGzBJrVmWAy4DavaSkFRtDf0ELND',
@@ -129,6 +137,7 @@ export default [
         type: 'دراما',
         img: [maktoub],
         legendary: true, 
+        partsPerEpisodes: 0,
         seasons: [
             'PLvuiC-ftvBUXDX5WO0VYGBZHqYkFExR42',
             'PLvuiC-ftvBUU4e7LthVkUTiR-85zL4KjC',
@@ -145,6 +154,7 @@ export default [
         img: [nouba],
         featured: true,
         legendary: true,
+        partsPerEpisodes: 0,
         seasons: [
             'PLY1IpuB2HLWgQJKklNCQ-S_EFFZIIU05z'
         ]
@@ -156,6 +166,7 @@ export default [
         channel: 'نسمة',
         type: 'كوميديا',
         img: [nsibtiLaziza],
+        partsPerEpisodes: 0,
         seasons: [
             'PLY1IpuB2HLWj2VpoVGVSct7DUQZ_38EM5',
             'PLY1IpuB2HLWhoIwA7ymEvQuzAT85iRHcU',
@@ -175,6 +186,7 @@ export default [
         type: 'دراما',
         img: [saydRim],
         legendary: true,
+        partsPerEpisodes: 0,
         seasons: [
             'PLtKHe7Z2QnnHpJ0m_dOQjboLQMQ3vwwSu'
         ]

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Loading from './Loading'
 
-export default function Video() {
+const Video = ({videoId}) => {
+    if(!videoId) return <Loading />
+    const videoSrc = `https://www.youtube.com/embed/${videoId}`
     return (
-        <div>
-            <h2>video</h2>
+        <div className='videoPlayer'>
+            <iframe width='100%' height='100%' src={videoSrc} frameborder="0"></iframe>
         </div>
     )
 }
+
+export default Video

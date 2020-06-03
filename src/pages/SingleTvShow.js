@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
-import OneShowContainer from '../components/OneShowContainer'
+import OneShowContainer from '../components/OneShowContainer';
+import OneShowContainer2 from '../components/OneShowContainer2'
 
 export default class SingleTvShow extends Component {
     constructor(props) {
@@ -19,12 +20,13 @@ export default class SingleTvShow extends Component {
     }
 
 
-    render() {
 
+
+    render() {
 
         return (
             <>
-                <OneShowContainer show={this.state.show} />
+                <OneShowContainer2 show={this.state.show} />
             </>
         )
     }
