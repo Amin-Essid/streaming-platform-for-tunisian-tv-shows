@@ -447,6 +447,11 @@ a {
     margin: 1em auto;
   }
 
+  .otherEpisodes {
+    display: flex;
+    justify-content: space-between;
+  }
+
 
   /* CSSTransition */
   /* Box enter */

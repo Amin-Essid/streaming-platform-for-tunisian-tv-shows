@@ -6,7 +6,7 @@ const Video = ({videoId}) => {
     const videoSrc = `https://www.youtube.com/embed/${videoId}`
     return (
         <div className='videoPlayer'>
-            <iframe width='100%' height='100%' src={videoSrc} frameborder="0"></iframe>
+            <iframe width='100%' height='100%' src={videoSrc} frameBorder="0" title="video player"></iframe>
         </div>
     )
 }

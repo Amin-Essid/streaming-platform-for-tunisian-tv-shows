@@ -165,7 +165,7 @@ class OneShowContainer2 extends Component {
                                                                     image={episode.snippet.thumbnails.default.url} 
                                                                     playlistItems={this.state.episodes}
                                                                     episodeId={episode}
-                                                                    lnk={`/${selectedShow.type}/${selectedShow.name}/${episode.snippet.resourceId.videoId}`}
+                                                                    lnk={`/${selectedShow.type}/${selectedShow.name}/${selectedShow.seasons[this.state.activeSeason - 1]}||||${episode.snippet.resourceId.videoId}`}
                                                                     getCurrentVideoInfo={getCurrentVideoInfo}
                                                                 />
                                                             </CSSTransition>
