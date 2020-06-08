@@ -154,7 +154,7 @@ class ShowsProvider extends Component {
     getCurrentVideoInfo = (seasonIndex, episodeIndex) => {
         this.setState({
             currentEpisodeIndex: episodeIndex,
-            currentSeasonIndex: seasonIndex
+            currentSeasonIndex: seasonIndex,
         }, () => {
             console.log(this.state.currentEpisodeIndex)
             console.log(this.state.currentSeasonIndex)

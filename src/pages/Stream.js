@@ -18,7 +18,11 @@ class Stream extends Component {
              selectedShowEpisodes: this.props.context.selectedShowEpisodes,
              currentEpisodeIndex: this.props.context.currentEpisodeIndex,
              currentSeasonIndex: this.props.context.currentSeasonIndex,
-             selectedShow: this.props.context.selectedShow
+             selectedShow: this.props.context.selectedShow,
+             nextEpisodeLnk: null,
+             prevEpisodeLnk: null,
+             prevVideoTitle: null,
+            nextVideoTitle: null
 
         }
     }
@@ -29,8 +33,37 @@ class Stream extends Component {
             })
     }
 
-    componentDidMount() {
+    createOtherEpisodesLink = () => {
+        let {selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex,  selectedShow} = this.state;
+                let nextEpisodeIndex = currentEpisodeIndex+1;
+                let prevEpisodeIndex = currentEpisodeIndex-1;
+                let nextEpisodeLnk = nextEpisodeIndex < selectedShowEpisodes.length ? 
+                (`${selectedShow.seasons[currentSeasonIndex]}||||${selectedShowEpisodes[nextEpisodeIndex].snippet.resourceId.videoId}`) : '#';
+                let prevEpisodeLnk = prevEpisodeIndex >= 0 ? 
+                (`${selectedShow.seasons[currentSeasonIndex]}||||${selectedShowEpisodes[prevEpisodeIndex].snippet.resourceId.videoId}`) : '#';
+                let prevVideoTitle  = selectedShowEpisodes[prevEpisodeIndex] ? 
+                (selectedShowEpisodes[prevEpisodeIndex].snippet.title) : 'nowhere'
+                let nextVideoTitle  = selectedShowEpisodes[nextEpisodeIndex] ? 
+                (selectedShowEpisodes[nextEpisodeIndex].snippet.title) : 'nowhere'
+                console.log(prevEpisodeIndex)
+                this.setState({
+                    nextEpisodeLnk,
+                    prevEpisodeLnk,
+                    prevVideoTitle,
+                    nextVideoTitle
+                })
+    }
 
+    componentDidMount() {
+        this.createOtherEpisodesLink()
+        // let {type, show, currentEpisode, selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex,  selectedShow} = this.state;
+
+        // let nextEpisodeIndex = currentEpisodeIndex+1;
+        // let prevEpisodeIndex = currentEpisodeIndex-1;
+        // let nextEpisodeLnk = nextEpisodeIndex < selectedShowEpisodes.length ? 
+        // (`${selectedShow.seasons[currentSeasonIndex]}||||${selectedShowEpisodes[nextEpisodeIndex].snippet.resourceId.videoId}`) : null;
+        // let prevEpisodeLnk = prevEpisodeIndex >= 0 ? 
+        // (`${selectedShow.seasons[currentSeasonIndex]}||||${selectedShowEpisodes[prevEpisodeIndex].snippet.resourceId.videoId}`) : null;
     }
 
     componentDidUpdate(){
@@ -38,51 +71,64 @@ class Stream extends Component {
             this.setState({
                 currentEpisodeIndex: this.props.context.currentEpisodeIndex,
                 currentSeasonIndex: this.props.context.currentSeasonIndex,
-            })
-        }
+            }, ()=>{
+                this.createOtherEpisodesLink()})
+            }
     }
     
     render() {
-        let {type, show, currentEpisode, selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex,  selectedShow} = this.state;
+        let {type, show, currentEpisode, selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex,  selectedShow, prevEpisodeLnk, nextEpisodeLnk, prevVideoTitle, nextVideoTitle} = this.state;
         const {getCurrentVideoInfo} = this.state.context;
         currentEpisode = currentEpisode.split('||||')[1]
-        console.log(selectedShow)
-        console.log(type)
-        console.log(show)
-        console.log(currentEpisode)
-        console.log(selectedShowEpisodes)
-        console.log(currentSeasonIndex)
-        console.log(currentEpisodeIndex)
-        console.log(currentEpisodeIndex-1)
-        console.log(currentEpisodeIndex+1)
+        // console.log(selectedShow)
+        // console.log(type)
+        // console.log(show)
+        // console.log(currentEpisode)
+        // console.log(selectedShowEpisodes)
+        // console.log(currentSeasonIndex)
+        // console.log(currentEpisodeIndex)
+        // console.log(currentEpisodeIndex-1)
+        // console.log(currentEpisodeIndex+1)
+        let nextEpisodeIndex = currentEpisodeIndex+1;
+        let prevEpisodeIndex = currentEpisodeIndex-1;
+        // let nextEpisodeLnk = nextEpisodeIndex < selectedShowEpisodes.length ? 
+        // (`${selectedShow.seasons[currentSeasonIndex]}||||${selectedShowEpisodes[nextEpisodeIndex].snippet.resourceId.videoId}`) : null;
+        // let prevEpisodeLnk = prevEpisodeIndex >= 0 ? 
+        // (`${selectedShow.seasons[currentSeasonIndex]}||||${selectedShowEpisodes[prevEpisodeIndex].snippet.resourceId.videoId}`) : null;
 
         return (
             <>
                 <Video videoId={currentEpisode} />
-                <div className="otherEpisodes">
-                    <PreviousSeason 
-                    season={selectedShow.seasons[currentSeasonIndex - 1]} 
-                    
-                    />
-                    <NextSeason 
-                    season={selectedShow.seasons[currentSeasonIndex + 1]}  
+                {/* <div className="otherEpisodes">
+                <PreviousSeason 
+                    season={`الموسم${currentSeasonIndex - 1}`} 
                     getCurrentVideoInfo={getCurrentVideoInfo}
+                    lnk = {prevEpisodeLnk}
+                    seasonIndex={currentSeasonIndex - 1}
+                    episodeIndex={1}
                     />
-                </div>
+                <NextSeason 
+                    season={`الموسم${currentSeasonIndex + 1}`}   
+                    getCurrentVideoInfo={getCurrentVideoInfo}
+                    lnk = {`${selectedShow.seasons[currentSeasonIndex + 1]}||||${selectedShowEpisodes[1].snippet.resourceId.videoId}`}
+                    seasonIndex={currentSeasonIndex + 1}
+                    episodeIndex={1}
+                    />
+                </div> */}
                 <div className="otherEpisodes">
                     <PreviousEpisode 
-                    video={selectedShowEpisodes[currentEpisodeIndex-1]}
-                    lnk={`${selectedShow.seasons[currentSeasonIndex]}||||${selectedShowEpisodes[currentEpisodeIndex-1].snippet.resourceId.videoId}`}
+                    videoTitle={prevVideoTitle}
+                    lnk={prevEpisodeLnk}
                     getCurrentVideoInfo={getCurrentVideoInfo}
                     seasonIndex={currentSeasonIndex}
-                    episodeIndex={currentEpisodeIndex-1}
+                    episodeIndex={prevEpisodeIndex}
                      />
                     <NextEpisode 
-                    video={selectedShowEpisodes[currentEpisodeIndex+1]} 
+                    videoTitle={nextVideoTitle} 
                     getCurrentVideoInfo={getCurrentVideoInfo} 
                     seasonIndex={currentSeasonIndex}
-                    episodeIndex={currentEpisodeIndex+1}
-                    lnk = {`${selectedShow.seasons[currentSeasonIndex]}||||${selectedShowEpisodes[currentEpisodeIndex+1].snippet.resourceId.videoId}`}
+                    episodeIndex={nextEpisodeIndex}
+                    lnk = {nextEpisodeLnk}
                     />
                 </div>
             </>

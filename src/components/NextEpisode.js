@@ -1,17 +1,22 @@
-import React from 'react'
+import React from 'react';
 import {Link} from 'react-router-dom';
+import whiteLeftArrow from '../images/icons/whiteLeftArrow.png';
 
-export default function NextEpisode({video, getCurrentVideoInfo, seasonIndex, episodeIndex, lnk}) {
-    console.log(video)
-    console.log(lnk)
-    return (
-        <>
-            <Link to={lnk}>
-                <div onClick={() => getCurrentVideoInfo(seasonIndex, episodeIndex)}>
-                    {video.snippet.title}
-                
-                </div>
-            </Link>
-        </>
-    )
+export default function NextEpisode({videoTitle, getCurrentVideoInfo, seasonIndex, episodeIndex, lnk}) {
+
+    if(videoTitle === 'nowhere' ){
+        return null
+    } else {
+        return (
+            <>
+                <Link to={lnk} className='nextEpisode'>
+                    <div className='streamButton' onClick={() => getCurrentVideoInfo(seasonIndex, episodeIndex)}>
+                        
+                        <p>{videoTitle}</p>
+                        <img src={whiteLeftArrow} alt="whiteLeftArrow"/>
+                    </div>
+                </Link>
+            </>
+        )
+    }
 }

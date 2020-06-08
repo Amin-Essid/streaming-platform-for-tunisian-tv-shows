@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
-export default function NextSeason({season}) {
+export default function NextSeason({season, lnk, getCurrentVideoInfo, seasonIndex, episodeIndex}) {
     return (
-        <div>
-            {season}
-        </div>
+        <>
+            <Link to={lnk}>
+                <div onClick={() => getCurrentVideoInfo(seasonIndex, episodeIndex)}>
+                    {season}
+                
+                </div>
+            </Link>
+        </>
     )
 }

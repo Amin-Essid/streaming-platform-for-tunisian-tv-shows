@@ -448,8 +448,40 @@ a {
   }
 
   .otherEpisodes {
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .prevEpisode {
+    color: white;
+    padding: .3em .7em;
+    margin-left: .5em;
+    font-size: 1rem;
+    background-color: #5A668C;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px grey;
+  }
+
+  .nextEpisode {
+    padding: .3em .7em;
+    margin-right: .5em;
+    color: white;
+    font-size: 1rem;
+    background-color: #5A668C;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px grey;
+  }
+
+  .streamButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .streamButton img {
+    height: 32px;
+    margin-bottom: -0.2em;
   }
 
 
