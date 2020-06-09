@@ -29,6 +29,7 @@ class OneShowContainer2 extends Component {
 
 
     getRestOfPlaylist = async (rep, playlistId) => {
+        const {getSelectedShowEpisodes} = this.props.context;
             try {
                 const response = await youtube.get('playlistItems', {
                   params: {
@@ -44,7 +45,7 @@ class OneShowContainer2 extends Component {
                     episodes: allEpisodes
                 }
                 ,() => {
-                console.log(this.state.episodes)
+                    getSelectedShowEpisodes(this.state.episodes)
                  }
                 
                 )

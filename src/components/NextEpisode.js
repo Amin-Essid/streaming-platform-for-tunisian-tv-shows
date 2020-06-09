@@ -4,7 +4,7 @@ import whiteLeftArrow from '../images/icons/whiteLeftArrow.png';
 
 export default function NextEpisode({videoTitle, getCurrentVideoInfo, seasonIndex, episodeIndex, lnk}) {
 
-    if(videoTitle === 'nowhere' ){
+    if(videoTitle === 'nowhere' || lnk === null){
         return null
     } else {
         return (

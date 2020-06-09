@@ -442,16 +442,20 @@ a {
   /* stream page styles */
 
   .videoPlayer{
-    width: 80vw;
+    width: 97%;
+    max-width: 700px;
+    max-height: 550px;
     height: 60vh;
     margin: 1em auto;
+    border: 3px solid #5A668C;
+    border-radius: 5px;
   }
 
   .otherEpisodes {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 97%;
   }
 
   .prevEpisode {
@@ -462,6 +466,13 @@ a {
     background-color: #5A668C;
     border-radius: 5px;
     box-shadow: 0 2px 4px grey;
+    cursor: pointer;
+  }
+
+  .prevEpisode:active {
+    background-color: white;
+    color: #5A668C;
+    border: 3px solid #5A668C;
   }
 
   .nextEpisode {
@@ -472,6 +483,13 @@ a {
     background-color: #5A668C;
     border-radius: 5px;
     box-shadow: 0 2px 4px grey;
+    cursor: pointer;
+  }
+
+  .nextEpisode:active {
+    background-color: white;
+    color: #5A668C;
+    border: 3px solid #5A668C;
   }
 
   .streamButton {
@@ -483,6 +501,7 @@ a {
     height: 32px;
     margin-bottom: -0.2em;
   }
+
 
 
   /* CSSTransition */
