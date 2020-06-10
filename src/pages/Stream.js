@@ -58,7 +58,7 @@ class Stream extends Component {
             }
     }
 
-    getRestOfPlaylist = async (rep, playlistId) => {
+    getRestOfPlaylist = async (rep, playlistId, selectedShowEpisodes) => {
         const {getSelectedShowEpisodes} = this.props.context;
         try {
             const response = await youtube.get('playlistItems', {
@@ -70,13 +70,13 @@ class Stream extends Component {
                 key: 'AIzaSyB4R8zkjTG79Wc_s2pnJlqzZrwb-IbHIVI',
               }
           })
-            let allEpisodes = this.state.selectedShowEpisodes.concat(response.data.items)
+            let allEpisodes = selectedShowEpisodes.concat(response.data.items)
             this.setState({
                 selectedShowEpisodes: allEpisodes
             }
-            ,() => {
-                getSelectedShowEpisodes(this.state.selectedShowEpisodes)
-             }
+            // ,() => {
+            //     getSelectedShowEpisodes(this.state.selectedShowEpisodes)
+            //  }
             
             )
         } catch (err) {
@@ -97,16 +97,21 @@ getPlaylist = async (playlistId) => {
               key: 'AIzaSyB4R8zkjTG79Wc_s2pnJlqzZrwb-IbHIVI',
             }
         })
-          this.setState({
-            selectedShowEpisodes: response.data.items
-          },() => {
-            let displayedItems = response.data.pageInfo.resultsPerPage 
+        const selectedShowEpisodes = response.data.items
+        let displayedItems = response.data.pageInfo.resultsPerPage 
+        if (response.data.pageInfo.totalResults === displayedItems){
+            this.setState({
+                selectedShowEpisodes,
+              }, () => {
+                getSelectedShowEpisodes(this.state.selectedShowEpisodes)  
+                })
+        } else {
             while (response.data.pageInfo.totalResults > displayedItems) {
-                this.getRestOfPlaylist(response, playlistId)
+                await this.getRestOfPlaylist(response, playlistId, selectedShowEpisodes)
                 displayedItems = displayedItems + response.data.pageInfo.resultsPerPage
             }
             getSelectedShowEpisodes(this.state.selectedShowEpisodes)
-            })
+        }
             
       } catch (err) {
           console.log(err)
@@ -165,7 +170,7 @@ getPlaylist = async (playlistId) => {
     }
 
     componentDidUpdate(){
-        const {currentEpisode} = this.state
+        // const {currentEpisode} = this.state
         if (this.props.context.currentEpisodeIndex !== this.state.currentEpisodeIndex || this.props.context.currentSeasonIndex !== this.state.currentSeasonIndex) {
             this.setState({
                 currentEpisodeIndex: this.props.context.currentEpisodeIndex,
@@ -178,10 +183,11 @@ getPlaylist = async (playlistId) => {
                 selectedShow: this.props.context.selectedShow
             })
         }
-        // if(this.state.selectedShowEpisodes !== this.props.context.selectedShowEpisodes) {
+        // if(this.state.selectedShowEpisodes.length < this.props.context.selectedShowEpisodes.length) {
         //     this.setState({
         //     selectedShowEpisodes: this.props.context.selectedShowEpisodes
         //     }, ()=>{
+        //         console.log(this.state.selectedShowEpisodes)
         //         let currentEpisodeIndex = this.props.context.selectedShowEpisodes.findIndex(ep => ep.snippet.resourceId.videoId === currentEpisode)
         //         this.setState({
         //             currentEpisodeIndex
