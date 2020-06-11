@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import whiteRightArrow from '../images/icons/whiteRightArrow.png';
 
-export default function PreviousEpisode({videoTitle, getCurrentVideoInfo, seasonIndex, episodeIndex, lnk}) {
+function PreviousEpisode({videoTitle, getCurrentVideoInfo, seasonIndex, episodeIndex, lnk}) {
 
     if(videoTitle === 'nowhere' || lnk === null){
         return null
@@ -19,3 +19,5 @@ export default function PreviousEpisode({videoTitle, getCurrentVideoInfo, season
         )
     }
 }
+
+export default React.memo(PreviousEpisode)

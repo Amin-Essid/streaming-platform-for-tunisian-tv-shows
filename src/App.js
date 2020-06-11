@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import TvShows from './pages/TvShows'
 import SingleTvShow from './pages/SingleTvShow';
-import Stream from "./pages/Stream";
+import VideoPlayer from './pages/VideoPlayer';
 import {Route, Switch} from 'react-router-dom';
 import Errr from './pages/Error';
 import Footer from './components/Footer';
@@ -19,7 +19,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route exact path='/:showsType' component={TvShows} />
         <Route exact path='/:showsType/:stvs' component={SingleTvShow} />
-        <Route exact path='/:showsType/:stvs/:stream' component={Stream} />
+        <Route exact path='/:showsType/:stvs/:stream' component={VideoPlayer} />
         <Route component={Errr} />
       </Switch>
       <Footer />

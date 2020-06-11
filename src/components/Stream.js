@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React, { PureComponent  } from 'react';
 import {withConsumer} from '../Context';
-import Video from '../components/Video';
-import NextEpisode from '../components/NextEpisode';
-import PreviousEpisode from '../components/PreviousEpisode';
+import Video from './Video';
+import NextEpisode from './NextEpisode';
+import PreviousEpisode from './PreviousEpisode';
 import youtube from '../api/Youtube'; 
-import NextSeason from '../components/NextSeason';
-import PreviousSeason from '../components/PreviousSeason';
+import {withRouter} from 'react-router-dom';
+import Loading from './Loading';
+import NextSeason from './NextSeason';
+import PreviousSeason from './PreviousSeason';
 
-class Stream extends Component {
+class Stream extends PureComponent {
     constructor(props) {
         super(props)
     
@@ -26,6 +28,7 @@ class Stream extends Component {
             nextVideoTitle: null
 
         }
+
     }
 
     static getDerivedStateFromProps(props, state){  
@@ -59,7 +62,6 @@ class Stream extends Component {
     }
 
     getRestOfPlaylist = async (rep, playlistId, selectedShowEpisodes) => {
-        const {getSelectedShowEpisodes} = this.props.context;
         try {
             const response = await youtube.get('playlistItems', {
               params: {
@@ -73,20 +75,15 @@ class Stream extends Component {
             let allEpisodes = selectedShowEpisodes.concat(response.data.items)
             this.setState({
                 selectedShowEpisodes: allEpisodes
-            }
-            // ,() => {
-            //     getSelectedShowEpisodes(this.state.selectedShowEpisodes)
-            //  }
-            
-            )
+            })
         } catch (err) {
             console.log(err)
         }
     
-}
+    }
 
 
-getPlaylist = async (playlistId) => {
+    getPlaylist = async (playlistId) => {
     const {getSelectedShowEpisodes} = this.props.context;
     try {
           const response = await youtube.get('playlistItems', {
@@ -99,18 +96,18 @@ getPlaylist = async (playlistId) => {
         })
         const selectedShowEpisodes = response.data.items
         let displayedItems = response.data.pageInfo.resultsPerPage 
-        if (response.data.pageInfo.totalResults === displayedItems){
-            this.setState({
-                selectedShowEpisodes,
-              }, () => {
-                getSelectedShowEpisodes(this.state.selectedShowEpisodes)  
-                })
-        } else {
+        if (response.data.pageInfo.totalResults > displayedItems){
             while (response.data.pageInfo.totalResults > displayedItems) {
                 await this.getRestOfPlaylist(response, playlistId, selectedShowEpisodes)
                 displayedItems = displayedItems + response.data.pageInfo.resultsPerPage
             }
             getSelectedShowEpisodes(this.state.selectedShowEpisodes)
+        } else {
+            this.setState({
+                selectedShowEpisodes,
+              }, () => {
+                getSelectedShowEpisodes(this.state.selectedShowEpisodes)  
+                })
         }
             
       } catch (err) {
@@ -165,12 +162,12 @@ getPlaylist = async (playlistId) => {
     componentDidMount() {
         this.getDataWhenRefresh()
         
-
        
     }
 
     componentDidUpdate(){
         // const {currentEpisode} = this.state
+        
         if (this.props.context.currentEpisodeIndex !== this.state.currentEpisodeIndex || this.props.context.currentSeasonIndex !== this.state.currentSeasonIndex) {
             this.setState({
                 currentEpisodeIndex: this.props.context.currentEpisodeIndex,
@@ -183,78 +180,66 @@ getPlaylist = async (playlistId) => {
                 selectedShow: this.props.context.selectedShow
             })
         }
-        // if(this.state.selectedShowEpisodes.length < this.props.context.selectedShowEpisodes.length) {
-        //     this.setState({
-        //     selectedShowEpisodes: this.props.context.selectedShowEpisodes
-        //     }, ()=>{
-        //         console.log(this.state.selectedShowEpisodes)
-        //         let currentEpisodeIndex = this.props.context.selectedShowEpisodes.findIndex(ep => ep.snippet.resourceId.videoId === currentEpisode)
-        //         this.setState({
-        //             currentEpisodeIndex
-        //         }, () => this.createOtherEpisodesLink())
-        //         })
-        // }
+        const {getCurrentVideoInfo} = this.props.context;
+        const {type, show} = this.state;
+        window.onpopstate  = async (e) => {
+            // await getCurrentVideoInfo(this.state.currentSeasonIndex, this.state.currentEpisodeIndex-1)
+            // await this.createOtherEpisodesLink()
+            // await this.getDataWhenRefresh()
+            // window.history.pushState({name: 'browserBack'}, 'on browser back click', window.location.href);
+            // this.props.history.push({ pathname: `/${type}/${show}`});
+            this.props.history.push({ pathname: `/${type}/${show}`});
+            console.log('aasba')
+            // getCurrentVideoInfo(this.state.currentSeasonIndex, this.state.currentEpisodeIndex-1)
+            }
     }
     
     render() {
         let {type, show, currentEpisode, selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex,  selectedShow, prevEpisodeLnk, nextEpisodeLnk, prevVideoTitle, nextVideoTitle} = this.state;
         const {getCurrentVideoInfo} = this.state.context;
         currentEpisode = currentEpisode.split('||||')[1];
+        let nextEpisodeIndex = currentEpisodeIndex+1;
+        let prevEpisodeIndex = currentEpisodeIndex-1;
 
         // console.log(selectedShow)
         // console.log(type)
         // console.log(show)
         // console.log(currentEpisode)
-        console.log(selectedShowEpisodes)
+        // console.log(selectedShowEpisodes)
         // console.log(currentSeasonIndex)
         // console.log(currentEpisodeIndex)
-        let nextEpisodeIndex = currentEpisodeIndex+1;
-        let prevEpisodeIndex = currentEpisodeIndex-1;
         // console.log(prevEpisodeIndex)
         // console.log(nextEpisodeIndex)
-        // let nextEpisodeLnk = nextEpisodeIndex < selectedShowEpisodes.length ? 
-        // (`${selectedShow.seasons[currentSeasonIndex]}||||${selectedShowEpisodes[nextEpisodeIndex].snippet.resourceId.videoId}`) : null;
-        // let prevEpisodeLnk = prevEpisodeIndex >= 0 ? 
-        // (`${selectedShow.seasons[currentSeasonIndex]}||||${selectedShowEpisodes[prevEpisodeIndex].snippet.resourceId.videoId}`) : null;
+
+        let layout = selectedShowEpisodes.length === 0 ? <Loading/> : (
+            <div>
+            <Video videoId={currentEpisode} />
+                            <div className="otherEpisodes">
+                            <PreviousEpisode 
+                            videoTitle={prevVideoTitle}
+                            lnk={prevEpisodeLnk}
+                            getCurrentVideoInfo={getCurrentVideoInfo}
+                            seasonIndex={currentSeasonIndex}
+                            episodeIndex={prevEpisodeIndex}
+                            />
+                            <NextEpisode 
+                            videoTitle={nextVideoTitle} 
+                            getCurrentVideoInfo={getCurrentVideoInfo} 
+                            seasonIndex={currentSeasonIndex}
+                            episodeIndex={nextEpisodeIndex}
+                            lnk = {nextEpisodeLnk}
+                            />
+                        </div>
+                    </div>
+            )
+    
              return (
                 <>
-                    <Video videoId={currentEpisode} />
-                    {/* <div className="otherEpisodes">
-                    <PreviousSeason 
-                        season={`الموسم${currentSeasonIndex - 1}`} 
-                        getCurrentVideoInfo={getCurrentVideoInfo}
-                        lnk = {prevEpisodeLnk}
-                        seasonIndex={currentSeasonIndex - 1}
-                        episodeIndex={1}
-                        />
-                    <NextSeason 
-                        season={`الموسم${currentSeasonIndex + 1}`}   
-                        getCurrentVideoInfo={getCurrentVideoInfo}
-                        lnk = {`${selectedShow.seasons[currentSeasonIndex + 1]}||||${selectedShowEpisodes[1].snippet.resourceId.videoId}`}
-                        seasonIndex={currentSeasonIndex + 1}
-                        episodeIndex={1}
-                        />
-                    </div> */}
-                        <div className="otherEpisodes">
-                        <PreviousEpisode 
-                        videoTitle={prevVideoTitle}
-                        lnk={prevEpisodeLnk}
-                        getCurrentVideoInfo={getCurrentVideoInfo}
-                        seasonIndex={currentSeasonIndex}
-                        episodeIndex={prevEpisodeIndex}
-                        />
-                        <NextEpisode 
-                        videoTitle={nextVideoTitle} 
-                        getCurrentVideoInfo={getCurrentVideoInfo} 
-                        seasonIndex={currentSeasonIndex}
-                        episodeIndex={nextEpisodeIndex}
-                        lnk = {nextEpisodeLnk}
-                        />
-                    </div>
+                   {layout}
                 </>
             )
     }
 }
 
-export default withConsumer(Stream)
+export default withRouter(withConsumer(Stream))
 

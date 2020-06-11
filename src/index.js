@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 import App from './App.js';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import {ShowsProvider} from './Context';
 import ScrollToTop from './ScrollToTop';
 
@@ -10,11 +10,11 @@ import ScrollToTop from './ScrollToTop';
 ReactDOM.render(
   // {/* <React.StrictMode> */}
     <ShowsProvider>
-      <Router>
+      <BrowserRouter>
         <ScrollToTop>
           <App />
         </ScrollToTop>
-      </Router>
+      </BrowserRouter>
     </ShowsProvider>
   // {/* </React.StrictMode> */}
   ,
