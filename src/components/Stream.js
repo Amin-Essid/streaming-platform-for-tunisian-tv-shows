@@ -6,8 +6,7 @@ import PreviousEpisode from './PreviousEpisode';
 import youtube from '../api/Youtube'; 
 import {withRouter} from 'react-router-dom';
 import Loading from './Loading';
-import NextSeason from './NextSeason';
-import PreviousSeason from './PreviousSeason';
+import AllEpisodes from './AllEpisodes';
 
 class Stream extends PureComponent {
     constructor(props) {
@@ -37,11 +36,11 @@ class Stream extends PureComponent {
             })
     }
 
+ 
+
     createOtherEpisodesLink = () => {
         let {selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex,  selectedShow} = this.state;
         if (selectedShow !== null) {
-            // console.log(selectedShow)
-        // if (this.props.context.selectedShow !== null) console.log(this.props.context.selectedShow)
                 let nextEpisodeIndex = currentEpisodeIndex+1;
                 let prevEpisodeIndex = currentEpisodeIndex-1;
                 let nextEpisodeLnk = nextEpisodeIndex < selectedShowEpisodes.length ? 
@@ -161,13 +160,10 @@ class Stream extends PureComponent {
 
     componentDidMount() {
         this.getDataWhenRefresh()
-        
        
     }
 
     componentDidUpdate(){
-        // const {currentEpisode} = this.state
-        
         if (this.props.context.currentEpisodeIndex !== this.state.currentEpisodeIndex || this.props.context.currentSeasonIndex !== this.state.currentSeasonIndex) {
             this.setState({
                 currentEpisodeIndex: this.props.context.currentEpisodeIndex,
@@ -183,14 +179,8 @@ class Stream extends PureComponent {
         const {getCurrentVideoInfo} = this.props.context;
         const {type, show} = this.state;
         window.onpopstate  = async (e) => {
-            // await getCurrentVideoInfo(this.state.currentSeasonIndex, this.state.currentEpisodeIndex-1)
-            // await this.createOtherEpisodesLink()
-            // await this.getDataWhenRefresh()
-            // window.history.pushState({name: 'browserBack'}, 'on browser back click', window.location.href);
-            // this.props.history.push({ pathname: `/${type}/${show}`});
             this.props.history.push({ pathname: `/${type}/${show}`});
             console.log('aasba')
-            // getCurrentVideoInfo(this.state.currentSeasonIndex, this.state.currentEpisodeIndex-1)
             }
     }
     
@@ -215,20 +205,21 @@ class Stream extends PureComponent {
             <div>
             <Video videoId={currentEpisode} />
                             <div className="otherEpisodes">
-                            <PreviousEpisode 
-                            videoTitle={prevVideoTitle}
-                            lnk={prevEpisodeLnk}
-                            getCurrentVideoInfo={getCurrentVideoInfo}
-                            seasonIndex={currentSeasonIndex}
-                            episodeIndex={prevEpisodeIndex}
-                            />
-                            <NextEpisode 
-                            videoTitle={nextVideoTitle} 
-                            getCurrentVideoInfo={getCurrentVideoInfo} 
-                            seasonIndex={currentSeasonIndex}
-                            episodeIndex={nextEpisodeIndex}
-                            lnk = {nextEpisodeLnk}
-                            />
+                                <NextEpisode 
+                                videoTitle={nextVideoTitle} 
+                                getCurrentVideoInfo={getCurrentVideoInfo} 
+                                seasonIndex={currentSeasonIndex}
+                                episodeIndex={nextEpisodeIndex}
+                                lnk = {nextEpisodeLnk}
+                                />
+                                <AllEpisodes lnk={`/${type}/${show}`} />
+                                <PreviousEpisode 
+                                videoTitle={prevVideoTitle}
+                                lnk={prevEpisodeLnk}
+                                getCurrentVideoInfo={getCurrentVideoInfo}
+                                seasonIndex={currentSeasonIndex}
+                                episodeIndex={prevEpisodeIndex}
+                                />
                         </div>
                     </div>
             )
@@ -236,6 +227,7 @@ class Stream extends PureComponent {
              return (
                 <>
                    {layout}
+
                 </>
             )
     }

@@ -459,9 +459,9 @@ a {
   }
 
   .prevEpisode {
-    color: white;
     padding: .3em .7em;
-    margin-left: .5em;
+    margin-right: .5em;
+    color: white;
     font-size: 1rem;
     background-color: #5A668C;
     border-radius: 5px;
@@ -476,15 +476,16 @@ a {
   }
 
   .nextEpisode {
-    padding: .3em .7em;
-    margin-right: .5em;
     color: white;
+    padding: .3em .7em;
+    margin-left: .5em;
     font-size: 1rem;
     background-color: #5A668C;
     border-radius: 5px;
     box-shadow: 0 2px 4px grey;
     cursor: pointer;
   }
+
 
   .nextEpisode:active {
     background-color: white;
@@ -497,6 +498,21 @@ a {
     align-items: center;
     justify-content: center;
   }
+
+  .AllEpisodes {
+    align-self: flex-start;
+    flex-shrink: 0;
+    padding: .3em .3em;
+    color: white;
+    /* border: solid 3px #5A668C; */
+    font-size: 1rem;
+    background-color: #BF1515;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px grey;
+    cursor: pointer;
+
+  }
+
   .streamButton img {
     height: 32px;
     margin-bottom: -0.2em;

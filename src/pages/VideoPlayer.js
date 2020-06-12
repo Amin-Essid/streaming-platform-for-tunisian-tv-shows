@@ -14,11 +14,11 @@ export default class SingleTvShow extends Component {
     }
     
 
-    static getDerivedStateFromProps(props, state){  
-        return ({
-                stream: props.match.params.stream
-                })
-    }
+    // static getDerivedStateFromProps(props, state){  
+    //     return ({
+    //             stream: props.match.params.stream
+    //             })
+    // }
 
     // componentDidUpdate(){
     //     const {type, show} = this.state;
