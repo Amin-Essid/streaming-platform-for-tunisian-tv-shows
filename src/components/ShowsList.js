@@ -19,8 +19,8 @@ export default function ShowsList({shows}) {
                 name={show.name} 
                 img = {show.img[0]}
                 lnk={`/${show.type}/${show.name}`}
-                boxWidth='220px' 
-                boxHeight='220px' 
+                boxWidth='200px' 
+                boxHeight='250px' 
                 boxLinkStyle = 'boxInShowsList'
             />)
     })

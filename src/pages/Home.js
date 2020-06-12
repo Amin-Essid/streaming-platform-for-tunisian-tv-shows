@@ -9,12 +9,12 @@ export default function Home() {
     return (
         <>
             <Section 
-                containerMaxWidth="700px" 
+                containerMaxWidth="860px" 
                 loading={loading} 
                 sectionShows={featuredShows} 
                 arrowSize="50px" 
-                boxWidth='220px' 
-                boxHeight='220px'
+                boxWidth='200px' 
+                boxHeight='250px'
             />
             <ButtonsContainer 
                 links={['2020', 'كل-الأصناف']}
@@ -46,7 +46,7 @@ export default function Home() {
                 sectionShows={legendaryShows} 
                 arrowSize="45px" 
                 boxWidth='200px' 
-                boxHeight='200px'
+                boxHeight='250px'
             />
             <ButtonsContainer 
                 links={['كوميديا', 'كوميديا']}
@@ -62,7 +62,7 @@ export default function Home() {
                 sectionShows={comedyShows} 
                 arrowSize="45px" 
                 boxWidth='200px' 
-                boxHeight='200px'
+                boxHeight='250px'
             />
             <ButtonsContainer 
                 links={['دراما', 'دراما']}
@@ -78,7 +78,7 @@ export default function Home() {
                 sectionShows={dramaShows} 
                 arrowSize="45px" 
                 boxWidth='200px' 
-                boxHeight='200px'
+                boxHeight='250px'
             />
         </>
     )

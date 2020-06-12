@@ -10,13 +10,16 @@ width: ${props => props.boxWidth};
 height: ${props => props.boxHeight};
 flex-shrink: 0;
 border-radius: 5px;
-background-color:#5A668C ;
+background-color: #5A668C ;
+border: 3px solid #5A668C;
 &:hover {
     transform: scale(1.03);
     filter: brightness(1.2);
 }
 cursor: pointer;
 box-shadow: 0 3px 6px grey;
+margin-top: 4px;
+margin-bottom: 4px;
 `
 
 
