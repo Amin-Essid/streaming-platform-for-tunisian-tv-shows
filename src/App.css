@@ -219,6 +219,10 @@ a {
   font-weight: bold;
 }
 
+.boxContentStyleBorder {
+  border: 3px solid #5A668C;
+}
+
 .boxContentStyle p {
   align-self: center;
   width: 100%;

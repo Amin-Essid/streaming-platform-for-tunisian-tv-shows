@@ -16,6 +16,7 @@ export default function Home() {
                 boxWidth='200px' 
                 boxHeight='250px'
                 boxContentStyle='boxContentStyle'
+                boxContentStyleBorder='3px solid #5A668C'
             />
             <ButtonsContainer 
                 links={['2020', 'كل-الأصناف']}
@@ -26,7 +27,7 @@ export default function Home() {
                 buttonsMargin={['2.9em', '2.9em']}
             />
             <Section 
-                containerMaxWidth="340px" 
+                containerMaxWidth="580px" 
                 loading={loading} 
                 sectionShows={channels} 
                 arrowSize="35px" 

@@ -12,7 +12,7 @@ height: ${props => props.boxHeight};
 flex-shrink: 0;
 border-radius: 5px;
 background-color: #5A668C ;
-border: 3px solid #5A668C;
+border: ${props => props.boxWidth === '100px' ? 'none' : '3px solid #5A668C'};
 &:hover {
     transform: scale(1.03);
     filter: brightness(1.2);

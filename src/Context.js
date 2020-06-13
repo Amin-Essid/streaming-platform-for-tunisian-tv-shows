@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import data from './Data';
 import finalData from './FinalData';
-import WataniaImg from './images/channels/watania.png';
-import alhiwarImg from './images/channels/alhiwar.png';
-import AttessiaImg from './images/channels/attessia.png';
-import NessmaImg from './images/channels/nessma.png';
+import WataniaImg from './images/channels/wataniaOne.jpg';
+import alhiwarImg from './images/channels/alhiwar.jpg';
+import AttessiaImg from './images/channels/attessia.jpg';
+import NessmaImg from './images/channels/nessma.jpg';
+import HannibalImg from './images/channels/hannibal.jpg';
+import WataniaTwoImg from './images/channels/wataniaTwo.jpg'
 
 const ShowsContext = React.createContext();
 
@@ -42,6 +44,18 @@ class ShowsProvider extends Component {
                 id: 444,
                 name: 'نسمة',
                 img: [NessmaImg],
+                type: 'channels'
+            },
+            {
+                id: 555,
+                name: 'حنبعل',
+                img: [HannibalImg],
+                type: 'channels'
+            },
+            {
+                id: 666,
+                name: 'وطنية 2',
+                img: [WataniaTwoImg],
                 type: 'channels'
             }
 
