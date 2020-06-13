@@ -27,7 +27,8 @@ export default class Container extends Component {
     
 
     render(){
-        let boxes = this.props.containerShows.map(box => {
+        const {containerShows, boxWidth, boxHeight, boxContentStyle, containerMaxWidth, loading} = this.props
+        let boxes = containerShows.map(box => {
             let lnk = '';
             if (box.type === 'channels') lnk = `/${box.name}`
             else lnk = `/${box.type}/${box.name}`
@@ -43,10 +44,10 @@ export default class Container extends Component {
                                 name={box.name} 
                                 img = {box.img[0]}
                                 lnk={lnk}
-                                boxWidth={this.props.boxWidth} 
-                                boxHeight={this.props.boxHeight} 
+                                boxWidth={boxWidth} 
+                                boxHeight={boxHeight} 
                                 boxLinkStyle='boxLink'
-                                boxContentStyle={this.props.boxContentStyle}
+                                boxContentStyle={boxContentStyle}
                             />
                         </CSSTransition>
                 
@@ -55,12 +56,12 @@ export default class Container extends Component {
         return (
         
             <StyledContainer 
-            boxWidth={this.props.boxWidth} 
-            containerMaxWidth={this.props.containerMaxWidth} 
+            boxWidth={boxWidth} 
+            containerMaxWidth={containerMaxWidth} 
             ref={this.container} 
             >
             
-            {this.props.loading ? <Loading /> : (
+            {loading ? <Loading /> : (
                 <TransitionGroup component={null}>
                {boxes}
                 </TransitionGroup>

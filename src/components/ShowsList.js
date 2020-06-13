@@ -22,6 +22,7 @@ export default function ShowsList({shows}) {
                 boxWidth='200px' 
                 boxHeight='250px' 
                 boxLinkStyle = 'boxInShowsList'
+                boxContentStyle='boxContentStyle'
             />)
     })
 

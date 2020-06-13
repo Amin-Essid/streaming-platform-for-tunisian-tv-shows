@@ -89,27 +89,28 @@ export default class Section extends Component{
     }
     
     render(){
+        const {loading, arrowSize, containerMaxWidth, boxWidth, boxHeight, boxContentStyle} = this.props
         return (
             <>
-                {this.props.loading ? <Loading /> : (
+                {loading ? <Loading /> : (
                     <StyledSection>
                         <Arrow 
                             moveBoxesFunction={this.moveBoxesLeft}  
-                            arrowSize={this.props.arrowSize} 
+                            arrowSize={arrowSize} 
                             imgURL={rightArrow}
                         />
                         <Container 
-                            containerMaxWidth={this.props.containerMaxWidth} 
+                            containerMaxWidth={containerMaxWidth} 
                             createBoxes={this.createBoxes} 
-                            loading={this.props.loading} 
+                            loading={loading} 
                             containerShows={this.state.containerShows} 
-                            boxWidth={this.props.boxWidth} 
-                            boxHeight={this.props.boxHeight}  
-                            boxContentStyle={this.props.boxContentStyle}
+                            boxWidth={boxWidth} 
+                            boxHeight={boxHeight}  
+                            boxContentStyle={boxContentStyle}
                         />
                         <Arrow 
                             moveBoxesFunction={this.moveBoxesRight}  
-                            arrowSize={this.props.arrowSize} 
+                            arrowSize={arrowSize} 
                             imgURL={leftArrow}
                         />
                     </StyledSection>
