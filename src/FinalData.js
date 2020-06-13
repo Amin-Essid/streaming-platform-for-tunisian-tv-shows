@@ -153,7 +153,6 @@ export default [
         type: 'دراما',
         img: [nouba],
         featured: true,
-        legendary: true,
         partsPerEpisodes: 0,
         seasons: [
             'PLY1IpuB2HLWgQJKklNCQ-S_EFFZIIU05z'

@@ -15,6 +15,7 @@ export default function Home() {
                 arrowSize="50px" 
                 boxWidth='200px' 
                 boxHeight='250px'
+                boxContentStyle='boxContentStyle'
             />
             <ButtonsContainer 
                 links={['2020', 'كل-الأصناف']}
@@ -47,6 +48,7 @@ export default function Home() {
                 arrowSize="45px" 
                 boxWidth='200px' 
                 boxHeight='250px'
+                boxContentStyle='boxContentStyle'
             />
             <ButtonsContainer 
                 links={['كوميديا', 'كوميديا']}
@@ -63,6 +65,7 @@ export default function Home() {
                 arrowSize="45px" 
                 boxWidth='200px' 
                 boxHeight='250px'
+                boxContentStyle='boxContentStyle'
             />
             <ButtonsContainer 
                 links={['دراما', 'دراما']}
@@ -79,6 +82,7 @@ export default function Home() {
                 arrowSize="45px" 
                 boxWidth='200px' 
                 boxHeight='250px'
+                boxContentStyle='boxContentStyle'
             />
         </>
     )

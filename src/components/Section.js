@@ -94,7 +94,7 @@ export default class Section extends Component{
                 {this.props.loading ? <Loading /> : (
                     <StyledSection>
                         <Arrow 
-                            moveBoxesFunction={this.moveBoxesRight}  
+                            moveBoxesFunction={this.moveBoxesLeft}  
                             arrowSize={this.props.arrowSize} 
                             imgURL={rightArrow}
                         />
@@ -105,9 +105,10 @@ export default class Section extends Component{
                             containerShows={this.state.containerShows} 
                             boxWidth={this.props.boxWidth} 
                             boxHeight={this.props.boxHeight}  
+                            boxContentStyle={this.props.boxContentStyle}
                         />
                         <Arrow 
-                            moveBoxesFunction={this.moveBoxesLeft}  
+                            moveBoxesFunction={this.moveBoxesRight}  
                             arrowSize={this.props.arrowSize} 
                             imgURL={leftArrow}
                         />

@@ -128,24 +128,30 @@ class OneShowContainer2 extends Component {
 
                             <div className="singleShow-hero">
                                 <img src={selectedShow.img[0]} alt="" className="singleShow-img"/>
-                                <div className="singleShow-description">
+                                {/* <div className="singleShow-description"> */}
                                     {/* {selectedShow.descripton} */}
+                                {/* </div> */}
+                                <div className='singleShow-about'>
+                                    <div className="singleShow-title">
+                                        {selectedShow.name}
+                                    </div>
+                                    <div className="seasons-style">
+                                        {
+                                            selectedShow.seasons.map((season, index) => {
+                                                return (
+                                                    <Season 
+                                                        key = {season}
+                                                        renderEpisodes={this.renderEpisodes} 
+                                                        seasonNumber={index + 1}
+                                                        activeSeason={this.state.activeSeason}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                    </div>
                                 </div>
                                 </div>
-                                <div className="seasons-style">
-                                    {
-                                        selectedShow.seasons.map((season, index) => {
-                                            return (
-                                                <Season 
-                                                    key = {season}
-                                                    renderEpisodes={this.renderEpisodes} 
-                                                    seasonNumber={index + 1}
-                                                    activeSeason={this.state.activeSeason}
-                                                />
-                                            )
-                                        })
-                                    }
-                                </div>
+                                
                             
 
                                 <div className='singleShow-EpisodesContainer'>

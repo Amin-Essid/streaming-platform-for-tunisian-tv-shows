@@ -46,6 +46,7 @@ export default class Container extends Component {
                                 boxWidth={this.props.boxWidth} 
                                 boxHeight={this.props.boxHeight} 
                                 boxLinkStyle='boxLink'
+                                boxContentStyle={this.props.boxContentStyle}
                             />
                         </CSSTransition>
                 

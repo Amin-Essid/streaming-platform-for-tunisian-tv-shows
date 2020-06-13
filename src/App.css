@@ -191,6 +191,7 @@ a {
 }
 
 .boxInShowsList{
+  display: flex;
   margin-left: .75em;
   margin-right: .75em;
   margin-bottom: 1.5em;
@@ -199,6 +200,33 @@ a {
 .no-items-style {
   text-align: center;
   color: #5A668C;
+}
+
+.DefaultBoxContentStyle {
+  display: none;
+}
+
+.boxContentStyle {
+  display:none;
+  width: 100%;
+  height: 100%;
+  padding: 0 .3em;
+  background-color: rgb(90, 102, 140, 0.8);
+  align-self: center;
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.boxContentStyle p {
+  align-self: center;
+  width: 100%;
+}
+
+#styledBox:hover .boxContentStyle{
+  display: flex;
+  transition:all 200s linear;
 }
 
 
@@ -279,6 +307,7 @@ a {
   border-radius: 5px;
   box-shadow: 0 2px 4px grey;
   cursor: pointer;
+  align-self: center;
 }
 .singleSeason-style + .singleSeason-style {
   margin-right: .5em;
@@ -293,6 +322,7 @@ a {
   border: 2px solid #5A668C;
   margin: 0 .5em;
   font-weight: bold;
+  align-self: center;
 }
 
 @media (max-width: 592px) {
@@ -315,8 +345,9 @@ a {
 }
 
 .singleShow-img {
-  width: 175px;
-  height: 125px;
+  margin-left: .7em;
+  width: 75px;
+  height: 95px;
   border-radius: 5px;
   box-shadow: 0 2px 4px grey;
 }
@@ -331,11 +362,23 @@ a {
   margin-right: 2em;
 }
 
+
+.singleShow-title {
+  margin:0 .4em .4em 0;
+  font-size: 1.5rem;
+  color: #BF1515;
+  font-weight: bold;
+}
+
 @media (max-width: 592px) {
   .singleShow-img {
     width: 100px;
-    height: 100px;
+    height: 125px;
     flex-shrink: 0;
+  }
+
+  .singleShow-title {
+    text-align: center;
   }
 
   .singleShow-description {

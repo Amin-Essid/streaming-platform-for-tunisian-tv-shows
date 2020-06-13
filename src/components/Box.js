@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const StyledBox = styled.div`
+display: flex;
 background-image: url(${props => props.img});
 background-size: 100% 100%;
 width: ${props => props.boxWidth};
@@ -24,12 +25,14 @@ margin-bottom: 4px;
 
 
 
-function Box({img, boxWidth, boxHeight, lnk, boxContent, boxContentStyle, boxLinkStyle}) {
+function Box({img, boxWidth, boxHeight, lnk, name, boxContentStyle = 'DefaultBoxContentStyle', boxLinkStyle}) {
     return (
         <Link className= {boxLinkStyle} to={lnk}>
-            <StyledBox boxWidth={boxWidth} boxHeight={boxHeight} img={img}>
+            <StyledBox id='styledBox' boxWidth={boxWidth} boxHeight={boxHeight} img={img}>
                 {
-                    boxContent ? <p className={boxContentStyle}>{boxContent}</p> : ''
+                    name ? (<div className={boxContentStyle}>
+                        <p>{name}</p>
+                        </div>) : ''
                 }
             </StyledBox>
         </Link>
