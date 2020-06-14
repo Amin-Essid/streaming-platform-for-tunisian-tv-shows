@@ -3,6 +3,7 @@ import menuIcon from '../images/icons/menuIcon.png';
 import {Link} from 'react-router-dom';
 
 function Navbar() {
+  const [open, setOpen] = useState(false);
     return (
         <nav className="navbar">
             
@@ -24,39 +25,39 @@ function Navbar() {
             
         </nav>
     )
-}
 
-function DropdownNavItem(props){
-    const [open, setOpen] = useState(false);
-    return (
-        <span className='menu-icon'>
-          <Link to="#" className="nav-item__link" onClick={() => setOpen(!open)}>
-            {props.content}
-          </Link>
-    
-          {open && props.children}
-        </span>
-      );
-}
 
-function DropdownMenu(){
-
-    function DropdownItem(props) {
+    function DropdownNavItem(props){
         return (
-          <li className="dropdown-item">
-            {props.children}
-          </li>
-        );
-      }
+            <span className='menu-icon'>
+              <Link to="#" className="nav-item__link" onClick={() => setOpen(!open)}>
+                {props.content}
+              </Link>
+        
+              {open && props.children}
+            </span>
+          );
+    }
 
-    return (
-        <div className='dropdown'>
-            <DropdownItem><Link to={() => `/2020${Math.floor(Math.random()*1000)}`}>رمضان 2020</Link></DropdownItem>
-            <DropdownItem><Link to={() => `/كل-الأصناف${Math.floor(Math.random()*1000)}`}>
-            كل المسلسلات</Link></DropdownItem>
-            <DropdownItem><Link to="#">اتصل بنا</Link></DropdownItem>
-        </div>
-    )
+    function DropdownMenu(){
+
+        function DropdownItem(props) {
+            return (
+              <li className="dropdown-item" onClick={() => setOpen(!open)}>
+                {props.children}
+              </li>
+            );
+          }
+
+        return (
+            <div className='dropdown'>
+                <DropdownItem><Link to={() => `/2020${Math.floor(Math.random()*1000)}`}>رمضان 2020</Link></DropdownItem>
+                <DropdownItem><Link to={() => `/كل-الأصناف${Math.floor(Math.random()*1000)}`}>
+                كل المسلسلات</Link></DropdownItem>
+                <DropdownItem><Link to="#">اتصل بنا</Link></DropdownItem>
+            </div>
+        )
+    }
 }
 
 export default Navbar
