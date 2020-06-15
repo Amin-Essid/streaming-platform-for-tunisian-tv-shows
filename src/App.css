@@ -437,7 +437,7 @@ a {
   margin: 1.5em;
   background-color: white;
   box-shadow: 0 2px 4px grey;
-  border-radius: 5px;
+  border-radius: 5px !important;
   transition: all 200ms linear;
   background-color: #5A668C;
 }
@@ -457,9 +457,8 @@ a {
 
 }
 
-.episode-style:hover  .episode-style_button {
-  transform: scale(1.2);
-  filter: brightness(1.2);
+.episode-style:hover{
+  transform: scale(1.1);
 }
 
 .episode-style_image {
@@ -474,8 +473,7 @@ a {
     flex-direction: column;
     background-color: #5A668C;
     position: relative;
-    padding-bottom: 3em;
-    min-height: 150px;
+    padding: 0 .2em .4em .2em;
   }
 
   .episode-style_names {
@@ -496,7 +494,7 @@ a {
       font-weight: bold;
     } */
 
-  .episode-style_button {
+  /* .episode-style_button {
     align-self: flex-end;
     margin-top: .3em;
     position: absolute;
@@ -513,7 +511,7 @@ a {
     box-shadow: 0 2px 4px grey;
     border-radius: 5px;
     cursor: pointer;
-  }
+  } */
 
 
   /* stream page styles */
