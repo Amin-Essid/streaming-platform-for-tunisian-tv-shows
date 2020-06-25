@@ -266,7 +266,7 @@ a {
 
 /*  rooms fitler*/
 .filter-container {
-  padding: 3em;
+  padding: 1.5em 3em 3em 3em;
 }
 .filter-form {
   width: 60%;
