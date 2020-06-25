@@ -432,7 +432,7 @@ a {
 
 
 .episode-style{
-  width: 253.234px;
+  width: 218.234px;
   height: auto;
   margin: 1.5em;
   background-color: white;
@@ -449,11 +449,11 @@ a {
     margin-right: 0;
   }
 
-  .episode-style {
+  /* .episode-style {
     width: 253.234px;
     margin-left: .1em;
     margin-right: .1em;
-  }
+  } */
 
 }
 
@@ -462,12 +462,12 @@ a {
 }
 
 .episode-style_image {
-  width: 253.234px;
-  height: 142.078px;
+  width: 218.234px;
+  height: 122.078px;
 }
 
 .episode-style_info {
-    width: 253.234px;
+    width: 218.234px;
     height: auto;
     display: flex;
     flex-direction: column;
