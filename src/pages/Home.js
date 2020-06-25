@@ -13,8 +13,8 @@ export default function Home() {
                 loading={loading} 
                 sectionShows={featuredShows} 
                 arrowSize="50px" 
-                boxWidth='200px' 
-                boxHeight='250px'
+                boxWidth='180px' 
+                boxHeight='240px'
                 boxContentStyle='boxContentStyle'
                 boxContentStyleBorder='3px solid #5A668C'
             />
@@ -27,12 +27,12 @@ export default function Home() {
                 buttonsMargin={['2.9em', '2.9em']}
             />
             <Section 
-                containerMaxWidth="580px" 
+                containerMaxWidth="500px" 
                 loading={loading} 
                 sectionShows={channels} 
                 arrowSize="35px" 
-                boxWidth='100px' 
-                boxHeight='100px'
+                boxWidth='75px' 
+                boxHeight='75px'
             />
             <ButtonsContainer 
             links={['قبل2011', 'قبل2011']}
@@ -47,8 +47,8 @@ export default function Home() {
                 loading={loading} 
                 sectionShows={legendaryShows} 
                 arrowSize="45px" 
-                boxWidth='200px' 
-                boxHeight='250px'
+                boxWidth='180px' 
+                boxHeight='240px'
                 boxContentStyle='boxContentStyle'
             />
             <ButtonsContainer 
@@ -64,8 +64,8 @@ export default function Home() {
                 loading={loading} 
                 sectionShows={comedyShows} 
                 arrowSize="45px" 
-                boxWidth='200px' 
-                boxHeight='250px'
+                boxWidth='180px' 
+                boxHeight='240px'
                 boxContentStyle='boxContentStyle'
             />
             <ButtonsContainer 
@@ -81,8 +81,8 @@ export default function Home() {
                 loading={loading} 
                 sectionShows={dramaShows} 
                 arrowSize="45px" 
-                boxWidth='200px' 
-                boxHeight='250px'
+                boxWidth='180px' 
+                boxHeight='240px'
                 boxContentStyle='boxContentStyle'
             />
         </>
