@@ -10,6 +10,8 @@ import  maktoub from './images/series/maktoub.png';
 import  nouba from './images/series/nouba.png';
 import  nsibtiLaziza from './images/series/nsibtiLaziza.png';
 import  saydRim from './images/series/saydRim.png';
+import macha3er from './images/series/macha3er.png';
+import chwareb from './images/series/chwareb.png'
 
 
 export default [
@@ -21,7 +23,6 @@ export default [
         type: 'دراما',
         img: [awledMoufida],
         featured: true,
-        partsPerEpisodes: [3, 3, 3, 3, 3],
         seasons: [
             'PLFApv2COP4eouxGWNj5_CTrBrjl6RnIXO',
             'PLFApv2COP4ermf8wpxfGnxW--TsNGrUJs',
@@ -37,7 +38,6 @@ export default [
         channel: 'التاسعة',
         type: 'كوميديا',
         img: [boulice ],
-        partsPerEpisodes: [[3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], 1, [1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 2, 3, 3, 3]],
         seasons: [
             'PLTGtCMX0-RuJi0_QiP0FcZ2pwAkHGjWcF',
             'PLTGtCMX0-RuINRHGwGgO_Em3_lzstnx2N',
@@ -53,13 +53,12 @@ export default [
         img: [choufliHal],
         featured: true,
         legendary: true,
-        partsPerEpisodes: 0,
         seasons:[
-            'PL6TjelGzBJrWK9Avy3doBfhc_VjKToZ1d',
-            'PLtKHe7Z2QnnGstKc69LrO3xZwdN0LKhYR',
-            'PLtKHe7Z2QnnFi-AOO638jza_yYGzef663',
-            'PLtKHe7Z2QnnH7XzkWjOUlsDIR45WCZjIH',
-            'PLtKHe7Z2QnnFIqdlGYw5_xYpQpiPooQeg'
+            'PLXcsy_-LfmItkc2uH7IjMZbNdjizMlF13',
+            'PLXcsy_-LfmItTaE0hBGn8w-5zMYXHmQwE',
+            'PLXcsy_-LfmIs_V85M5vubfs-CvSoWFBoZ',
+            'PLXcsy_-LfmIvBwhdF-jbdnZXJRiZHDY1J',
+            'PLXcsy_-LfmIuDRmrHA9RemxM1JrXZ4qXV'
         ]
     },
     {
@@ -69,7 +68,6 @@ export default [
         channel: 'الوطنية',
         type: 'كوميديا',
         img: [darLkhleaa],
-        partsPerEpisodes: 0,
         seasons: [
             'PLtKHe7Z2QnnE4_0T09UwEIS80TMXsif_y'
         ]
@@ -81,7 +79,6 @@ export default [
         channel: 'الحوار التونسي',
         type: 'كوميديا',
         img: [denyaOkhra],
-        partsPerEpisodes: 0,
         featured: true,
         seasons: [
             'PLFApv2COP4eqyVmGeU3lsyR0nKzHaoGvW',
@@ -97,9 +94,8 @@ export default [
         type: 'دراما',
         img: [galbDhib ],
         featured: true,
-        partsPerEpisodes: 0,
         seasons: [
-            'PLtKHe7Z2QnnFV995T-rpMOu8zKou-7GhE'
+            'PLfakkE2mXWQBvwGt7gEz59Pwo1_jCHw-B'
         ]
     },
     {
@@ -109,10 +105,9 @@ export default [
         channel: 'الوطنية',
         type: 'دراما',
         img: [hsabetWakabet],
-        partsPerEpisodes: 0,
         legendary: true,
         seasons: [
-            'PLtKHe7Z2QnnHz84ac0npqDOAUHw_qmCOG'
+            'PLXcsy_-LfmIs9AmfmwzPOGykusmO_7mAm'
         ]
     },
     {
@@ -122,7 +117,6 @@ export default [
         channel: 'الوطنية',
         type: 'دراما',
         img: [khoutabAlbeb],
-        partsPerEpisodes: 0,
         legendary: true,
         seasons: [
             'PL6TjelGzBJrVmWAy4DavaSkFRtDf0ELND',
@@ -137,7 +131,6 @@ export default [
         type: 'دراما',
         img: [maktoub],
         legendary: true, 
-        partsPerEpisodes: 0,
         seasons: [
             'PLvuiC-ftvBUXDX5WO0VYGBZHqYkFExR42',
             'PLvuiC-ftvBUU4e7LthVkUTiR-85zL4KjC',
@@ -153,9 +146,8 @@ export default [
         type: 'دراما',
         img: [nouba],
         featured: true,
-        partsPerEpisodes: 0,
         seasons: [
-            'PLY1IpuB2HLWgQJKklNCQ-S_EFFZIIU05z'
+            'PLJEhvAb0cvwKzUtTpOpvkYHuVEauhomv5'
         ]
     },
     {
@@ -165,7 +157,6 @@ export default [
         channel: 'نسمة',
         type: 'كوميديا',
         img: [nsibtiLaziza],
-        partsPerEpisodes: 0,
         seasons: [
             'PLY1IpuB2HLWj2VpoVGVSct7DUQZ_38EM5',
             'PLY1IpuB2HLWhoIwA7ymEvQuzAT85iRHcU',
@@ -185,9 +176,31 @@ export default [
         type: 'دراما',
         img: [saydRim],
         legendary: true,
-        partsPerEpisodes: 0,
         seasons: [
             'PLtKHe7Z2QnnHpJ0m_dOQjboLQMQ3vwwSu'
         ]
-    }
+    },
+    {
+        id: 13,
+        name: 'مشاعر',
+        year: 'قبل2011',
+        channel: 'قرطاج+',
+        type: 'دراما',
+        img: [macha3er],
+        seasons: [
+            'PLJEhvAb0cvwLZMXUYbx2EBWh3PXxU62JV'
+        ]
+    },
+    {
+        id: 14,
+        name: 'شورب',
+        year: 'بعد2011',
+        channel: 'التاسعة',
+        type: 'دراما',
+        img: [chwareb],
+        seasons: [
+            'PLMRYrbXGVjIFlN2iOgftVfSg5qCTmjNhY',
+            'PLJEhvAb0cvwKwWjNm1UvAYfnB-E19cLKb'
+        ]
+    },
 ]

@@ -27,7 +27,7 @@ export default function Home() {
                 buttonsMargin={['2.9em', '2.9em']}
             />
             <Section 
-                containerMaxWidth="500px" 
+                containerMaxWidth="580px" 
                 loading={loading} 
                 sectionShows={channels} 
                 arrowSize="35px" 

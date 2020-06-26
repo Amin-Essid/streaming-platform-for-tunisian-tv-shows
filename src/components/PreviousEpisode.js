@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import whiteLeftArrow from '../images/icons/whiteLeftArrow.png';
+import whiteRightArrow from '../images/icons/whiteRightArrow.png';
 
 
 function PreviousEpisode({videoTitle, getCurrentVideoInfo, seasonIndex, episodeIndex, lnk}) {
@@ -12,8 +12,9 @@ function PreviousEpisode({videoTitle, getCurrentVideoInfo, seasonIndex, episodeI
             <>
                 <Link to={lnk} className='prevEpisode'>
                     <div className='streamButton' onClick={() => getCurrentVideoInfo(seasonIndex, episodeIndex)}>
-                        <p>{videoTitle}</p>
-                        <img src={whiteLeftArrow} alt="whiteLeftArrow"/>
+                        <img src={whiteRightArrow} alt="whiteLeftArrow"/>
+                        {/* <p>{videoTitle}</p> */}
+                        <p>السابقة</p>
                     </div>
                 </Link>
             </>

@@ -6,7 +6,8 @@ import alhiwarImg from './images/channels/alhiwar.jpg';
 import AttessiaImg from './images/channels/attessia.jpg';
 import NessmaImg from './images/channels/nessma.jpg';
 import HannibalImg from './images/channels/hannibal.jpg';
-import WataniaTwoImg from './images/channels/wataniaTwo.jpg'
+import WataniaTwoImg from './images/channels/wataniaTwo.jpg';
+import CarthagePlus from './images/channels/carthagePlus.jpg';
 
 const ShowsContext = React.createContext();
 
@@ -54,7 +55,13 @@ class ShowsProvider extends Component {
             },
             {
                 id: 666,
-                name: 'وطنية 2',
+                name: 'قرطاج+',
+                img: [CarthagePlus],
+                type: 'channels'
+            },
+            {
+                id: 777,
+                name: 'الوطنية',
                 img: [WataniaTwoImg],
                 type: 'channels'
             }

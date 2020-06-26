@@ -521,9 +521,26 @@ a {
     max-width: 700px;
     max-height: 550px;
     height: 60vh;
-    margin: 1em auto;
+    margin: 1em auto 0 auto;
     border: 3px solid #5A668C;
     border-radius: 5px;
+  }
+
+  .episode-title {
+    display: flex;
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    /* padding: .3em .7em; */
+    justify-content: center;
+    max-width: 700px;
+    color: #BF1515;
+    font-size: 1.1rem;
+    font-weight: bold;
+    /* border: 3px solid #BF1515; */
+    /* border-radius: 5px;
+    box-shadow: 0 2px 4px grey;
+    background-color: white; */
   }
 
   .otherEpisodes {
@@ -535,13 +552,14 @@ a {
 
   .prevEpisode {
     padding: .3em .7em;
-    margin-right: .5em;
     color: white;
+    margin-left: .5em;
     font-size: 1rem;
     background-color: #5A668C;
     border-radius: 5px;
     box-shadow: 0 2px 4px grey;
     cursor: pointer;
+    min-width: 100px;
   }
 
   .prevEpisode:active {
@@ -553,12 +571,13 @@ a {
   .nextEpisode {
     color: white;
     padding: .3em .7em;
-    margin-left: .5em;
+    margin-right: .5em;
     font-size: 1rem;
     background-color: #5A668C;
     border-radius: 5px;
     box-shadow: 0 2px 4px grey;
     cursor: pointer;
+    min-width: 100px;
   }
 
 
@@ -584,7 +603,7 @@ a {
     border-radius: 5px;
     box-shadow: 0 2px 4px grey;
     cursor: pointer;
-
+    min-width: 100px;
   }
 
   .streamButton img {

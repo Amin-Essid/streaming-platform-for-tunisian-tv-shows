@@ -25,7 +25,8 @@ class Stream extends PureComponent {
              nextEpisodeLnk: null,
              prevEpisodeLnk: null,
              prevVideoTitle: null,
-            nextVideoTitle: null
+             nextVideoTitle: null, 
+             currentVideoTitle: null
 
         }
 
@@ -52,11 +53,14 @@ class Stream extends PureComponent {
                 (selectedShowEpisodes[prevEpisodeIndex].snippet.title) : 'nowhere'
                 let nextVideoTitle  = selectedShowEpisodes[nextEpisodeIndex] ? 
                 (selectedShowEpisodes[nextEpisodeIndex].snippet.title) : 'nowhere'
+                let currentVideoTitle = selectedShowEpisodes[currentEpisodeIndex] ? 
+                (selectedShowEpisodes[currentEpisodeIndex].snippet.title) : 'wait'
                 this.setState({
                     nextEpisodeLnk,
                     prevEpisodeLnk,
                     prevVideoTitle,
-                    nextVideoTitle
+                    nextVideoTitle, 
+                    currentVideoTitle
                 })
             }
     }
@@ -117,7 +121,7 @@ class Stream extends PureComponent {
     }
 
     getDataWhenRefresh = async () => {
-        let {type, show, currentEpisode, currentSeasonIndex,  selectedShow} = this.state;
+        let {show, currentEpisode, currentSeasonIndex,  selectedShow} = this.state;
         const {getSingleShow, getCurrentVideoInfo} = this.props.context;
 
         
@@ -186,41 +190,31 @@ class Stream extends PureComponent {
     }
     
     render() {
-        let {type, show, currentEpisode, selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex,  selectedShow, prevEpisodeLnk, nextEpisodeLnk, prevVideoTitle, nextVideoTitle} = this.state;
+        let {type, show, currentVideoTitle, currentEpisode, selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex,  selectedShow, prevEpisodeLnk, nextEpisodeLnk, prevVideoTitle, nextVideoTitle} = this.state;
         const {getCurrentVideoInfo} = this.state.context;
         currentEpisode = currentEpisode.split('||||')[1];
         let nextEpisodeIndex = currentEpisodeIndex+1;
         let prevEpisodeIndex = currentEpisodeIndex-1;
 
-        // console.log(selectedShow)
-        // console.log(type)
-        // console.log(show)
-        // console.log(currentEpisode)
-        // console.log(selectedShowEpisodes)
-        // console.log(currentSeasonIndex)
-        // console.log(currentEpisodeIndex)
-        // console.log(prevEpisodeIndex)
-        // console.log(nextEpisodeIndex)
-
         let layout = selectedShowEpisodes.length === 0 ? <Loading/> : (
             <div>
-            <Video videoId={currentEpisode} />
-                            <div className="otherEpisodes">
-                                <NextEpisode 
-                                videoTitle={nextVideoTitle} 
-                                getCurrentVideoInfo={getCurrentVideoInfo} 
-                                seasonIndex={currentSeasonIndex}
-                                episodeIndex={nextEpisodeIndex}
-                                lnk = {nextEpisodeLnk}
-                                />
-                                <AllEpisodes lnk={`/${type}/${show}`} />
-                                <PreviousEpisode 
+                <Video videoId={currentEpisode} epTitle={currentVideoTitle} />
+                        <div className="otherEpisodes">
+                            <PreviousEpisode 
                                 videoTitle={prevVideoTitle}
                                 lnk={prevEpisodeLnk}
                                 getCurrentVideoInfo={getCurrentVideoInfo}
                                 seasonIndex={currentSeasonIndex}
                                 episodeIndex={prevEpisodeIndex}
-                                />
+                            />
+                            <AllEpisodes lnk={`/${type}/${show}`} />   
+                            <NextEpisode 
+                                videoTitle={nextVideoTitle} 
+                                getCurrentVideoInfo={getCurrentVideoInfo} 
+                                seasonIndex={currentSeasonIndex}
+                                episodeIndex={nextEpisodeIndex}
+                                lnk = {nextEpisodeLnk}
+                            />
                         </div>
                     </div>
             )
