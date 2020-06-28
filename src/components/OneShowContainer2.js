@@ -6,8 +6,7 @@ import Episode from './Episode';
 import {withRouter} from 'react-router-dom';
 import DefaultMovieImg from '../images/icons/defaultMovieImg.png';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import youtube from '../api/Youtube'; 
-import withRefacturingData from './withRefacturingData';
+import youtube from '../api/Youtube';
 
 class OneShowContainer2 extends Component {
     constructor(props) {

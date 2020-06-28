@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import OneShowContainer from '../components/OneShowContainer';
 import OneShowContainer2 from '../components/OneShowContainer2'
 
 export default class SingleTvShow extends Component {

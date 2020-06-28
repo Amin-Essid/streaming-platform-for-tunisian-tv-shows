@@ -7,7 +7,6 @@ import youtube from '../api/Youtube';
 import {withRouter} from 'react-router-dom';
 import Loading from './Loading';
 import AllEpisodes from './AllEpisodes';
-import withRefacturingData from './withRefacturingData';
 
 class Stream extends PureComponent {
     constructor(props) {
