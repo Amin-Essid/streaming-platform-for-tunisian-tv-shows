@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import data from './Data';
 import finalData from './FinalData';
 import WataniaImg from './images/channels/wataniaOne.jpg';
 import alhiwarImg from './images/channels/alhiwar.jpg';

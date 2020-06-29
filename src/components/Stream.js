@@ -180,7 +180,6 @@ class Stream extends PureComponent {
                 selectedShow: this.props.context.selectedShow
             })
         }
-        const {getCurrentVideoInfo} = this.props.context;
         const {type, show} = this.state;
         window.onpopstate  = async (e) => {
             this.props.history.push({ pathname: `/${type}/${show}`});
@@ -189,7 +188,7 @@ class Stream extends PureComponent {
     }
     
     render() {
-        let {type, show, currentVideoTitle, currentEpisode, selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex,  selectedShow, prevEpisodeLnk, nextEpisodeLnk, prevVideoTitle, nextVideoTitle} = this.state;
+        let {type, show, currentVideoTitle, currentEpisode, selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex, prevEpisodeLnk, nextEpisodeLnk, prevVideoTitle, nextVideoTitle} = this.state;
         const {getCurrentVideoInfo} = this.state.context;
         currentEpisode = currentEpisode.split('||||')[1];
         let nextEpisodeIndex = currentEpisodeIndex+1;

@@ -19,9 +19,9 @@ function Navbar() {
                   <Link to={() => `/كل-الأصناف${Math.floor(Math.random()*1000)}`} className='nav-item__link'>كل المسلسلات </Link>
                 </span>
                 <span className=' nav-item socialMedia-container'>
-                  <a target="_blank" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={FaceBookIcon} alt="" className="socialMedia-icon-fb"/></a>
-                  <a target="_blank" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={EmailIcon} alt="" className="socialMedia-icon-em"/></a>
-                  <a target="_blank" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={LinkedinIcon} alt="" className="socialMedia-icon-ln"/></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={FaceBookIcon} alt="" className="socialMedia-icon-fb"/></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={EmailIcon} alt="" className="socialMedia-icon-em"/></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={LinkedinIcon} alt="" className="socialMedia-icon-ln"/></a>
                 </span>
                 <DropdownNavItem content={<img src={menuIcon} alt="menu"/>}>
                     <DropdownMenu></DropdownMenu>
@@ -60,9 +60,9 @@ function Navbar() {
                 <DropdownItem><Link to={() => `/كل-الأصناف${Math.floor(Math.random()*1000)}`}>
                 كل المسلسلات</Link></DropdownItem>
                 <DropdownItem className='socialMedia-container'>
-                  <a target="_blank" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={FaceBookIcon} alt="" className="socialMedia-icon-fb"/></a>
-                  <a target="_blank" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={EmailIcon} alt="" className="socialMedia-icon-em"/></a>
-                  <a target="_blank" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={LinkedinIcon} alt="" className="socialMedia-icon-ln"/></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={FaceBookIcon} alt="" className="socialMedia-icon-fb"/></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={EmailIcon} alt="" className="socialMedia-icon-em"/></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={LinkedinIcon} alt="" className="socialMedia-icon-ln"/></a>
                 </DropdownItem>
             </div>
         )
