@@ -1,17 +1,31 @@
-import  awledMoufida from './images/series/awledMoufida.png';
+import  awledMoufida from './images/series/awledMoufida.jpg';
 import  boulice from './images/series/boulice.png';
-import  choufliHal from './images/series/choufliHal.png';
+import  choufliHal from './images/series/choufliHal.jpg';
 import  darLkhleaa from './images/series/darLkhleaa.png';
 import  denyaOkhra from './images/series/denyaOkhra.png';
 import  galbDhib from './images/series/galbDhib.png';
 import  hsabetWakabet from './images/series/hsabetWakabet.png';
 import  khoutabAlbeb from './images/series/khoutabAlbeb.png';
 import  maktoub from './images/series/maktoub.png';
-import  nouba from './images/series/nouba.png';
+import  nouba from './images/series/nouba.jpg';
 import  nsibtiLaziza from './images/series/nsibtiLaziza.png';
 import  saydRim from './images/series/saydRim.png';
 import macha3er from './images/series/macha3er.png';
-import chwareb from './images/series/chwareb.png'
+import chwareb from './images/series/chwareb.png';
+import na3ouretLhwe from './images/series/na3ouretLhwe.png';
+import maestro from './images/series/maestro.png';
+import loutil from './images/series/loutil.png';
+import gesmetWkhayen from './images/series/9esmetWkhayen.png';
+import jnounL9ayla from './images/series/jnounL9ayla.jpg';
+import binThaneya from './images/series/binThaneya.png';
+import anberLil from './images/series/anberLil.jpg';
+import awdetLminyar from './images/series/awdetLminyar.png';
+import gamretSidiMa7rous from './images/series/gamretSidiMa7rous.jpg';
+import brika from './images/series/brika.jpg';
+import a9fasBilaTouyour from './images/series/a9fasBilaTouyour.jpg';
+import ocha9Sarab from './images/series/ocha9Sarab.jpg';
+import and3zayez from './images/series/and3zayez.jpg';
+
 
 
 export default [
@@ -201,6 +215,151 @@ export default [
         seasons: [
             'PLMRYrbXGVjIFlN2iOgftVfSg5qCTmjNhY',
             'PLJEhvAb0cvwKwWjNm1UvAYfnB-E19cLKb'
+        ]
+    },
+    {
+        id: 15,
+        name: 'ناعورة الهواء',
+        year: 'بعد2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [na3ouretLhwe],
+        seasons: [
+            'PL-WZ0q0SEje3nV3xkrqzs2qvUx0vapk0t',
+            'PLctUXHFsw5XSMRa1WplcYbHoJTQKI9yu3'
+        ]
+    },
+    {
+        id: 16,
+        name: 'المايسترو',
+        year: 'بعد2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [maestro],
+        seasons: [
+            'PLzfCQunlSZTN_x959VjaWWfWO_RZKcQWY'
+        ]
+    },
+    {
+        id: 17,
+        name: 'لوتيل',
+        year: 'بعد2011',
+        channel: 'الوطنية',
+        type: 'كوميديا',
+        img: [loutil],
+        seasons: [
+            'PLtKHe7Z2QnnGsOvf805SBCqmYDEbvgSGz'
+        ]
+    },
+    {
+        id: 18,
+        name: 'قسمة وخيان',
+        year: 'بعد2011',
+        channel: 'الحوار التونسي',
+        type: 'دراما',
+        img: [gesmetWkhayen],
+        seasons: [
+            'PLE9Asy3d102O_mXV9jkPxy4OrbfrUG0R4'
+        ]
+    },
+    {
+        id: 19,
+        name: 'جنون القايلة',
+        year: 'بعد2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [jnounL9ayla],
+        seasons: [
+            'PLVT_9gYHUHdMpIUGB5BEl661dKn4IfqaM',
+            'PLQLbJPjZnmDGYf3nWHEv3sp_OAZSgwftn'
+        ]
+    },
+    {
+        id: 20,
+        name: 'بين الثناية',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [binThaneya],
+        seasons: [
+            'PLtKHe7Z2QnnFyS6C5AInDrUIQZNEEfkvE'
+        ]
+    },
+    {
+        id: 21,
+        name: 'عنبر الليل',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [anberLil],
+        seasons: [
+            'PL6TjelGzBJrVGI-SOh0EA8N1XPSy9vWBj'
+        ]
+    },
+    {
+        id: 22,
+        name: 'عودة المنيار',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [awdetLminyar],
+        seasons: [
+            'PLtKHe7Z2QnnFo6dzj6dxc9R9yvEq6VAsJ'
+        ]
+    },
+    {
+        id: 23,
+        name: 'قمرة سيدي محروس',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [gamretSidiMa7rous],
+        seasons: [
+            'PLwBeSDLRCKrFXUn0rzKpZEKdrjmA09Og4'
+        ]
+    },
+    {
+        id: 24,
+        name: 'أقفاص بلا طيور',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [a9fasBilaTouyour],
+        seasons: [
+            'PLTCHUZcwy4mipvkxkCjs8JwB5nn9BntFT'
+        ]
+    },
+    {
+        id: 25,
+        name: 'عشاق السراب',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [ocha9Sarab],
+        seasons: [
+            'PLTCHUZcwy4mh7W-FPw-aHWXjSVSZjuvMy'
+        ]
+    },
+    {
+        id: 26,
+        name: 'عند عزيز',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [and3zayez],
+        seasons: [
+            'PL4KunyD_mdAjf35iLHwh0AxYpk7ETsnRo'
+        ]
+    },
+    {
+        id: 27,
+        name: 'سجن بريكة',
+        year: 'بعد2011',
+        channel: 'حنبعل',
+        type: 'دراما',
+        img: [brika],
+        seasons: [
+            'PLTCHUZcwy4mgBNsfAhB7QR9E2CJ5oqjDP'
         ]
     },
 ]
