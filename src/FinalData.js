@@ -49,6 +49,7 @@ import njoumElil from './images/series/njoumElil.jpg';
 import oyounKatrin from './images/series/oyounKatrin.jpg';
 import kamanjetSalema from './images/series/kamanjetSalema.jpg';
 import ghada from './images/series/ghada.jpg';
+import lmanara from './images/series/lmanara.jpg';
 
 
 
@@ -658,17 +659,17 @@ export default [
             'PLtKHe7Z2QnnGaiEETp1XKwtlENPMLzBHM'
         ]
     },
-    // {
-    //     id: 53,
-    //     name: '',
-    //     year: 'قبل2011',
-    //     channel: 'الوطنية',
-    //     type: 'دراما',
-    //     img: [],
-    //     seasons: [
-    //         ''
-    //     ]
-    // },
+    {
+        id: 52,
+        name: 'لمنارة',
+        year: 'بعد2011',
+        channel: 'الحوار التونسي',
+        type: 'دراما',
+        img: [lmanara],
+        seasons: [
+            'PLFApv2COP4erYy_0ea9b3z5ac-MahzxIM'
+        ]
+    },
     // {
     //     id: 54,
     //     name: '',
