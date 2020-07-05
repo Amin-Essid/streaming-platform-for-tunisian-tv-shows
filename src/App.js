@@ -9,19 +9,22 @@ import {Route, Switch} from 'react-router-dom';
 import Errr from './pages/Error';
 import Footer from './components/Footer';
 import Ads from './components/Ads';
+import Error from './pages/Error';
 
 function App() {
   return (
     <>
       <Header />
       <Ads />
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/:showsType' component={TvShows} />
-        <Route exact path='/:showsType/:stvs' component={SingleTvShow} />
-        <Route exact path='/:showsType/:stvs/:stream' component={VideoPlayer} />
-        <Route component={Errr} />
-      </Switch>
+      <Error>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/:showsType' component={TvShows} />
+          <Route exact path='/:showsType/:stvs' component={SingleTvShow} />
+          <Route exact path='/:showsType/:stvs/:stream' component={VideoPlayer} />
+          <Route component={Errr} />
+        </Switch>
+      </Error>
       <Footer />
     </>
   );

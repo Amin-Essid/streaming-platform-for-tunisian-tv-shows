@@ -1,6 +1,6 @@
-
 import React, { Component } from 'react';
-import OneShowContainer2 from '../components/OneShowContainer2'
+import OneShowContainer2 from '../components/OneShowContainer2';
+import Error from '../pages/Error';
 
 export default class SingleTvShow extends Component {
     constructor(props) {
@@ -26,7 +26,9 @@ export default class SingleTvShow extends Component {
 
         return (
             <>
-                <OneShowContainer2 show={this.state.show} />
+                <Error>
+                    <OneShowContainer2 show={this.state.show} />
+                </Error>
             </>
         )
     }

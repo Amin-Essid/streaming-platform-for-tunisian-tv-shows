@@ -6,7 +6,6 @@ let StyledNormalButton = styled.div`
     & + & {
         margin-right: 1em;
     }
-    /* padding: auto auto; */
     width: ${props => props.buttonWidth};
     height: ${props => props.buttonHeight};
     border-radius: 5px;

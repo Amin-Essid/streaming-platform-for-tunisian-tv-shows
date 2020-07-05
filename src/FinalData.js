@@ -64,11 +64,11 @@ export default [
         img: [awledMoufida],
         featured: true,
         seasons: [
-            'PLFApv2COP4eouxGWNj5_CTrBrjl6RnIXO',
-            'PLFApv2COP4ermf8wpxfGnxW--TsNGrUJs',
-            'PLFApv2COP4eqjxesVEePk4VKSkFKUdnWy',
-            'PLFApv2COP4eoOE0i2naOEX30mJ1cCR-QR',
-            'PLFApv2COP4eo1E6y4anTwSJiWLLZAtzWQ'
+            'PLXcsy_-LfmIvKZDRRW2PRWcgaRORrnh6H',
+            'PLXcsy_-LfmIuLt8VG0Nhg0_98RoevCW52',
+            'PLXcsy_-LfmIvV6dGcrZCV6_55v9dY9sPP',
+            'PLXcsy_-LfmIuskvQCH6fCgSOXmQmbYywa',
+            'PLXcsy_-LfmIvxqRDpMaahlHpp3Rqn3oNC'
         ]
     },
     {

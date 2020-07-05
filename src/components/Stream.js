@@ -7,6 +7,7 @@ import youtube from '../api/Youtube';
 import {withRouter} from 'react-router-dom';
 import Loading from './Loading';
 import AllEpisodes from './AllEpisodes';
+import NoInternet from './NoInternet';
 
 class Stream extends PureComponent {
     constructor(props) {
@@ -25,8 +26,8 @@ class Stream extends PureComponent {
              prevEpisodeLnk: null,
              prevVideoTitle: null,
              nextVideoTitle: null, 
-             currentVideoTitle: null
-
+             currentVideoTitle: null,
+             noInternet: false
         }
 
     }
@@ -77,10 +78,14 @@ class Stream extends PureComponent {
           })
             let allEpisodes = selectedShowEpisodes.concat(response.data.items)
             this.setState({
-                selectedShowEpisodes: allEpisodes
+                selectedShowEpisodes: allEpisodes,
+                noInternet: false
             })
         } catch (err) {
             console.log(err)
+            this.setState({
+                noInternet: true
+              })
         }
     
     }
@@ -108,6 +113,7 @@ class Stream extends PureComponent {
         } else {
             this.setState({
                 selectedShowEpisodes,
+                noInternet: false
               }, () => {
                 getSelectedShowEpisodes(this.state.selectedShowEpisodes)  
                 })
@@ -115,6 +121,9 @@ class Stream extends PureComponent {
             
       } catch (err) {
           console.log(err)
+          this.setState({
+            noInternet: true
+          })
       }
       
     }
@@ -157,7 +166,6 @@ class Stream extends PureComponent {
             })
         } else {
             this.createOtherEpisodesLink()
-
         }
         
     }
@@ -188,7 +196,7 @@ class Stream extends PureComponent {
     }
     
     render() {
-        let {type, show, currentVideoTitle, currentEpisode, selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex, prevEpisodeLnk, nextEpisodeLnk, prevVideoTitle, nextVideoTitle} = this.state;
+        let {type, show, currentVideoTitle, currentEpisode, selectedShowEpisodes, currentEpisodeIndex, currentSeasonIndex, prevEpisodeLnk, nextEpisodeLnk, prevVideoTitle, nextVideoTitle, noInternet} = this.state;
         const {getCurrentVideoInfo} = this.state.context;
         currentEpisode = currentEpisode.split('||||')[1];
         let nextEpisodeIndex = currentEpisodeIndex+1;
@@ -216,13 +224,15 @@ class Stream extends PureComponent {
                         </div>
                     </div>
             )
-    
-             return (
-                <>
-                   {layout}
-
-                </>
-            )
+             if (noInternet) {
+                 return <NoInternet/>
+             } else {
+                return (
+                    <>
+                    {layout}
+                    </>
+                )
+             }
     }
 }
 

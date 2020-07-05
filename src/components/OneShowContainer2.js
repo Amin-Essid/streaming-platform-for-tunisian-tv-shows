@@ -6,6 +6,7 @@ import Episode from './Episode';
 import {withRouter} from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import youtube from '../api/Youtube';
+import NoInternet from './NoInternet';
 
 class OneShowContainer2 extends Component {
     constructor(props) {
@@ -15,7 +16,8 @@ class OneShowContainer2 extends Component {
              context: this.props.context,
              activeSeason: 1,
              selectedShow: null,
-             episodes: []
+             episodes: [],
+             noInternet: false
         }
     }
 
@@ -42,7 +44,8 @@ class OneShowContainer2 extends Component {
               })
                 let allEpisodes = this.state.episodes.concat(response.data.items)
                 this.setState({
-                    episodes: allEpisodes
+                    episodes: allEpisodes,
+                    noInternet: false
                 }
                 ,() => {
                     getSelectedShowEpisodes(this.state.episodes)
@@ -51,6 +54,9 @@ class OneShowContainer2 extends Component {
                 )
             } catch (err) {
                 console.log(err)
+                this.setState({
+                    noInternet: true
+                  })
             }
         
     }
@@ -68,7 +74,8 @@ class OneShowContainer2 extends Component {
                 }
             })
               this.setState({
-                  episodes: response.data.items
+                  episodes: response.data.items,
+                  noInternet: false
               },() => {
                 let displayedItems = response.data.pageInfo.resultsPerPage 
                 while (response.data.pageInfo.totalResults > displayedItems) {
@@ -80,6 +87,9 @@ class OneShowContainer2 extends Component {
                 
           } catch (err) {
               console.log(err)
+              this.setState({
+                noInternet: true
+              })
           }
           
         }
@@ -116,6 +126,8 @@ class OneShowContainer2 extends Component {
         const {loading, selectedShow, getCurrentVideoInfo} = this.props.context;
         if(loading){
             return <Loading />
+        }  else if (this.state.noInternet) {
+            return <NoInternet/>
         } else {
         return (
             <>

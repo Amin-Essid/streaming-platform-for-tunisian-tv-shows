@@ -531,16 +531,12 @@ a {
     width: auto;
     margin: 0 auto;
     margin-bottom: 5px;
-    /* padding: .3em .7em; */
     justify-content: center;
     max-width: 700px;
     color: #BF1515;
     font-size: 1.1rem;
     font-weight: bold;
-    /* border: 3px solid #BF1515; */
-    /* border-radius: 5px;
-    box-shadow: 0 2px 4px grey;
-    background-color: white; */
+    text-align: center;
   }
 
   .otherEpisodes {
@@ -610,6 +606,57 @@ a {
     height: 32px;
     margin-bottom: -0.2em;
   }
+
+  .noInternet-msg {
+    display: flex;
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    justify-content: center;
+    max-width: 700px;
+    color: #BF1515;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .error-msg {
+    display: flex;
+    width: auto;
+    max-height: 100px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    justify-content: center;
+    max-width: 700px;
+    color: #BF1515;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+  }
+
+  .error-btn{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px grey;
+    cursor: pointer;
+    font-weight: medium;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #BF1515;
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .error-btn:hover {
+      transform: scale(1.03);
+      filter: brightness(1.2);
+    }
+
 
 
 
