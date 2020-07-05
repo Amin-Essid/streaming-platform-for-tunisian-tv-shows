@@ -25,7 +25,7 @@ export default class Error extends Component {
                     <div className='error-msg' style={{fontSize: '1.3rem'}}>
                         هذه الصفحة غير موجودة
                     </div>
-                    <a href='http://localhost:3000/' className="error-btn">
+                    <a href='https://btounsi.netlify.app/' className="error-btn">
                         عودة إلى الرئيسية
                     </a>
                 </>
