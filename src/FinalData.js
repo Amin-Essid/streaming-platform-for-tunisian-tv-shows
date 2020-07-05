@@ -121,9 +121,9 @@ export default [
         img: [denyaOkhra],
         featured: true,
         seasons: [
-            'PLFApv2COP4eqyVmGeU3lsyR0nKzHaoGvW',
-            'PLFApv2COP4ep_N76PBmJ6Pk5OSodDempI',
-            'PLFApv2COP4eoXum4THeJKpA9Z8na0w1ku'
+            'PLXcsy_-LfmIu4cZZr2Yk1uOks4QwLzosO',
+            'PLXcsy_-LfmIuAXJakSFOxh5t7q2nhzR9k',
+            'PLXcsy_-LfmIvB9f5geKAf0DkCvjihsPDi'
         ]
     },
     {
