@@ -13,11 +13,7 @@ const Video = ({videoId, epTitle}) => {
                 src={videoSrc} 
                 frameBorder="0" 
                 title="video player"
-                allowfullscreen="allowfullscreen"
-                mozallowfullscreen="mozallowfullscreen" 
-                msallowfullscreen="msallowfullscreen" 
-                oallowfullscreen="oallowfullscreen" 
-                webkitallowfullscreen="webkitallowfullscreen"></iframe>
+                allowFullScreen></iframe>
             </div>
             <div className='episode-title'>
                 <p>{epTitle}</p>

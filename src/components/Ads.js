@@ -7,12 +7,13 @@ const StyledBanner = styled.div`
     max-width: 900px;
     background-image: url(${props => props.img});
     background-size: 100% 100%;
-    height: 50px;
+    height: 65px;
     /* border-radius: 30px; */
-    margin: 1.5em auto 1.5em auto; 
+    margin: 1em auto .5em auto; 
     box-shadow: 0 1px 6px grey;
     @media (min-width:690px) {
-        height:100px
+        height:100px;
+        margin: 1.5em auto 1.5em auto; 
     }
 `
 function Ads(){
