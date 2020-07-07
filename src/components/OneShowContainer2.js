@@ -39,7 +39,7 @@ class OneShowContainer2 extends Component {
                     maxResults: 50,
                     pageToken: rep.data.nextPageToken,
                     playlistId: playlistId,
-                    key: process.env.REACT_APP_API_KEY,
+                    key: 'AIzaSyB4R8zkjTG79Wc_s2pnJlqzZrwb-IbHIVI',
                   }
               })
                 let allEpisodes = this.state.episodes.concat(response.data.items)
@@ -70,7 +70,7 @@ class OneShowContainer2 extends Component {
                   part: 'snippet',
                   maxResults: 50,
                   playlistId: playlistId,
-                  key: process.env.REACT_APP_API_KEY,
+                  key: 'AIzaSyB4R8zkjTG79Wc_s2pnJlqzZrwb-IbHIVI',
                 }
             })
               this.setState({
