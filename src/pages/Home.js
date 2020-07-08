@@ -22,7 +22,7 @@ export default function Home() {
                 links={['كل-الأصناف']}
                 buttonsContent={['إبحث عن مسلسلك المفضل']} 
                 buttonsWidth={['220px']} 
-                buttonsHeight={['43px']} 
+                buttonsHeight={['50px']} 
                 buttonsStyle={['primary-button']} 
                 buttonsMargin={['2.9em', '2.9em']}
             />
