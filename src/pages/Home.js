@@ -19,11 +19,11 @@ export default function Home() {
                 boxContentStyleBorder='3px solid #5A668C'
             />
             <ButtonsContainer 
-                links={['2020', 'كل-الأصناف']}
-                buttonsContent={['رمضان 2020', 'كل المسلسلات']} 
-                buttonsWidth={['130px', '130px']} 
-                buttonsHeight={['43px', '43px']} 
-                buttonsStyle={['primary-button', 'secondary-button']} 
+                links={['كل-الأصناف']}
+                buttonsContent={['إبحث عن مسلسلك المفضل']} 
+                buttonsWidth={['220px']} 
+                buttonsHeight={['43px']} 
+                buttonsStyle={['primary-button']} 
                 buttonsMargin={['2.9em', '2.9em']}
             />
             <Section 

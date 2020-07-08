@@ -119,7 +119,6 @@ export default [
         channel: 'الحوار التونسي',
         type: 'كوميديا',
         img: [denyaOkhra],
-        featured: true,
         seasons: [
             'PLXcsy_-LfmIu4cZZr2Yk1uOks4QwLzosO',
             'PLXcsy_-LfmIuAXJakSFOxh5t7q2nhzR9k',
@@ -129,11 +128,10 @@ export default [
     {
         id: 6,
         name: 'قلب الذيب',
-        year: '2020',
+        year: 'بعد2011',
         channel: 'الوطنية',
         type: 'دراما',
         img: [galbDhib ],
-        featured: true,
         seasons: [
             'PLfakkE2mXWQBvwGt7gEz59Pwo1_jCHw-B'
         ]
@@ -145,6 +143,7 @@ export default [
         channel: 'الوطنية',
         type: 'دراما',
         img: [hsabetWakabet],
+        featured: true,
         legendary: true,
         seasons: [
             'PLXcsy_-LfmIs9AmfmwzPOGykusmO_7mAm'
@@ -158,6 +157,7 @@ export default [
         type: 'دراما',
         img: [khoutabAlbeb],
         legendary: true,
+        featured: true,
         seasons: [
             'PL6TjelGzBJrVmWAy4DavaSkFRtDf0ELND',
             'PL6TjelGzBJrWCW90n93v2PTtjBPMFFybL'
@@ -166,11 +166,12 @@ export default [
     {
         id: 9,
         name: 'مكتوب',
-        year: 'بعد2011',
+        year: 'قبل2011',
         channel: 'الحوار التونسي',
         type: 'دراما',
         img: [maktoub],
         legendary: true, 
+        featured: true,
         seasons: [
             'PLvuiC-ftvBUXDX5WO0VYGBZHqYkFExR42',
             'PLvuiC-ftvBUU4e7LthVkUTiR-85zL4KjC',
@@ -216,6 +217,7 @@ export default [
         type: 'دراما',
         img: [saydRim],
         legendary: true,
+        featured: true,
         seasons: [
             'PLtKHe7Z2QnnHpJ0m_dOQjboLQMQ3vwwSu'
         ]
@@ -223,7 +225,7 @@ export default [
     {
         id: 13,
         name: 'مشاعر',
-        year: 'قبل2011',
+        year: 'بعد2011',
         channel: 'قرطاج+',
         type: 'دراما',
         img: [macha3er],
@@ -238,6 +240,8 @@ export default [
         channel: 'التاسعة',
         type: 'دراما',
         img: [chwareb],
+        legendary: true,
+        featured: true,
         seasons: [
             'PLMRYrbXGVjIFlN2iOgftVfSg5qCTmjNhY',
             'PLJEhvAb0cvwKwWjNm1UvAYfnB-E19cLKb'
@@ -309,6 +313,7 @@ export default [
         type: 'دراما',
         img: [binThaneya],
         legendary: true,
+        featured: true,
         seasons: [
             'PLtKHe7Z2QnnFyS6C5AInDrUIQZNEEfkvE'
         ]
@@ -462,7 +467,7 @@ export default [
     {
         id: 34,
         name: '27',
-        year: 'قبل2011',
+        year: 'بعد2011',
         channel: 'الوطنية',
         type: 'دراما',
         img: [m27],
@@ -488,6 +493,8 @@ export default [
         channel: 'الوطنية',
         type: 'دراما',
         img: [lialiLbidh],
+        featured: true,
+        legendary: true,
         seasons: [
             'PLeLC_Um5IywNPSOtT7INRpcfSDRV0yUvM'
         ]
@@ -495,7 +502,7 @@ export default [
     {
         id: 37,
         name: 'يوميات إمرأة',
-        year: 'قبل2011',
+        year: 'بعد2011',
         channel: 'الوطنية',
         type: 'دراما',
         img: [yawmiyetEmra2a],
@@ -506,7 +513,7 @@ export default [
     {
         id: 38,
         name: 'الدوامة',
-        year: 'قبل2011',
+        year: 'بعد2011',
         channel: 'الوطنية',
         type: 'دراما',
         img: [dawema],
@@ -561,7 +568,7 @@ export default [
     {
         id: 43,
         name: 'وردة و كتاب',
-        year: 'قبل2011',
+        year: 'بعد2011',
         channel: 'الوطنية',
         type: 'دراما',
         img: [wardaWkteb],
@@ -576,6 +583,7 @@ export default [
         channel: 'الوطنية',
         type: 'دراما',
         img: [mnemet3roussiya],
+        legendary: true,
         seasons: [
             'PLeLC_Um5IywP1DvOKXREfK_UmsLWpsUvo'
         ]
@@ -620,6 +628,7 @@ export default [
         channel: 'حنبعل',
         type: 'دراما',
         img: [njoumElil],
+        legendary: true,
         seasons: [
             'PL-WZ0q0SEje3ixESGTZNGh_sk9qpiliYR',
             'L-WZ0q0SEje0hE-xEbIPuXVMeOp4wQRVx',
