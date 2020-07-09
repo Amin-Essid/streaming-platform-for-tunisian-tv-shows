@@ -12,7 +12,6 @@ function NextEpisode({videoTitle, getCurrentVideoInfo, seasonIndex, episodeIndex
                 <Link to={lnk} className='nextEpisode'>
                     <div className='streamButton' onClick={() => getCurrentVideoInfo(seasonIndex, episodeIndex)}>
                         <p>التالية</p>
-                        {/* <p>{videoTitle}</p> */}
                         <img src={whiteLeftArrow} alt="whiteRightArrow"/>
                     </div>
                 </Link>

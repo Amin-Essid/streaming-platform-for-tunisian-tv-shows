@@ -56,22 +56,6 @@ import lmanara from './images/series/lmanara.jpg';
 
 export default [
     {
-        id: 1,
-        name: 'أولاد مفيدة',
-        year: 'بعد2011',
-        channel: 'الحوار التونسي',
-        type: 'دراما',
-        img: [awledMoufida],
-        featured: true,
-        seasons: [
-            'PLXcsy_-LfmIvKZDRRW2PRWcgaRORrnh6H',
-            'PLXcsy_-LfmIuLt8VG0Nhg0_98RoevCW52',
-            'PLXcsy_-LfmIvV6dGcrZCV6_55v9dY9sPP',
-            'PLXcsy_-LfmIuskvQCH6fCgSOXmQmbYywa',
-            'PLXcsy_-LfmIvxqRDpMaahlHpp3Rqn3oNC'
-        ]
-    },
-    {
         id: 2,
         name: 'بوليس',
         year: 'بعد2011',
@@ -92,13 +76,28 @@ export default [
         type: 'كوميديا',
         img: [choufliHal],
         featured: true,
-        legendary: true,
         seasons:[
             'PLXcsy_-LfmItkc2uH7IjMZbNdjizMlF13',
             'PLXcsy_-LfmItTaE0hBGn8w-5zMYXHmQwE',
             'PLXcsy_-LfmIs_V85M5vubfs-CvSoWFBoZ',
             'PLXcsy_-LfmIvBwhdF-jbdnZXJRiZHDY1J',
             'PLXcsy_-LfmIuDRmrHA9RemxM1JrXZ4qXV'
+        ]
+    },
+    {
+        id: 1,
+        name: 'أولاد مفيدة',
+        year: 'بعد2011',
+        channel: 'الحوار التونسي',
+        type: 'دراما',
+        img: [awledMoufida],
+        featured: true,
+        seasons: [
+            'PLXcsy_-LfmIvKZDRRW2PRWcgaRORrnh6H',
+            'PLXcsy_-LfmIuLt8VG0Nhg0_98RoevCW52',
+            'PLXcsy_-LfmIvV6dGcrZCV6_55v9dY9sPP',
+            'PLXcsy_-LfmIuskvQCH6fCgSOXmQmbYywa',
+            'PLXcsy_-LfmIvxqRDpMaahlHpp3Rqn3oNC'
         ]
     },
     {
@@ -126,6 +125,17 @@ export default [
         ]
     },
     {
+        id: 28,
+        name: 'القضية 460',
+        year: 'بعد2011',
+        channel: 'التاسعة',
+        type: 'دراما',
+        img: [kadheya460],
+        seasons: [
+            'PLTGtCMX0-RuJMxUHT30HrIIXliCVU2Qng'
+        ]
+    },
+    {
         id: 6,
         name: 'قلب الذيب',
         year: 'بعد2011',
@@ -137,16 +147,14 @@ export default [
         ]
     },
     {
-        id: 7,
-        name: 'حسابات و عقابات',
+        id: 44,
+        name: 'منامة عروسية',
         year: 'قبل2011',
         channel: 'الوطنية',
         type: 'دراما',
-        img: [hsabetWakabet],
-        featured: true,
-        legendary: true,
+        img: [mnemet3roussiya],
         seasons: [
-            'PLXcsy_-LfmIs9AmfmwzPOGykusmO_7mAm'
+            'PLeLC_Um5IywP1DvOKXREfK_UmsLWpsUvo'
         ]
     },
     {
@@ -164,6 +172,31 @@ export default [
         ]
     },
     {
+        id: 10,
+        name: 'النوبة',
+        year: 'بعد2011',
+        channel: 'نسمة',
+        type: 'دراما',
+        img: [nouba],
+        featured: true,
+        seasons: [
+            'PLJEhvAb0cvwKzUtTpOpvkYHuVEauhomv5'
+        ]
+    },
+    {
+        id: 7,
+        name: 'حسابات و عقابات',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [hsabetWakabet],
+        featured: true,
+        legendary: true,
+        seasons: [
+            'PLXcsy_-LfmIs9AmfmwzPOGykusmO_7mAm'
+        ]
+    },
+    {
         id: 9,
         name: 'مكتوب',
         year: 'قبل2011',
@@ -177,18 +210,6 @@ export default [
             'PLvuiC-ftvBUU4e7LthVkUTiR-85zL4KjC',
             'PLFApv2COP4eryEq2U4ZJP_tmoM42e0XG0',
             'PLFApv2COP4eohI7nndcB86uu8WYSdjqEf',
-        ]
-    },
-    {
-        id: 10,
-        name: 'النوبة',
-        year: 'بعد2011',
-        channel: 'نسمة',
-        type: 'دراما',
-        img: [nouba],
-        featured: true,
-        seasons: [
-            'PLJEhvAb0cvwKzUtTpOpvkYHuVEauhomv5'
         ]
     },
     {
@@ -240,7 +261,6 @@ export default [
         channel: 'التاسعة',
         type: 'دراما',
         img: [chwareb],
-        legendary: true,
         featured: true,
         seasons: [
             'PLMRYrbXGVjIFlN2iOgftVfSg5qCTmjNhY',
@@ -396,17 +416,6 @@ export default [
         img: [brika],
         seasons: [
             'PLTCHUZcwy4mgBNsfAhB7QR9E2CJ5oqjDP'
-        ]
-    },
-    {
-        id: 28,
-        name: 'القضية 460',
-        year: 'بعد2011',
-        channel: 'التاسعة',
-        type: 'دراما',
-        img: [kadheya460],
-        seasons: [
-            'PLTGtCMX0-RuJMxUHT30HrIIXliCVU2Qng'
         ]
     },
     {
@@ -574,18 +583,6 @@ export default [
         img: [wardaWkteb],
         seasons: [
             'PLttXhuKlsXZ8KpeCQhANLafmWdyNNZfZP'
-        ]
-    },
-    {
-        id: 44,
-        name: 'منامة عروسية',
-        year: 'قبل2011',
-        channel: 'الوطنية',
-        type: 'دراما',
-        img: [mnemet3roussiya],
-        legendary: true,
-        seasons: [
-            'PLeLC_Um5IywP1DvOKXREfK_UmsLWpsUvo'
         ]
     },
     {
