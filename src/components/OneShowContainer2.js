@@ -26,7 +26,7 @@ class OneShowContainer2 extends Component {
             activeSeason: seasonNumber + 1
         }, ()=> {
             this.getPlaylist(this.state.selectedShow.seasons[this.state.activeSeason - 1])
-            console.log(seasonNumber)})
+            })
     }
 
 
@@ -113,7 +113,6 @@ class OneShowContainer2 extends Component {
              this.setState({
                  selectedShow: selectedShow
              }, async () => {
-                 console.log("aasba")
                  await getSingleShow(show)
                  this.getPlaylist(this.state.selectedShow.seasons[0])})
         }
@@ -139,9 +138,6 @@ class OneShowContainer2 extends Component {
 
                             <div className="singleShow-hero">
                                 <img src={selectedShow.img[0]} alt="" className="singleShow-img"/>
-                                {/* <div className="singleShow-description"> */}
-                                    {/* {selectedShow.descripton} */}
-                                {/* </div> */}
                                 <div className='singleShow-about'>
                                     <div className="singleShow-title">
                                         {selectedShow.name}

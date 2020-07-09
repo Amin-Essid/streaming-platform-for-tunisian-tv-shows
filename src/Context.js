@@ -129,10 +129,8 @@ class ShowsProvider extends Component {
 
     //auto select the shows using the url
     getShows = (slug) => {
-        console.log(slug[0])
         if (isNaN(slug[0])) {slug = this.replaceNumbersAt(slug, 7)}
         else {slug = this.replaceNumbersAt(slug, 4)}
-        console.log(slug)
         if (this.getUnique(this.state.shows, 'type').includes(slug) || slug === 'كل الأصناف'){
             this.setState({
                 type :slug,
@@ -168,16 +166,13 @@ class ShowsProvider extends Component {
     getSelectedShowEpisodes = (episodes) => {
         this.setState({
             selectedShowEpisodes: episodes
-        }, () => console.log(this.state.selectedShowEpisodes))
+        })
     }
 
     getCurrentVideoInfo = (seasonIndex, episodeIndex) => {
         this.setState({
             currentEpisodeIndex: episodeIndex,
             currentSeasonIndex: seasonIndex,
-        }, () => {
-            console.log(this.state.currentEpisodeIndex)
-            console.log(this.state.currentSeasonIndex)
         })
     }
 
