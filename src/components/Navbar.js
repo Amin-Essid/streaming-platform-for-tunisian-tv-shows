@@ -19,9 +19,9 @@ function Navbar() {
                 </span>
 
                 <span className=' nav-item socialMedia-container'>
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={FaceBookIcon} alt="" className="socialMedia-icon-fb"/></a>
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={EmailIcon} alt="" className="socialMedia-icon-em"/></a>
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={LinkedinIcon} alt="" className="socialMedia-icon-ln"/></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Btounsicom-102091131582205"><img src={FaceBookIcon} alt="" className="socialMedia-icon-fb"/></a>
+                  <a  href="mailto:btounsiTv@.gmail.com"><img src={EmailIcon} alt="" className="socialMedia-icon-em"/></a>
+                  {/* <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={LinkedinIcon} alt="" className="socialMedia-icon-ln"/></a> */}
                 </span>
                 <DropdownNavItem content={<img src={menuIcon} alt="menu"/>}>
                     <DropdownMenu></DropdownMenu>
@@ -60,9 +60,9 @@ function Navbar() {
                 كل المسلسلات</Link></DropdownItem>
                 <DropdownItem><Link to={() => `/قبل2011${Math.floor(Math.random()*1000)}`}>مسلسلات زمان</Link></DropdownItem>
                 <DropdownItem className='socialMedia-container'>
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={FaceBookIcon} alt="" className="socialMedia-icon-fb"/></a>
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={EmailIcon} alt="" className="socialMedia-icon-em"/></a>
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={LinkedinIcon} alt="" className="socialMedia-icon-ln"/></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Btounsicom-102091131582205"><img src={FaceBookIcon} alt="" className="socialMedia-icon-fb"/></a>
+                  <a href="mailto:btounsiTv@.gmail.com"><img src={EmailIcon} alt="" className="socialMedia-icon-em"/></a>
+                  {/* <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/essoiydi.mohamedamin"><img src={LinkedinIcon} alt="" className="socialMedia-icon-ln"/></a> */}
                 </DropdownItem>
             </div>
         )
