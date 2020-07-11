@@ -188,11 +188,7 @@ class Stream extends PureComponent {
                 selectedShow: this.props.context.selectedShow
             })
         }
-        const {type, show} = this.state;
-        window.onpopstate  = async (e) => {
-            this.props.history.push({ pathname: `/${type}/${show}`});
-            console.log('aasba')
-            }
+
     }
     
     render() {
