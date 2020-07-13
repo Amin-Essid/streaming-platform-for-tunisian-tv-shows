@@ -50,6 +50,21 @@ import oyounKatrin from './images/series/oyounKatrin.jpg';
 import kamanjetSalema from './images/series/kamanjetSalema.jpg';
 import ghada from './images/series/ghada.jpg';
 import lmanara from './images/series/lmanara.jpg';
+// l7ajrSe7i  matous  jariYe7amouda  ech9aW7keyet  nwasiW3teb  fiDarNana   tejL7adhara
+//   familyaLol  sb3aSbeya  l7ajema  far7etL3mor  malaEna  haloulaWslouma
+import l7ajrSe7i from './images/series/l7ajrSe7i.png';
+import matous from './images/series/matous.png';
+import jariYe7amouda from './images/series/jariYe7amouda.png';
+import nwasiW3teb from './images/series/nwasiW3teb.png';
+import fiDarNana from './images/series/fiDarNana.png';
+import tejL7adhara from './images/series/tejL7adhara.png';
+import sb3aSbeya from './images/series/sb3aSbeya.png';
+import familyaLol from './images/series/familyaLol.png';
+import l7ajema from './images/series/l7ajema.png';
+import far7etL3mor from './images/series/far7etL3mor.png';
+import malaEna from './images/series/malaEna.png';
+import haloulaWslouma from './images/series/haloulaWslouma.jpg';
+import ech9aW7keyet from './images/series/3ech9aW7keyet.jpg';
 
 
 
@@ -673,29 +688,154 @@ export default [
         type: 'دراما',
         img: [lmanara],
         seasons: [
-            'PLFApv2COP4erYy_0ea9b3z5ac-MahzxIM'
+            'PLbCZP7VjrbV-tIBizEMEU6AAztwADROtj'
         ]
     },
-    // {
-    //     id: 54,
-    //     name: '',
-    //     year: 'قبل2011',
-    //     channel: 'الوطنية',
-    //     type: 'دراما',
-    //     img: [],
-    //     seasons: [
-    //         ''
-    //     ]
-    // },
-    // {
-    //     id: 55,
-    //     name: '',
-    //     year: 'قبل2011',
-    //     channel: 'الوطنية',
-    //     type: 'دراما',
-    //     img: [],
-    //     seasons: [
-    //         ''
-    //     ]
-    // },
+    {
+        id: 54,
+        name: 'جاري يا حمودة',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [jariYe7amouda],
+        seasons: [
+            'PLtKHe7Z2QnnGg3oeG3Micow-isVNIqD9m'
+        ]
+    },
+    {
+        id: 55,
+        name: 'ماطوس',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [matous],
+        seasons: [
+            'PLtKHe7Z2QnnE5KleQQtU0NXzGR6VE9Qoq'
+        ]
+    },
+    {
+        id: 56,
+        name: 'عشقة و حكايات',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [ech9aW7keyet],
+        seasons: [
+            'PLwBeSDLRCKrE6XxZZC7osdR0_gUykpeSi'
+        ]
+    },
+    {
+        id: 57,
+        name: 'نواصي و عتب',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [nwasiW3teb],
+        seasons: [
+            'PLCB10EBFA59F92E70'
+        ]
+    },
+    {
+        id: 58,
+        name: 'في دار نانة',
+        year: 'بعد2011',
+        channel: 'نسمة',
+        type: 'دراما',
+        img: [fiDarNana],
+        seasons: [
+            'PLhodKXCC_DVWdguuf_DGkXN7ciWTtrM_6'
+        ]
+    },
+    {
+        id: 59,
+        name: 'هلولة و سلومة',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'كوميديا',
+        img: [haloulaWslouma],
+        seasons: [
+            'PLtKHe7Z2QnnHYnvjmwvPbEAXsjvA8CQmT'
+        ]
+    },
+    {
+        id: 60,
+        name: 'ملا إنا',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [malaEna],
+        seasons: [
+            'PLtKHe7Z2QnnERhLq1FqSltrMzYaxwnDNf'
+        ]
+    },
+    {
+        id: 61,
+        name: 'فرحة العمر',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [far7etL3mor],
+        seasons: [
+            'PLtKHe7Z2QnnHl7AQ0rql7vAJBXZJaGQJH'
+        ]
+    },
+    {
+        id: 62,
+        name: 'الحجامة',
+        year: 'بعد2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [l7ajema],
+        seasons: [
+            'PLtKHe7Z2QnnGx3tjBXYx5fWCvUSn0LJ-U'
+        ]
+    },
+    {
+        id: 63,
+        name: 'سبعة صبايا',
+        year: 'بعد2011',
+        channel: 'التاسعة',
+        type: 'كوميديا',
+        img: [sb3aSbeya],
+        seasons: [
+            'PLTGtCMX0-RuI7lJrcvBcvw5Jf_B8XEskS'
+        ]
+    },
+    
+    {
+        id: 64,
+        name: 'فاميليا لول',
+        year: 'بعد2011',
+        channel: 'الوطنية',
+        type: 'كوميديا',
+        img: [familyaLol],
+        seasons: [
+            'PLtKHe7Z2QnnGkqzFDPe7kzVOnUzqfiVvG'
+        ]
+    },
+    
+    {
+        id: 65,
+        name: 'تاج الحضارة',
+        year: 'بعد2011',
+        channel: 'الحوار التونسي',
+        type: 'دراما',
+        img: [tejL7adhara],
+        seasons: [
+            'PLgk1wghrEkVxh4vngHbekt8-QUxzAMuO2'
+        ]
+    },
+    
+    {
+        id: 66,
+        name: 'الحجر الصحي',
+        year: 'قبل2011',
+        channel: 'الوطنية',
+        type: 'دراما',
+        img: [l7ajrSe7i],
+        seasons: [
+            'PLTGtCMX0-RuK1P6iuw6HJ_PNzxf7oipOA'
+        ]
+    },
 ]
+

@@ -3,7 +3,7 @@ import menuIcon from '../images/icons/menuIcon.png';
 import {Link} from 'react-router-dom';
 import FaceBookIcon from '../images/icons/facebook.png';
 import EmailIcon from '../images/icons/email.png';
-import LinkedinIcon from '../images/icons/linkedin.png'
+// import LinkedinIcon from '../images/icons/linkedin.png'
 
 function Navbar() {
   const [open, setOpen] = useState(false);
