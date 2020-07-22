@@ -73,7 +73,7 @@ class Stream extends PureComponent {
                 maxResults: 50,
                 pageToken: rep.data.nextPageToken,
                 playlistId: playlistId,
-                key: 'AIzaSyB4R8zkjTG79Wc_s2pnJlqzZrwb-IbHIVI',
+                key: process.env.REACT_APP_API_KEY,
               }
           })
             let allEpisodes = selectedShowEpisodes.concat(response.data.items)
@@ -99,7 +99,7 @@ class Stream extends PureComponent {
               part: 'snippet',
               maxResults: 50,
               playlistId: playlistId,
-              key: 'AIzaSyB4R8zkjTG79Wc_s2pnJlqzZrwb-IbHIVI',
+              key: process.env.REACT_APP_API_KEY,
             }
         })
         const selectedShowEpisodes = response.data.items
