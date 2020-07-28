@@ -717,6 +717,22 @@ a {
   opacity: 0;
 }
 
+.adsbygoogle {
+  width: 85%;
+  max-width: 900px;
+  height: 100px !important;
+  max-height: 100px !important;
+  margin: 1em auto .5em auto;
+}
+
+@media (min-width:690px) {
+  .adsbygoogle {
+    height:100px !important;
+    max-height: 100px !important;
+    margin: 1.5em auto 1.5em auto; 
+  }
+}
+
 
   /* light pink: #F2B6CC
    dark pink: #F2506E
