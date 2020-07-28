@@ -1,30 +1,4 @@
 import React from 'react';
-
-
-export default class Ads extends React.Component {
-    
-  componentDidMount () {
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
-  }
-
-render () {
-    return (
-        <div>
-            <ins className="adsbygoogle"
-                style={{ display: 'block', height: '100px !important'}}
-                data-ad-client="ca-pub-8119914449289013"
-                data-ad-slot="2463850031"
-                data-ad-format="auto"
-                data-full-width-responsive="true">
-            </ins>
-        </div>
-    );
-  }
-}
-
-
-
-
 // import styled from 'styled-components';
 // import AdsBanner from '../images/icons/adsOne.png';
 
@@ -52,3 +26,24 @@ render () {
 // }
 
 // export default Ads
+
+export default class Ads extends React.Component {
+    
+  componentDidMount () {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }
+
+render () {
+    return (
+        <div>
+            <ins className="adsbygoogle"
+                style={{ display: 'block', height: '100px !important'}}
+                data-ad-client="ca-pub-8119914449289013"
+                data-ad-slot="2463850031"
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+            </ins>
+        </div>
+    );
+  }
+}

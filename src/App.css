@@ -720,15 +720,12 @@ a {
 .adsbygoogle {
   width: 85%;
   max-width: 900px;
-  height: 100px !important;
-  max-height: 100px !important;
-  margin: 1em auto .5em auto;
+  margin: 1em auto .5em auto; 
+  box-shadow: 0 1px 6px grey;
 }
 
 @media (min-width:690px) {
   .adsbygoogle {
-    height:100px !important;
-    max-height: 100px !important;
     margin: 1.5em auto 1.5em auto; 
   }
 }
