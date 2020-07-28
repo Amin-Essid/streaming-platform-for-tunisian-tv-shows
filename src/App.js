@@ -8,7 +8,7 @@ import VideoPlayer from './pages/VideoPlayer';
 import {Route, Switch} from 'react-router-dom';
 import Errr from './pages/Error';
 import Footer from './components/Footer';
-import Ads from './components/AdsTwo';
+import Ads from './components/Ads';
 import Error from './pages/Error';
 
 function App() {
