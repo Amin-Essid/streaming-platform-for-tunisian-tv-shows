@@ -36,11 +36,13 @@ export default class Ads extends React.Component {
 render () {
     return (
         <StyledBanner>
-                <ins className='adsbygoogle'
+            <ins className="adsbygoogle"
                 style={{ display: 'block'}}
-                data-ad-client='ca-pub-xxxxxxxxxx'
-                data-ad-slot='xxxxxxxxxx'
-                data-ad-format='auto' />
+                data-ad-client="ca-pub-8119914449289013"
+                data-ad-slot="2463850031"
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+            </ins>
         </StyledBanner>
     );
   }
