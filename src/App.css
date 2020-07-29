@@ -75,7 +75,6 @@ a {
   color: #F2506E;
   font-weight: bolder;
   font-size: 1.125rem;
-  z-index: 1;
 }
 
 .navbar {
@@ -117,6 +116,7 @@ a {
   padding: 1em;
   overflow: hidden;
   transition: height 500ms ease;
+  z-index: 1000000000;
 }
 
 .dropdown a{
