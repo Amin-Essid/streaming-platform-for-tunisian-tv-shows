@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Header />
-      <Ads />
+      {/* <Ads /> */}
       <Error>
         <Switch>
           <Route exact path='/' component={Home} />
